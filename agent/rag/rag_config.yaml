@@ -1,0 +1,55 @@
+shared:
+  pipeline_batch_size: 20
+
+data:
+  chunk_size: 128
+  chunk_overlap: 16
+  file_extns:
+    - "json"
+
+embedding:
+  embedding_model: BAAI/bge-large-en
+  pooling_strategy: cls
+  embedding_model_platform: huggingface
+  embedding_model_platform_args:
+    hf_tokenizer_params:
+      padding: true
+      truncation: true
+  normalize_embeddings: false
+  normalization_params: {'p': 2, 'dim': 1, 'eps': 1e-12}
+  embedding_batch_size: 64
+
+vector_db:
+  db_type: faiss
+  params: {gpu: False}
+  similarity_threshold: 0.95
+  similarity_fn: cosine
+  use_existing_vector_db: true
+  save_index: true
+  num_gpus: 0
+  vector_db_index_save_path: vectorDB_index_save/faiss/index.idx
+  metadata_index_save_path: vectorDB_metadata_save/faiss/metadata.json
+  vector_db_index_load_path: vectorDB_index_save/faiss/index.idx
+  metadata_index_load_path: vectorDB_metadata_save/faiss/metadata.json
+
+retriever:
+  retriever_top_k: 20
+  use_reranker: false
+  reranker_top_k: 1
+  reranker_model_name: BAAI/bge-large-en
+  reranker_model_platform: huggingface
+  reranker_batch_size: 32
+  num_gpus: 0
+  reranker_model_platform_args:
+    hf_tokenizer_params:
+      padding: true
+      truncation: true
+      max_length: 512
+      return_tensors: pt
+
+generator:
+  generator_model_name: gpt-4o
+  generator_model_platform: openai
+  generator_model_platform_args:
+    openai_api_key: /Users/siyengar/Desktop/dev/Chemical/autogluon-rag/src/agrag/configs/presets/openai_key.txt
+  generator_query_prefix: You are a helpful chat assistant. You will be provided with a query and you must answer it to the best of your abilities. You will be provided with some additional context that is related to the query and will help you answer the question.

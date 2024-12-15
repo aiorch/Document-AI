@@ -1,0 +1,1475 @@
+{
+    "batch_details": {
+        "product_name": "Ranitidine HCi (Grade -1)",
+        "stage": "RH",
+        "batch_no": "RH/08 2024 0574",
+        "batch_started_on": "2024-08-25T00:00:00",
+        "batch_completed_on": "2024-08-26T00:00:00"
+    },
+    "material_usage_table": {
+        "rows": [
+            {
+                "raw_material": "RI-III(B)",
+                "unit": "L",
+                "standard_quantity": 4950,
+                "allowed_range_min": 4800,
+                "allowed_range_max": 5100,
+                "actual_quantity": 4910,
+                "in_house_batch_no": "RH(RD3B)Pl",
+                "performed_by": "John Doe",
+                "checked_by": "Michael Johnson",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "PA (Lot - 1)",
+                "unit": "L",
+                "standard_quantity": 460,
+                "allowed_range_min": 450,
+                "allowed_range_max": 470,
+                "actual_quantity": 460,
+                "in_house_batch_no": "PA1240428M",
+                "performed_by": "Jane Smith",
+                "checked_by": "Emily White",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "PL",
+                "unit": "L",
+                "standard_quantity": 750,
+                "allowed_range_min": 700,
+                "allowed_range_max": 850,
+                "actual_quantity": 780,
+                "in_house_batch_no": "RH/PL/240093-420",
+                "performed_by": "Alex Brown",
+                "checked_by": "Chris Green",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "PA Centrifuge washings",
+                "unit": "L",
+                "standard_quantity": 100,
+                "allowed_range_min": 90,
+                "allowed_range_max": 110,
+                "actual_quantity": 100,
+                "in_house_batch_no": "PAI240428M",
+                "performed_by": "Emma Davis",
+                "checked_by": "Sophia Carter",
+                "remarks": null,
+                "quantity_within_range": true
+            }
+        ]
+    },
+    "equipment_list": {
+        "equipments": [
+            {
+                "serial_no": 1,
+                "name": "Glass Lined Reactor",
+                "id_no": "GLRE 1101"
+            },
+            {
+                "serial_no": 2,
+                "name": "Glass Lined Reactor",
+                "id_no": "GLRE 1107"
+            },
+            {
+                "serial_no": 3,
+                "name": "Stainless Steel Centrifuge",
+                "id_no": "SSCF 1103"
+            },
+            {
+                "serial_no": 4,
+                "name": "Stainless Steel Centrifuge",
+                "id_no": "SSCF 1104"
+            },
+            {
+                "serial_no": 5,
+                "name": "Stainless Steel TUB",
+                "id_no": "SSTB 1105"
+            },
+            {
+                "serial_no": 6,
+                "name": "Stainless Steel Powder Conveying System",
+                "id_no": "SSPCS 1102"
+            },
+            {
+                "serial_no": 7,
+                "name": "Stainless Steel Ribbon Blender",
+                "id_no": "SSRBL 1101"
+            },
+            {
+                "serial_no": 8,
+                "name": "Stainless Steel Sifter",
+                "id_no": "SSSI 1101"
+            }
+        ]
+    },
+    "approval_details": {
+        "prepared_by": "Asst.Manager-Production/designee",
+        "reviewed_by": "Head - Production/designee",
+        "approved_by": "Head - QA/designee"
+    },
+    "document_metadata": {
+        "revision_no": "05",
+        "effective_date": "2024-08-01T00:00:00",
+        "mfr_ref_no": "RD/MF/RH/II/RH-003",
+        "format_no": "QSP-021/F-002/00"
+    },
+    "raw_material_sheet": {
+        "measurements": [
+            {
+                "id": "PA (SSRC 1102)",
+                "op_no": 1,
+                "initial_volume": 460,
+                "final_volume": 460,
+                "difference_volume": 0
+            },
+            {
+                "id": "PL (PPRC 1101)",
+                "op_no": 11,
+                "initial_volume": 780,
+                "final_volume": 780,
+                "difference_volume": 0
+            },
+            {
+                "id": "PA (SSRC 1126)",
+                "op_no": 20,
+                "initial_volume": 100,
+                "final_volume": 100,
+                "difference_volume": 0
+            },
+            {
+                "id": "PA (SSRC 1126)",
+                "op_no": 25,
+                "initial_volume": 100,
+                "final_volume": 100,
+                "difference_volume": 0
+            },
+            {
+                "id": "PA (SSRC 1126)",
+                "op_no": 30,
+                "initial_volume": 100,
+                "final_volume": 100,
+                "difference_volume": 0
+            },
+            {
+                "id": "PA (SSRC 1126)",
+                "op_no": 35,
+                "initial_volume": 100,
+                "final_volume": 100,
+                "difference_volume": 0
+            }
+        ]
+    },
+    "manufacturing_procedure": {
+        "steps": [
+            {
+                "op_no": 1,
+                "description": "Ensure that respective filter change frequency is in acceptable limit",
+                "equipment_no": null,
+                "date": "2024-08-25T00:00:00",
+                "time_from": "17:50",
+                "time_to": "17:55",
+                "duration": null,
+                "performed_by": "Daniel Garcia",
+                "checked_by": "Jacob Miller",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 2,
+                "description": "Ensure that the valve of filtration setup leading to GLRE 1101/1107 is closed. Then open the valve leading to SSRC 1101",
+                "equipment_no": null,
+                "date": "2024-08-25T00:00:00",
+                "time_from": "17:55",
+                "time_to": "18:00",
+                "duration": null,
+                "performed_by": "Sophia Lee",
+                "checked_by": "Ella Thomas",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 3,
+                "description": "Switch 'ON' pump and re-circulate the reaction mass from filter outlet into SSRC 1101 for 20 min. + 5 minutes",
+                "equipment_no": null,
+                "date": "2024-08-25T00:00:00",
+                "time_from": "18:00",
+                "time_to": "18:20",
+                "duration": null,
+                "performed_by": "Michael Clark",
+                "checked_by": "Liam Walker",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 4,
+                "description": "Open the sample point & collect approximately 250 ml sample into a clean glass beaker and visually check for black or foreign particles (if any).If found, change the SSMF-1104 filter and repeat the operations from op.no. 3 to 4.",
+                "equipment_no": null,
+                "date": "2024-08-25T00:00:00",
+                "time_from": "18:20",
+                "time_to": "18:30",
+                "duration": null,
+                "performed_by": "Emily White",
+                "checked_by": "Grace Hall",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 5,
+                "description": "Check the cleanliness of the reactor.",
+                "equipment_no": null,
+                "date": "2024-08-25T00:00:00",
+                "time_from": "18:30",
+                "time_to": "18:35",
+                "duration": null,
+                "performed_by": "Chris Green",
+                "checked_by": "Ethan Adams",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 6,
+                "description": "Open the valve leading to GLRE and close the valve leading to SSRC 1101. Filter reaction mass through filtration set up (leaf filter, 1\u00b5 and 0.45\u00b5 filters) into the reactor",
+                "equipment_no": null,
+                "date": "2024-08-25T00:00:00",
+                "time_from": "18:35",
+                "time_to": "19:20",
+                "duration": null,
+                "performed_by": "Sophia Carter",
+                "checked_by": "Mia Robinson",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 7,
+                "description": "Apply nitrogen to flush out the mass hold up into GLRE through filtration set up",
+                "equipment_no": null,
+                "date": "2024-08-25T00:00:00",
+                "time_from": "19:20",
+                "time_to": "19:25",
+                "duration": null,
+                "performed_by": "David Wilson",
+                "checked_by": "Lucas Allen",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 8,
+                "description": "Charge PA (Lot-1) from the receiver SSRC-1102 into GLRE through filtration set up.",
+                "equipment_no": null,
+                "date": "2024-08-25T00:00:00",
+                "time_from": "19:25",
+                "time_to": "19:35",
+                "duration": null,
+                "performed_by": "Olivia Johnson",
+                "checked_by": "Charlotte Young",
+                "remarks": "PA Vol: 460 L",
+                "temperature_records": null
+            },
+            {
+                "op_no": 9,
+                "description": "Apply nitrogen to flush out the mass hold up into GLRE through filtration set up",
+                "equipment_no": null,
+                "date": "2024-08-25T00:00:00",
+                "time_from": "19:35",
+                "time_to": "19:40",
+                "duration": null,
+                "performed_by": "John Doe",
+                "checked_by": "Michael Johnson",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 10,
+                "description": "Cool reaction mass (RM) to 10\u00b0C to 15\u00b0C",
+                "equipment_no": null,
+                "date": "2024-08-25T00:00:00",
+                "time_from": "19:40",
+                "time_to": "22:20",
+                "duration": null,
+                "performed_by": "Jane Smith",
+                "checked_by": "Emily White",
+                "remarks": null,
+                "temperature_records": [
+                    {
+                        "time": "22:20",
+                        "temp_c": 10.3,
+                        "sign": "G"
+                    },
+                    {
+                        "time": "22:40",
+                        "temp_c": 14.0,
+                        "sign": "G"
+                    },
+                    {
+                        "time": "23:00",
+                        "temp_c": 17.6,
+                        "sign": "G"
+                    },
+                    {
+                        "time": "23:20",
+                        "temp_c": 21.2,
+                        "sign": "G"
+                    }
+                ]
+            },
+            {
+                "op_no": 11,
+                "description": "Add 1\u00b5 and 0.45\u00b5 filtered PL into the reactor by maintaining mass temp. in between 10\u00b0\u2103 to 25\u2103 until pH of the reaction mass reaches 5.5 to 6.0",
+                "equipment_no": null,
+                "date": "2024-08-25T00:00:00",
+                "time_from": "22:20",
+                "time_to": "23:20",
+                "duration": "01:00",
+                "performed_by": "Alex Brown",
+                "checked_by": "Chris Green",
+                "remarks": "PL Vol: 780 L",
+                "temperature_records": null
+            },
+            {
+                "op_no": 12,
+                "description": "Send reaction mass sample from reactor to QC for pH test",
+                "equipment_no": null,
+                "date": "2024-08-25T00:00:00",
+                "time_from": "23:20",
+                "time_to": "23:30",
+                "duration": null,
+                "performed_by": "Emma Davis",
+                "checked_by": "Sophia Carter",
+                "remarks": "pH: 5.67 (Limit: 5.5 to 6.0)",
+                "temperature_records": null
+            },
+            {
+                "op_no": 13,
+                "description": "Maintain the reaction mass for NLT 3 hrs in between 15\u00b0\u2103 to 27\u00b0C.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "00:00",
+                "time_to": "03:10",
+                "duration": null,
+                "performed_by": "Daniel Garcia",
+                "checked_by": "Jacob Miller",
+                "remarks": null,
+                "temperature_records": [
+                    {
+                        "time": "00:00",
+                        "temp_c": 26.5,
+                        "sign": "0"
+                    },
+                    {
+                        "time": "01:00",
+                        "temp_c": 22.7,
+                        "sign": "0"
+                    },
+                    {
+                        "time": "02:00",
+                        "temp_c": 18.4,
+                        "sign": "0"
+                    },
+                    {
+                        "time": "03:10",
+                        "temp_c": 15.2,
+                        "sign": "0"
+                    }
+                ]
+            },
+            {
+                "op_no": 14,
+                "description": "Cool RM to 10\u00b0C to 5\u00b0C",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "03:10",
+                "time_to": "08:10",
+                "duration": null,
+                "performed_by": "Sophia Lee",
+                "checked_by": "Ella Thomas",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 15,
+                "description": "Ensure the PCS is ready to use.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "08:10",
+                "time_to": "08:20",
+                "duration": null,
+                "performed_by": "Michael Clark",
+                "checked_by": "Liam Walker",
+                "remarks": "Cleaned / Uncleaned",
+                "temperature_records": null
+            },
+            {
+                "op_no": 16,
+                "description": "Ensure the material holding tub ready to use.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "08:20",
+                "time_to": "08:30",
+                "duration": null,
+                "performed_by": "Emily White",
+                "checked_by": "Grace Hall",
+                "remarks": "Cleaned / Uncleaned",
+                "temperature_records": null
+            },
+            {
+                "op_no": 17,
+                "description": "Ensure the centrifuge is ready to use.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "08:30",
+                "time_to": "08:40",
+                "duration": null,
+                "performed_by": "Chris Green",
+                "checked_by": "Ethan Adams",
+                "remarks": "Cleaned / Uncleaned",
+                "temperature_records": null
+            },
+            {
+                "op_no": 18,
+                "description": "Load Lot-1 material into centrifuge and collect MLR into receiver SSRC 1103",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "08:40",
+                "time_to": "08:50",
+                "duration": null,
+                "performed_by": "Sophia Carter",
+                "checked_by": "Mia Robinson",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 19,
+                "description": "Spin-dry the material for 5 to 10 minutes.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "08:50",
+                "time_to": "09:00",
+                "duration": null,
+                "performed_by": "David Wilson",
+                "checked_by": "Lucas Allen",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 20,
+                "description": "Wash the material with PA received from receiver SSRC 1102 to SSRC 1126 and collect the washed PA (PA MLR) into receiver SSRC 1113",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "09:00",
+                "time_to": "09:10",
+                "duration": null,
+                "performed_by": "Olivia Johnson",
+                "checked_by": "Charlotte Young",
+                "remarks": "PA Vol: 100 L",
+                "temperature_records": null
+            },
+            {
+                "op_no": 21,
+                "description": "Spin dry the material for 30 to 45 minutes",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "09:10",
+                "time_to": "09:55",
+                "duration": null,
+                "performed_by": "John Doe",
+                "checked_by": "Michael Johnson",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 22,
+                "description": "Unload the material into the tub through PCS.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "09:55",
+                "time_to": "10:05",
+                "duration": null,
+                "performed_by": "Jane Smith",
+                "checked_by": "Emily White",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 23,
+                "description": "Load Lot-2 material into centrifuge.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "10:05",
+                "time_to": "10:15",
+                "duration": null,
+                "performed_by": "Alex Brown",
+                "checked_by": "Chris Green",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 24,
+                "description": "Spin-dry the material for 5 to 10 minutes.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "10:15",
+                "time_to": "10:25",
+                "duration": null,
+                "performed_by": "Emma Davis",
+                "checked_by": "Sophia Carter",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 25,
+                "description": "Wash the material with PA received from receiver SSRC 1102 to SSRC 1126 and collect the washed PA (PA MLR) into receiver SSRC 1113 by applying vacuum",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "10:25",
+                "time_to": "10:35",
+                "duration": null,
+                "performed_by": "Daniel Garcia",
+                "checked_by": "Jacob Miller",
+                "remarks": "PA Vol: 100 L",
+                "temperature_records": null
+            },
+            {
+                "op_no": 26,
+                "description": "Spin dry the material for 30 to 45 minutes",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "10:35",
+                "time_to": "11:20",
+                "duration": null,
+                "performed_by": "Sophia Lee",
+                "checked_by": "Ella Thomas",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 27,
+                "description": "Unload the material into the RCVD through PCS.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "11:20",
+                "time_to": "11:30",
+                "duration": null,
+                "performed_by": "Michael Clark",
+                "checked_by": "Liam Walker",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 28,
+                "description": "Load Lot-3 material into a centrifuge.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "11:30",
+                "time_to": "11:40",
+                "duration": null,
+                "performed_by": "Emily White",
+                "checked_by": "Grace Hall",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 29,
+                "description": "Spin-dry the material for 5 to 10 minutes.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "11:40",
+                "time_to": "11:50",
+                "duration": null,
+                "performed_by": "Chris Green",
+                "checked_by": "Ethan Adams",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 30,
+                "description": "Wash the material with PA received from receiver SSRC 1102 to SSRC 1126 and collect the washed PA (PA MLR) into receiver SSRC 1113 by applying vacuum",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "11:50",
+                "time_to": "12:00",
+                "duration": null,
+                "performed_by": "Sophia Carter",
+                "checked_by": "Mia Robinson",
+                "remarks": "PA Vol: 100 L",
+                "temperature_records": null
+            },
+            {
+                "op_no": 31,
+                "description": "Spin dry the material for 30 to 45 minutes",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "12:00",
+                "time_to": "12:45",
+                "duration": null,
+                "performed_by": "David Wilson",
+                "checked_by": "Lucas Allen",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 32,
+                "description": "Unload the material into the RCVD through PCS.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "12:45",
+                "time_to": "12:55",
+                "duration": null,
+                "performed_by": "Olivia Johnson",
+                "checked_by": "Charlotte Young",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 33,
+                "description": "Load Lot-4 material into a centrifuge.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "12:55",
+                "time_to": "13:05",
+                "duration": null,
+                "performed_by": "John Doe",
+                "checked_by": "Michael Johnson",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 34,
+                "description": "Spin-dry the material for 5 to 10 minutes.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "13:05",
+                "time_to": "13:15",
+                "duration": null,
+                "performed_by": "Jane Smith",
+                "checked_by": "Emily White",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 35,
+                "description": "Wash the material with PA received from receiver SSRC 1102 to SSRC 1126 and collect the washed PA (PA MLR) into receiver SSRC 1113 by applying vacuum",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "13:15",
+                "time_to": "13:25",
+                "duration": null,
+                "performed_by": "Alex Brown",
+                "checked_by": "Chris Green",
+                "remarks": "PA Vol: 100 L",
+                "temperature_records": null
+            },
+            {
+                "op_no": 36,
+                "description": "Spin dry the material for 30 to 45 minutes",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "13:25",
+                "time_to": "14:10",
+                "duration": null,
+                "performed_by": "Emma Davis",
+                "checked_by": "Sophia Carter",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 37,
+                "description": "Unload the material into the RCVD through PCS.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "14:10",
+                "time_to": "14:20",
+                "duration": null,
+                "performed_by": "Daniel Garcia",
+                "checked_by": "Jacob Miller",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 38,
+                "description": "Open the manhole of RCVD",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "14:20",
+                "time_to": "14:30",
+                "duration": null,
+                "performed_by": "Sophia Lee",
+                "checked_by": "Ella Thomas",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 39,
+                "description": "Check cleanliness of the RCVD & hopper",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "14:30",
+                "time_to": "14:40",
+                "duration": null,
+                "performed_by": "Michael Clark",
+                "checked_by": "Liam Walker",
+                "remarks": "Cleaned / Uncleaned",
+                "temperature_records": null
+            },
+            {
+                "op_no": 40,
+                "description": "Charge the wet material into RCVD from material holding tub and centrifuge through PCS.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "14:40",
+                "time_to": "15:00",
+                "duration": null,
+                "performed_by": "Emily White",
+                "checked_by": "Grace Hall",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 41,
+                "description": "Close manhole of the RCVD",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "15:00",
+                "time_to": "15:10",
+                "duration": null,
+                "performed_by": "Chris Green",
+                "checked_by": "Ethan Adams",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 42,
+                "description": "Switch \"ON\" the RCVD and apply vacuum of NLT 650 mm Hg",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "15:10",
+                "time_to": "15:20",
+                "duration": null,
+                "performed_by": "Sophia Carter",
+                "checked_by": "Mia Robinson",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 43,
+                "description": "Apply hot water to RCVD and maintain the temperature between 40 to 55\u2103",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "15:20",
+                "time_to": "15:30",
+                "duration": null,
+                "performed_by": "David Wilson",
+                "checked_by": "Lucas Allen",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 44,
+                "description": "Continue hot water (40 to 55\u00baC) circulation into an RCVD jacket for 3 to 4 hours to dry the material. collect MLs into the receiver SSRC 1116.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "15:30",
+                "time_to": "18:30",
+                "duration": null,
+                "performed_by": "Olivia Johnson",
+                "checked_by": "Charlotte Young",
+                "remarks": null,
+                "temperature_records": [
+                    {
+                        "time": "10:10",
+                        "temp_c": 40.1,
+                        "sign": "na"
+                    },
+                    {
+                        "time": "11:20",
+                        "temp_c": 41.2,
+                        "sign": "na"
+                    },
+                    {
+                        "time": "12:20",
+                        "temp_c": 42.7,
+                        "sign": "na"
+                    },
+                    {
+                        "time": "13:25",
+                        "temp_c": 63.4,
+                        "sign": "na"
+                    },
+                    {
+                        "time": "12:50",
+                        "temp_c": 45.2,
+                        "sign": "na"
+                    },
+                    {
+                        "time": "14:00",
+                        "temp_c": 67.9,
+                        "sign": "na"
+                    }
+                ]
+            },
+            {
+                "op_no": 45,
+                "description": "Stop hot water circulation to RCVD.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "18:30",
+                "time_to": "18:40",
+                "duration": null,
+                "performed_by": "John Doe",
+                "checked_by": "Michael Johnson",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 46,
+                "description": "Close the vacuum valve of RCVD and break the vacuum by applying nitrogen",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "18:40",
+                "time_to": "18:50",
+                "duration": null,
+                "performed_by": "Jane Smith",
+                "checked_by": "Emily White",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 47,
+                "description": "Switch off RCVD and open the manhole",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "18:50",
+                "time_to": "19:00",
+                "duration": null,
+                "performed_by": "Alex Brown",
+                "checked_by": "Chris Green",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 48,
+                "description": "Replace the manhole cover with cadcon valve with magnet for unloading the material",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "19:00",
+                "time_to": "19:10",
+                "duration": null,
+                "performed_by": "Emma Davis",
+                "checked_by": "Sophia Carter",
+                "remarks": "Integrity of Magnet: Satisfactory/ Does not satisfactory",
+                "temperature_records": null
+            },
+            {
+                "op_no": 49,
+                "description": "Check the cleanliness of the Sifter & ensure the integrity of sieve and magnet",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "19:10",
+                "time_to": "19:20",
+                "duration": null,
+                "performed_by": "Daniel Garcia",
+                "checked_by": "Jacob Miller",
+                "remarks": "Cleaned / Uncleaned",
+                "temperature_records": null
+            },
+            {
+                "op_no": 50,
+                "description": "Record tare weights of containers (HDPE/Fiber containers) including outer Triple laminated aluminium foil bag and inner semi transparent LDPE bag).",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "19:20",
+                "time_to": "19:30",
+                "duration": null,
+                "performed_by": "Sophia Lee",
+                "checked_by": "Ella Thomas",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 51,
+                "description": "Unload the material from RCVD by sifting through designated mesh into HDPE / Fiber containers containing outer Triple laminated aluminium foil bag and inner semi transparent LDPE bag and weigh the material on calibrated weighing balance.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "19:30",
+                "time_to": "19:40",
+                "duration": null,
+                "performed_by": "Michael Clark",
+                "checked_by": "Liam Walker",
+                "remarks": "Mesh No: 30 #",
+                "temperature_records": null
+            },
+            {
+                "op_no": 52,
+                "description": "Check the integrity of the sieve and magnets of the Sifter and RCVD / after completion of sifting.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "19:40",
+                "time_to": "19:50",
+                "duration": null,
+                "performed_by": "Emily White",
+                "checked_by": "Grace Hall",
+                "remarks": "Integrity of Sieve & Magnets: Satisfactory/ Does not satisfactory",
+                "temperature_records": null
+            },
+            {
+                "op_no": 53,
+                "description": "Clean the outer surface of the containers with lint free cloth. Paste Internal Product labels on the packing containers.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "19:50",
+                "time_to": "20:00",
+                "duration": null,
+                "performed_by": "Chris Green",
+                "checked_by": "Ethan Adams",
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 54,
+                "description": "Adjust the weights and notify QC for sampling and complete analysis using the Finished Product Sample Advice sheet.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": "20:00",
+                "time_to": "20:10",
+                "duration": null,
+                "performed_by": "Sophia Carter",
+                "checked_by": "Mia Robinson",
+                "remarks": null,
+                "temperature_records": null
+            }
+        ]
+    },
+    "measurement_section": {
+        "measurements": [
+            {
+                "time": "10:10",
+                "hot_water_temp_c": 40.1,
+                "vapor_temp_c": 20.1,
+                "rcvd_vacuum_mm_hg": 660,
+                "sign": "na"
+            },
+            {
+                "time": "11:20",
+                "hot_water_temp_c": 41.2,
+                "vapor_temp_c": 21.2,
+                "rcvd_vacuum_mm_hg": 670,
+                "sign": "na"
+            },
+            {
+                "time": "12:20",
+                "hot_water_temp_c": 42.7,
+                "vapor_temp_c": 22.7,
+                "rcvd_vacuum_mm_hg": 680,
+                "sign": "na"
+            },
+            {
+                "time": "13:25",
+                "hot_water_temp_c": 63.4,
+                "vapor_temp_c": null,
+                "rcvd_vacuum_mm_hg": 690,
+                "sign": "na"
+            },
+            {
+                "time": "12:50",
+                "hot_water_temp_c": 45.2,
+                "vapor_temp_c": null,
+                "rcvd_vacuum_mm_hg": 705,
+                "sign": "na"
+            },
+            {
+                "time": "14:00",
+                "hot_water_temp_c": 67.9,
+                "vapor_temp_c": null,
+                "rcvd_vacuum_mm_hg": 715,
+                "sign": "na"
+            }
+        ]
+    },
+    "weighing_sheet": {
+        "measurements": [
+            {
+                "drum_no": 1,
+                "tare_wt": 5.25,
+                "gross_wt": 55.25,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 2,
+                "tare_wt": 5.12,
+                "gross_wt": 55.12,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 3,
+                "tare_wt": 5.36,
+                "gross_wt": 55.36,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 4,
+                "tare_wt": 5.35,
+                "gross_wt": 55.35,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 5,
+                "tare_wt": 5.17,
+                "gross_wt": 55.17,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 6,
+                "tare_wt": 5.22,
+                "gross_wt": 55.22,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 7,
+                "tare_wt": 5.14,
+                "gross_wt": 55.14,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 8,
+                "tare_wt": 5.15,
+                "gross_wt": 55.15,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 9,
+                "tare_wt": 5.16,
+                "gross_wt": 55.16,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 10,
+                "tare_wt": 5.04,
+                "gross_wt": 55.04,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 11,
+                "tare_wt": 5.63,
+                "gross_wt": 55.63,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 12,
+                "tare_wt": 5.24,
+                "gross_wt": 55.24,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 13,
+                "tare_wt": 5.2,
+                "gross_wt": 55.2,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 14,
+                "tare_wt": 5.37,
+                "gross_wt": 55.37,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 15,
+                "tare_wt": 5.21,
+                "gross_wt": 55.21,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 16,
+                "tare_wt": 5.15,
+                "gross_wt": 55.15,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 17,
+                "tare_wt": 5.23,
+                "gross_wt": 55.23,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 18,
+                "tare_wt": 5.1,
+                "gross_wt": 55.1,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 19,
+                "tare_wt": 5.16,
+                "gross_wt": 55.16,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 20,
+                "tare_wt": 5.25,
+                "gross_wt": 55.25,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 21,
+                "tare_wt": 5.12,
+                "gross_wt": 55.12,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 22,
+                "tare_wt": 5.33,
+                "gross_wt": 55.33,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 23,
+                "tare_wt": 5.3,
+                "gross_wt": 55.3,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 24,
+                "tare_wt": 5.29,
+                "gross_wt": 55.29,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 25,
+                "tare_wt": 5.23,
+                "gross_wt": 55.23,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 26,
+                "tare_wt": 5.08,
+                "gross_wt": 55.08,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 27,
+                "tare_wt": 5.14,
+                "gross_wt": 55.14,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 28,
+                "tare_wt": 5.32,
+                "gross_wt": 55.32,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 29,
+                "tare_wt": 5.31,
+                "gross_wt": 55.31,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 30,
+                "tare_wt": 5.26,
+                "gross_wt": 55.26,
+                "net_wt": 50.0
+            },
+            {
+                "drum_no": 31,
+                "tare_wt": 5.24,
+                "gross_wt": 55.24,
+                "net_wt": 50.0
+            }
+        ],
+        "total_weight": 1549.0,
+        "weighed_by": "le Bavari"
+    },
+    "yield_report": {
+        "product_name": "Ranitidine HCI",
+        "expected_yield_min": 1475,
+        "expected_yield_max": 1625,
+        "actual_yield": 1549.0,
+        "sample_quantity": 300,
+        "balance_quantity": 1249.0,
+        "deviations": null,
+        "compiled_by": "le BaraTe",
+        "compiled_date": "2024-08-26T00:00:00",
+        "checked_by": "1 Banana",
+        "checked_date": "2024-08-26T00:00:00"
+    },
+    "bpr_review_checklist": {
+        "department": "QUALITY ASSURANCE",
+        "format_no": "QSP-021/F-004",
+        "format_title": "BPR REVIEW CHECKLIST",
+        "revision_no": "00",
+        "effective_date": "2017-05-12",
+        "review_date": "2025-04-01",
+        "product_stage": "Ranitidine Ha/RH",
+        "batch_no": "RH/08 2024 0574",
+        "verification_details": [
+            {
+                "item_no": "1.0",
+                "description": "Is the Batch production record issued by QA ?",
+                "yes": true,
+                "no": false,
+                "na": false
+            },
+            {
+                "item_no": "2.0",
+                "description": "Are raw material input weights, in-house batch nos./A.R.Nos. recorded?",
+                "yes": true,
+                "no": false,
+                "na": false
+            },
+            {
+                "item_no": "3.0",
+                "description": "Are all approved raw materials used?",
+                "yes": true,
+                "no": false,
+                "na": false
+            },
+            {
+                "item_no": "4.0",
+                "description": "Are all operations performed, checked and signed?",
+                "yes": true,
+                "no": false,
+                "na": false
+            },
+            {
+                "item_no": "5.0",
+                "description": "Are all in-process instructions followed?",
+                "yes": true,
+                "no": false,
+                "na": false
+            },
+            {
+                "item_no": "6.0",
+                "description": "Are all in-process testing reports attached to the batch production record?",
+                "yes": true,
+                "no": false,
+                "na": false
+            },
+            {
+                "item_no": "7.0",
+                "description": "Is temperature / vacuum data recorded in relevant columns of the BPR?",
+                "yes": true,
+                "no": false,
+                "na": false
+            },
+            {
+                "item_no": "8.0",
+                "description": "Is the yield of the product entered in the yield report?",
+                "yes": true,
+                "no": false,
+                "na": false
+            },
+            {
+                "item_no": "9.0",
+                "description": "Is the yield of the product within the, expected yield range?",
+                "yes": true,
+                "no": false,
+                "na": false
+            },
+            {
+                "item_no": "10.0",
+                "description": "Is the batch product passed as per relevant specifications?",
+                "yes": true,
+                "no": false,
+                "na": false
+            },
+            {
+                "item_no": "11.0",
+                "description": "Are there any deviations? if yes, are the deviations closed properly? Ref. Deviation No.(s):",
+                "yes": false,
+                "no": true,
+                "na": false
+            },
+            {
+                "item_no": "12.0",
+                "description": "Are all. relevant ATR\u015f attached to the BPR?",
+                "yes": true,
+                "no": false,
+                "na": false
+            }
+        ],
+        "reviewed_by": "Officer-Production/ Designee",
+        "reviewed_date": "2024-09-09",
+        "approved_by": "Head-Production/ Designee",
+        "approved_date": "2024-09-10",
+        "qa_review": null
+    },
+    "raw_material_indent_form": {
+        "department": "STORES",
+        "format_no": "SOP/ST/GEN-002/F-002/00",
+        "format_title": "RAW MATERIAL INDENT (RMI) FORM",
+        "revision_no": "00",
+        "effective_date": "2021-12-01",
+        "review_date": "2024-11-01",
+        "rmi_no": "4713",
+        "date": "2024-08-25",
+        "requested_by": "K BALAJI",
+        "department_requested": "STORES",
+        "raw_material_details": [
+            {
+                "s_no": 1,
+                "raw_material": "PA",
+                "units": "L",
+                "quantity_indented": 500,
+                "quantity_issued": 500,
+                "ihb_no": "PA/240428M",
+                "issued_by": "R:\\ TI",
+                "received_by": "21/082014",
+                "remarks": "0574"
+            },
+            {
+                "s_no": 2,
+                "raw_material": "PA",
+                "units": "L",
+                "quantity_indented": 400,
+                "quantity_issued": 400,
+                "ihb_no": "PAILU0428m",
+                "issued_by": "R:\\ TI",
+                "received_by": "21/082014",
+                "remarks": "0574"
+            }
+        ],
+        "department_incharge": "R:\\ TI",
+        "stores_incharge": "21/082014"
+    },
+    "analytical_test_requisition": {
+        "department": "QUALITY CONTROL",
+        "atr_no": "QC/ATR/INP-011",
+        "atr_title": "PHARMA REACTION MASS",
+        "revision_no": "00",
+        "effective_date": "2022-08-01",
+        "review_date": "2025-07-01",
+        "product_name": "PHARMA REACTION MASS (RANITIDINE HCI)",
+        "stage": "RH",
+        "test_name": "pH",
+        "batch_no": "RH/08 2024 0574",
+        "department_requested": "production",
+        "requested_by": "production",
+        "request_date": "2024-08-25",
+        "request_time": "23:20",
+        "ar_no": "PH UTP / 24/08/291",
+        "out_time": "23:40",
+        "specification_ref_no": "QC/SPEC/INP-011",
+        "moa_ref_no": "QC/MOA/INP-011",
+        "test_details": [
+            {
+                "s_no": 1,
+                "test": "pH",
+                "specification": "5.5 to 6.0",
+                "results": "5.67"
+            }
+        ],
+        "compliance": true,
+        "tested_by": "QC",
+        "test_date": "2024-08-25",
+        "checked_by": "QC",
+        "checked_date": "2024-02-25"
+    },
+    "finished_product_sample_advice_sheet": {
+        "department": "QUALITY ASSURANCE",
+        "format_no": "QSP-021/F-007",
+        "format_title": "FINISHED PRODUCT SAMPLE ADVICE SHEET",
+        "revision_no": "00",
+        "effective_date": "2024-08-01",
+        "review_date": "2027-07-01",
+        "sample_name": "Ranitidina HCL",
+        "batch_no": "RH/082014 0574",
+        "manufacturing_date": "AUG - 2024",
+        "batch_quantity": "1549.00.109",
+        "number_of_containers": 31,
+        "mode_of_packing": "HDPE/ Fiber",
+        "test_requested": "IP / USP / Ph Eur. / BP/ In-house",
+        "requested_by": "PRODUCTION",
+        "request_date": "2024-08-26",
+        "request_time": "16:40",
+        "received_by": "QC",
+        "received_date": "2024-08-26",
+        "received_time": "16:45"
+    },
+    "analytical_test_report": {
+        "department": "QUALITY CONTROL",
+        "atr_no": "QC/ATR/FP-002",
+        "atr_title": "RANITIDINE HCI (FORM - II) IP",
+        "revision_no": "02",
+        "effective_date": "2024-07-25",
+        "review_date": "2027-06-01",
+        "specification_ref_no": "QC/SPEC/FP-002",
+        "moa_ref_no": "QC/MOA/FP-002",
+        "sample_name": "Ranitidine HCI (Form-II)",
+        "batch_no": "RH/08 2004 0574",
+        "manufacturing_date": "Aug-2024",
+        "expiry_date": "Jan-2027",
+        "quantity": "1549.00 Kgs",
+        "number_of_containers": 31,
+        "ar_no": "R114/08/0644",
+        "test_specifications": [
+            {
+                "s_no": "1.0",
+                "test": "Description",
+                "specification": "A white to pale yellow crystalline powder",
+                "result": "pale yellow crystalline"
+            },
+            {
+                "s_no": "2.0",
+                "test": "Solubility",
+                "specification": "Freely soluble in water, soluble in methanol and ethanol (95%), sparingly soluble in ethanol, very slightly soluble in chloroform and dichloromethane",
+                "result": "Complies"
+            },
+            {
+                "s_no": "3.0",
+                "test": "Identification",
+                "specification": "Test A -IR positive The IR absorption spectrum of sample should match with the spectrum of working standard Test B - HPLC The retention time of R.HCI peak obtained from test chromatogram should match with retention time of R.HCI peak obtained from Working standard chromatogram Test C-Test for Chlorides 5 % w/v solution gives the reaction of chlorides",
+                "result": "Complies"
+            },
+            {
+                "s_no": "4.0",
+                "test": "PH (1% w/v aq. solution)",
+                "specification": "Between 4.5 to 6.0",
+                "result": "5.45"
+            },
+            {
+                "s_no": "5.0",
+                "test": "Appearance of solution",
+                "specification": "1% w/v solution is clear and not more intensely colored than reference solution BYS 5",
+                "result": "Complies"
+            },
+            {
+                "s_no": "6.0",
+                "test": "Related substances (by HPLC)",
+                "specification": "Impurity A NMT 0.5 % w/w Impurity B NMT 0.2 % w/W Impurity C NMT 0.2 % w/w Impurity D NMT 0.2 % w/w Impurity E NMT 0.2 % w/W Impurity F NMT 0.2 % w/w Impurity G NMT 0.2 % w/w Impurity H NMT 0.2 % w/w Impurity I NMT 0.2 % w/w Impurity J NMT 0.2 % w/w Any unspecified impurity NMT 0.1 %w/w Sum of impurities other than impurity A NMT 0.5 %w/w",
+                "result": "Impurity A: 0.08%10/10, Impurity B: NO, Impurity C: 0.02%10/10, Impurity D: 0.03/10/00, Impurity E: 0.02%.00/10, Impurity F: 0.01/ 10/09, Impurity G: NO, Impurity H: 0.06%.00/10, Impurity I: 0.04.1.00/00, Impurity J: 0.02/ 10/10, Any unspecified impurity: 0.23%w/w, Sum of impurities other than impurity A: 0.23% W/w"
+            },
+            {
+                "s_no": "7.0",
+                "test": "Sulphated ash",
+                "specification": "NMT 0.1% w/w",
+                "result": "0.028% W/W"
+            },
+            {
+                "s_no": "8.0",
+                "test": "Loss on drying at 60\u00b0C + 2\u00b0\u2103 under vacuum for 3 hours at a pressure not exceeding 2.75 Kpa",
+                "specification": "NMT 0.75% w/w",
+                "result": "0.23%w/w"
+            },
+            {
+                "s_no": "9.0",
+                "test": "Assay on dried basis (by HPLC)",
+                "specification": "97.5% w/w to 102.0 % w/w",
+                "result": "99.8% w/w"
+            },
+            {
+                "s_no": "1.0",
+                "test": "N- Nitroso dimethyl amine (NDMA) content",
+                "specification": "NMT 0.32 ppm",
+                "result": "0.17PPM"
+            }
+        ],
+        "customer_specified_requirements": null,
+        "complied_by": "PR",
+        "complied_date": "2024-09-09",
+        "checked_by": "pauder",
+        "checked_date": "2024-09-09",
+        "approved_by": "APPROVED",
+        "approved_date": "2024-09-09"
+    }
+}

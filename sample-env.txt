@@ -1,0 +1,5 @@
+OPENAI_API_KEY="your-open-ai-key which can preferably connect to GPT-4o"
+AZURE_COMPUTER_VISION_KEY="optional, it's not being used currently"
+AZURE_COMPUTER_VISION_ENDPOINT="https://litewave-cv.cognitiveservices.azure.com/"
+AZURE_DOC_ENDPOINT="https://litewave-doc-ocr-new.cognitiveservices.azure.com/"
+AZURE_DOC_KEY="I can send my key via Slack if needed"

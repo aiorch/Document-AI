@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Processed Output</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .invalid { background-color: #f8d7da; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Processed Data</h1>
+
+        {% if parsed_data %}
+            {% for section_name, section_content in parsed_data.items() %}
+                <h2>{{ section_name | capitalize }}</h2>
+
+                {% if section_name == "material_usage_table" %}
+                    <!-- Special handling for material_usage_table to show validation -->
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                {% for key in section_content.rows[0].keys() %}
+                                    <th>{{ key | capitalize }}</th>
+                                {% endfor %}
+                                <th>Validation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in section_content.rows %}
+                                <tr class="{% if not row.quantity_within_range %}invalid{% endif %}">
+                                    {% for value in row.values() %}
+                                        <td>{{ value }}</td>
+                                    {% endfor %}
+                                    <td>
+                                        {% if row.quantity_within_range %}
+                                            ✔ Within Range
+                                        {% else %}
+                                            ✘ Out of Range
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                {% elif section_content is mapping %}
+                    <!-- Render dictionary as a key-value table -->
+                    <table class="table table-bordered">
+                        <tbody>
+                            {% for key, value in section_content.items() %}
+                                <tr>
+                                    <th>{{ key | capitalize }}</th>
+                                    <td>
+                                        {% if value is mapping %}
+                                            <table class="table table-sm table-bordered">
+                                                <tbody>
+                                                    {% for subkey, subvalue in value.items() %}
+                                                        <tr>
+                                                            <th>{{ subkey | capitalize }}</th>
+                                                            <td>{{ subvalue }}</td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        {% elif value is iterable and value[0] is mapping %}
+                                            <table class="table table-sm table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        {% for subkey in value[0].keys() %}
+                                                            <th>{{ subkey | capitalize }}</th>
+                                                        {% endfor %}
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for item in value %}
+                                                        <tr>
+                                                            {% for subvalue in item.values() %}
+                                                                <td>{{ subvalue }}</td>
+                                                            {% endfor %}
+                                                        </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        {% else %}
+                                            {{ value }}
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                {% elif section_content is iterable and section_content[0] is mapping %}
+                    <!-- Render list of dictionaries as a multi-row table -->
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                {% for key in section_content[0].keys() %}
+                                    <th>{{ key | capitalize }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in section_content %}
+                                <tr>
+                                    {% for value in item.values() %}
+                                        <td>{{ value }}</td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                {% else %}
+                    <p>{{ section_content }}</p>
+                {% endif %}
+
+            {% endfor %}
+        {% else %}
+            <p>No data available to display.</p>
+        {% endif %}
+
+        <a href="/" class="btn btn-primary mt-3">Upload Another</a>
+    </div>
+</body>
+</html>
