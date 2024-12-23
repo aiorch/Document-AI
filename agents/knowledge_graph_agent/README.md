@@ -126,6 +126,17 @@ Run the script to generate an HTML file (`graph.html`) for visualization.
 - If Neo4j doesn't start, ensure the `apoc-*.jar` file is placed in the correct `plugins` directory.
 - Check logs in `neo4j.log` and `debug.log` for detailed error information.
 - Ensure that the database is running before executing scripts.
+
+#### Common Errors and Fixes
+1. APOC Plugin Errors
+ - Ensure the .jar file matches your Neo4j version.
+ - Verify that the configuration settings are correctly added to neo4j.conf.
+2. Neo4j Fails to Start
+ - Check debug.log in the logs folder for more information.
+ - Ensure the database port (7687) is not being used by another process.
+3. Cypher Query Issues
+- Verify the data schema using the Neo4j browser and ensure node and relationship labels match the script.
+
 ---
 ### References
 - [Neo4j Documentation](https://neo4j.com/docs/)
