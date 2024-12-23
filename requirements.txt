@@ -18,3 +18,5 @@ fastapi
 uvicorn
 streamlit
 torch
+azure-core
+azure-ai-formrecognizer

@@ -193,7 +193,7 @@ def process_pdf_pages(file_path, page_numbers=[]):
     # Construct the path to the 'knowledge_base' directory within the 'agent' folder
     current_dir = os.path.dirname(os.path.abspath(__file__))
 
-    knowledge_base_dir = os.path.join(current_dir, '..', 'agent', 'knowledge_base')
+    knowledge_base_dir = os.path.join(current_dir, '..', 'agents', 'knowledge_base')
     # Normalize the path
     knowledge_base_dir = os.path.normpath(knowledge_base_dir)
 
