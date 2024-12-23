@@ -105,7 +105,7 @@ if RUN_INFERENCE:
         model = model.to(DEVICE)
     SIMILARITY_THRESHOLD = 1000
 
-    classify_extracted_signatures(
+    employee_names = classify_extracted_signatures(
         model,
         true_signatures_path,
         detected_signatures_base_path,

@@ -71,6 +71,8 @@ def classify_extracted_signatures(
         key=lambda x: int(x.replace("page", "")),
     )
 
+    names = []
+
     for page_dir in page_dirs:
         detected_signatures_path = os.path.join(detected_signatures_base_path, page_dir)
 
@@ -103,6 +105,7 @@ def classify_extracted_signatures(
                         if distance < min_distance:
                             min_distance = distance
                             best_match = name
+                            names.append(name)
 
                     # Only accept matches below the threshold
                     if min_distance <= similarity_threshold:
@@ -141,6 +144,7 @@ def classify_extracted_signatures(
             print(f"\nResults for {page_dir}:")
             for detected_filename, (name, similarity) in results.items():
                 print(f"{detected_filename}: {name} - Similarity: {similarity}")
+    return names
 
 
 if __name__ == "__main__":
@@ -155,6 +159,6 @@ if __name__ == "__main__":
     model.load_state_dict(torch.load(finetuned_model_weights))
     model.eval()  # Set to evaluation mode
     model = model.to(DEVICE)
-    classify_extracted_signatures(
+    employee_names = classify_extracted_signatures(
         model, true_signatures_path, detected_signatures_base_path
     )
