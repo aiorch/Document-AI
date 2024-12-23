@@ -57,7 +57,7 @@ Create a `.env` file in the `knowledge_graph_agent` folder with the following co
 ```plaintext
 OPENAI_API_KEY=
 OPENAI_MODEL=gpt-3.5-turbo-instruct
-NEO4J_URI=bolt://localhost:7687
+NEO4J_URI=bolt://localhost:7687 # this is the default
 NEO4J_USERNAME=neo4j
 NEO4J_PASSWORD=your_password
 NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
@@ -77,6 +77,8 @@ Use the `langchain_graph_agent.py` script to ask questions about the graph:
 ```bash
 python langchain_graph_agent.py
 ```
+Make sure to sure the parameters in the script are set correctly such as NEO4J_URI, NEO4J_USERNAME, and NEO4J_PASSWORD. These should be set in the configuration file.
+
 Example interaction:
 ```plaintext
 Ask questions about your graph database!
