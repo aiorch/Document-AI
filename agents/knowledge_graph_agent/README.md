@@ -38,7 +38,7 @@ apoc.import.file.enabled=true
 apoc.export.file.enabled=true
 apoc.cypher.enabled=true
 # Allow unrestricted procedures
-dbms.security.procedures.unrestricted=apoc.*
+dbms.security.procedures.unrestricted=apoc.*,jwt.security.*
 ```
 3. Save the file and restart the Neo4j database using the desktop application.
 ---
