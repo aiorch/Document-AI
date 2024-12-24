@@ -37,3 +37,29 @@ class AnalyticalTestReport(BaseModel):
     checked_date: str = Field(description="Date of check")
     approved_by: str = Field(description="Person who approved the results")
     approved_date: str = Field(description="Date of approval")
+
+class BPRReviewChecklistEntry(BaseModel):
+    serial_no: str = Field(description="Serial number of the verification item")
+    verification_details: str = Field(description="Description of the verification item")
+    status_yes: Optional[bool] = Field(default=False, description="Whether the item is marked 'Yes'")
+    status_no: Optional[bool] = Field(default=False, description="Whether the item is marked 'No'")
+    status_na: Optional[bool] = Field(default=False, description="Whether the item is marked 'N/A'")
+
+class BPRReviewChecklist(BaseModel):
+    department: str = Field(description="Department name")
+    revision_no: Optional[str] = Field(description="Revision number")
+    format_no: str = Field(description="Format number of the checklist")
+    effective_date: str = Field(description="Effective date of the checklist")
+    review_date: Optional[str] = Field(description="Review date of the checklist")
+    product_stage: str = Field(description="Product or stage name")
+    batch_no: str = Field(description="Batch number")
+
+    # Entries for verification details
+    verification_items: List[BPRReviewChecklistEntry] = Field(description="List of verification items with statuses")
+
+    # Review and Approval Details
+    reviewed_by: str = Field(description="Name of the person who reviewed the checklist")
+    reviewed_date: str = Field(description="Date of review")
+    approved_by: str = Field(description="Name of the person who approved the checklist")
+    approved_date: str = Field(description="Date of approval")
+    qa_review: Optional[str] = Field(default=None, description="QA review remarks or stamp details")

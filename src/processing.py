@@ -73,7 +73,7 @@ def process_inspection_information(extracted_text):
 
 
     preamble = "This is a filled-out pharmaceutical inspection form. Extract relevant data accurately. IMPORTANT: Remember that the manufacturing procedure table spans multiple pages."
-    postamble = "Do not include any explanation in the reply; only include extracted information. This should be able to get decoded as json."
+    postamble = "Do not include any explanation in the reply; only include extracted information. This should be able to get decoded as json. The JSON must not contain syntax errors or incomplete structures. The pydantic structure given does not have to be followed rigidly. This means that if a table doesn't exist in the document, you don't need to create json for it in the output. Sometimes, the pydantic classes may be out of order and there could be multiple instances of a table."
 
     system_message_prompt = SystemMessagePromptTemplate.from_template("{preamble}")
     human_message_prompt = HumanMessagePromptTemplate.from_template(

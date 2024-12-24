@@ -1,5 +1,7 @@
+from typing import Optional
 from pydantic import BaseModel, Field
 
+# Import your page loader classes
 from src.page_loaders.page1 import (ApprovalDetails, BatchDetails,
                                     DocumentMetadata, EquipmentList,
                                     MaterialUsageTable)
@@ -14,101 +16,79 @@ from src.page_loaders.page14 import FinishedProductSampleAdviceSheet
 from src.page_loaders.page15to16 import AnalyticalTestReport
 
 class InspectionForm(BaseModel):
-    # page 1
-    batch_details: BatchDetails = Field(description="Details of the batch")
-    material_usage_table: MaterialUsageTable = Field(
-        description="Details of the material usage"
+    # Page 1
+    batch_details: Optional[BatchDetails] = Field(
+        None, description="Details of the batch"
     )
-    equipment_list: EquipmentList = Field(description="List of equipment used")
-    approval_details: ApprovalDetails = Field(
-        description="Approval details at the bottom of the page"
+    material_usage_table: Optional[MaterialUsageTable] = Field(
+        None, description="Details of the material usage"
     )
-    document_metadata: DocumentMetadata = Field(
-        description="Metadata details at the bottom of the page"
+    equipment_list: Optional[EquipmentList] = Field(
+        None, description="List of equipment used"
     )
-
-    # page 2
-    raw_material_sheet: RawMaterialSheet = Field(
-        description="Raw Material Weighing / Measuring Sheet details"
+    approval_details: Optional[ApprovalDetails] = Field(
+        None, description="Approval details at the bottom of the page"
     )
-    manufacturing_procedure: ManufacturingProcedure = Field(
-        description="Details of the manufacturing procedure"
-    )
-    measurement_section: MeasurementSection = Field(
-        description="Periodic measurements of temperature, vacuum, etc."
+    document_metadata: Optional[DocumentMetadata] = Field(
+        None, description="Metadata details at the bottom of the page"
     )
 
-    # page 4
-    manufacturing_procedure: ManufacturingProcedure = Field(
-        description="Details of the manufacturing procedure"
+    # Page 2
+    raw_material_sheet: Optional[RawMaterialSheet] = Field(
+        None, description="Raw Material Weighing / Measuring Sheet details"
     )
-    measurement_section: MeasurementSection = Field(
-        description="Periodic measurements of temperature, vacuum, etc."
+    manufacturing_procedure: Optional[ManufacturingProcedure] = Field(
+        None, description="Details of the manufacturing procedure"
     )
-
-    # page 5
-    manufacturing_procedure: ManufacturingProcedure = Field(
-        description="Details of the manufacturing procedure"
-    )
-    measurement_section: MeasurementSection = Field(
-        description="Periodic measurements of temperature, vacuum, etc."
+    measurement_section: Optional[MeasurementSection] = Field(
+        None, description="Periodic measurements of temperature, vacuum, etc."
     )
 
-    # page 6
-    manufacturing_procedure: ManufacturingProcedure = Field(
-        description="Details of the manufacturing procedure"
+    # Pages 4 to 8
+    manufacturing_procedures: Optional[list[ManufacturingProcedure]] = Field(
+        None, description="Details of the manufacturing procedures"
     )
-    measurement_section: MeasurementSection = Field(
-        description="Periodic measurements of temperature, vacuum, etc."
-    )
-
-    # page 7
-    manufacturing_procedure: ManufacturingProcedure = Field(
-        description="Details of the manufacturing procedure"
-    )
-    measurement_section: MeasurementSection = Field(
-        description="Periodic measurements of temperature, vacuum, etc."
+    measurement_sections: Optional[list[MeasurementSection]] = Field(
+        None, description="Periodic measurements of temperature, vacuum, etc."
     )
 
-    # page 8
-    manufacturing_procedure: ManufacturingProcedure = Field(
-        description="Details of the manufacturing procedure"
-    )
-    measurement_section: MeasurementSection = Field(
-        description="Periodic measurements of temperature, vacuum, etc."
+    # Page 9
+    weighing_sheet: Optional[WeighingSheet] = Field(
+        None, description="Weighing Sheet with drum measurements and total weight details"
     )
 
-    # page 9
-    weighing_sheet: WeighingSheet = Field(
-        description="Weighing Sheet with drum measurements and total weight details"
+    # Page 10
+    yield_report: Optional[YieldReport] = Field(
+        None, description="Yield report including expected range, actual yield, sample quantity, and deviations"
     )
 
-    # page 10
-    yield_report: YieldReport = Field(
-        description="Yield report including expected range, actual yield, sample quantity, and deviations"
+    # Page 11
+    bpr_review_checklist: Optional[BPRReviewChecklist] = Field(
+        None, description="BPR Review Checklist with verification details"
     )
 
-    # page 11
-    bpr_review_checklist: BPRReviewChecklist = Field(
-        description="BPR Review Checklist with verification details"
+    # Page 12
+    raw_material_indent_form: Optional[RawMaterialIndentForm] = Field(
+        None, description="Raw Material Indent Form with details of raw materials"
     )
 
-    # page 12
-    raw_material_indent_form: RawMaterialIndentForm = Field(
-        description="Raw Material Indent Form with details of raw materials"
+    # Page 13
+    analytical_test_requisition: Optional[AnalyticalTestRequisition] = Field(
+        None, description="Analytical Test Requisition with details of the test"
     )
 
-    # page 13
-    analytical_test_requisition: AnalyticalTestRequisition = Field(
-        description="Analytical Test Requisition with details of the test"
+    # Page 14
+    finished_product_sample_advice_sheet: Optional[FinishedProductSampleAdviceSheet] = Field(
+        None, description="Finished Product Sample Advice Sheet with details of the sample"
     )
 
-    # page 14
-    finished_product_sample_advice_sheet: FinishedProductSampleAdviceSheet = Field(
-        description="Finished Product Sample Advice Sheet with details of the sample"
+    # Pages 15 to 16
+    analytical_test_report: Optional[AnalyticalTestReport] = Field(
+        None, description="Analytical Test Report with details of the test"
     )
 
-    # page 15 to 16
-    analytical_test_report: AnalyticalTestReport = Field(
-        description="Analytical Test Report with details of the test"
+    bpr_review_checklist: Optional[BPRReviewChecklist] = Field(
+        None, description="BPR Review Checklist with verification details"
     )
+
+

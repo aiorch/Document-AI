@@ -20,3 +20,4 @@ streamlit
 torch
 azure-core
 azure-ai-formrecognizer
+docling
