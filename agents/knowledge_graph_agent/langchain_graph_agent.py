@@ -21,9 +21,6 @@ class GraphQAAgent:
         # Connect to Neo4j
         self.graph = Neo4jGraph(url=uri, username=username, password=password)
         self.graph.refresh_schema()  # Fetch graph schema
-        print("Graph Schema:")
-        print(self.graph.schema)
-
         self.llm = ChatOpenAI(model=llm_model, temperature=0)
 
         # Build QA Chain
