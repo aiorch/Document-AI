@@ -117,7 +117,7 @@ def process_inspection_information_with_llm(json_data, names_performed_by, names
     Automatically cycle through the names if the list is not long enough.
     """
     # Initialize the ChatOpenAI model
-    chat = ChatOpenAI(model="gpt-4o")
+    chat = ChatOpenAI(model="gpt-4o-2024-08-06")
 
     # Get the total number of rows to process
     rows = json_data.get("material_usage_table", {}).get("rows", [])
