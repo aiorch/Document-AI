@@ -7,7 +7,7 @@ from langchain.prompts import (ChatPromptTemplate, HumanMessagePromptTemplate,
                                SystemMessagePromptTemplate)
 from langchain_openai import ChatOpenAI
 
-from src.document import InspectionForm
+from schemas.inspection_form import InspectionForm
 from src.validation.material_usage import validate_material_usage
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage
@@ -15,7 +15,10 @@ import time
 import os
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.formrecognizer import DocumentAnalysisClient
+import importlib
 # from azure.ai.documentintelligence import DocumentIntelligenceClient
+from schema_helper import SCHEMA_DIR, load_schema
+
 
 def error_exit(error_message):
     print(error_message)
@@ -47,16 +50,19 @@ def extract_text_from_pdf_azure(file_path, pages_list=None):
         for line in page.lines:
             extracted_text += line.content + "\n"
 
-    # # Write the extracted text to 'temp.txt'
-    # with open("temp.txt", "w", encoding="utf-8") as output_file:
-    #     output_file.write(extracted_text)
-
-    # print("Extracted text has been written to 'temp.txt'")
     return extracted_text
 
 
 
-def process_inspection_information(extracted_text):
+def process_inspection_information(extracted_text, doc_type):
+    try:
+        schema_class = load_schema(doc_type)
+    except ValueError as e:
+        print(e)
+        return {"error": str(e)}
+
+    # Use LangChain’s Pydantic parser with the dynamically loaded schema
+    parser = PydanticOutputParser(pydantic_object=schema_class)
     # TEMPORARY:Lists of names to fill in the "performed_by" and "checked_by" fields
     # Example list of names for "performed_by" and "checked_by" (one name per row in the table)
     names_performed_by = [
@@ -80,7 +86,6 @@ def process_inspection_information(extracted_text):
         "{format_instructions}\n\n{extracted_text}\n\n{postamble}"
     )
 
-    parser = PydanticOutputParser(pydantic_object=InspectionForm)
     chat_prompt = ChatPromptTemplate.from_messages(
         [system_message_prompt, human_message_prompt]
     )
@@ -181,12 +186,10 @@ def save_processed_data(data, filename, directory):
         json.dump(data, json_file, indent=4)
     print(f"Saved processed data to {file_path}")
 
-def process_pdf_pages(file_path, page_numbers=[]):
-    # extracted_text = extract_text_from_pdf_llmwhisperer(file_path, page_numbers)
-    # extracted_text = extract_text_from_pdf_abbyy(file_path, page_numbers)
+def process_pdf_pages(file_path, doc_type, page_numbers=[]):
     extracted_text = extract_text_from_pdf_azure(file_path, page_numbers)
     print(f"Extracted Text (Pages {page_numbers}):\n", extracted_text)
-    response = process_inspection_information(extracted_text)
+    response = process_inspection_information(extracted_text, doc_type)
     # response = process_inspection_information_with_chunking(extracted_text)
     print(f"Response from LLM:\n{response}")
 

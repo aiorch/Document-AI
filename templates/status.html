@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task Status</title>
+</head>
+<body>
+    <h1>Task Status</h1>
+    <ul>
+        {% for task_id in task_ids %}
+            <li>
+                Task {{ task_id }}: <a href="{{ url_for('task_status', task_id=task_id) }}">Check Status</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Upload Another File</a>
+</body>
+</html>

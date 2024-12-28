@@ -2,20 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Upload PDF</title>
+    <title>Upload PDFs</title>
 </head>
 <body>
-    <h1>Upload a PDF for Processing</h1>
+    <h1>Upload PDFs for Processing</h1>
+
+    <!-- Form for uploading PDFs -->
     <form action="/" method="POST" enctype="multipart/form-data">
-        <label for="file">Select PDF:</label>
-        <input type="file" name="file" accept=".pdf" required>
-        <br><br>
-        <label for="pages">Pages to Parse (e.g., "1,3,5" or "1-3"):</label>
-        <input type="text" name="pages" id="pages" placeholder="Leave blank for all pages">
+        <div id="fileInputs">
+            <!-- Initial file input -->
+            <div class="file-input-group">
+                <label for="file">Select PDF:</label>
+                <input type="file" name="files[]" accept=".pdf" required>
+                <label for="document_type">Document Type:</label>
+                <select name="document_types[]" required>
+                    {% for doc_type in document_types %}
+                        <option value="{{ doc_type }}">{{ doc_type }}</option>
+                    {% endfor %}
+                </select>
+                <button type="button" class="remove-btn" onclick="removeFileInput(this)" style="display: none;">Remove</button>
+                <br><br>
+            </div>
+        </div>
+        <button type="button" onclick="addFileInput()">Add Another File</button>
         <br><br>
         <button type="submit">Upload and Parse</button>
     </form>
 
+    <!-- Form for adding a new document type -->
+    <h2>Add a New Document Type</h2>
+    <form action="/add_document_type" method="POST">
+        <label for="new_document_type">New Document Type:</label>
+        <input type="text" name="document_type" id="new_document_type" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <!-- Task Status Section -->
+    <h2>Task Status</h2>
+    <ul>
+        {% for task_id in task_ids %}
+            <li>
+                Task {{ task_id }}: <a href="{{ url_for('task_status', task_id=task_id) }}">Check Status</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Flash messages -->
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             <ul>
@@ -25,5 +57,32 @@
             </ul>
         {% endif %}
     {% endwith %}
+
+    <script>
+        // Function to dynamically add more file inputs
+        function addFileInput() {
+            const fileInputGroup = document.createElement("div");
+            fileInputGroup.className = "file-input-group";
+            fileInputGroup.innerHTML = `
+                <label for="file">Select PDF:</label>
+                <input type="file" name="files[]" accept=".pdf" required>
+                <label for="document_type">Document Type:</label>
+                <select name="document_types[]" required>
+                    {% for doc_type in document_types %}
+                        <option value="{{ doc_type }}">{{ doc_type }}</option>
+                    {% endfor %}
+                </select>
+                <button type="button" class="remove-btn" onclick="removeFileInput(this)">Remove</button>
+                <br><br>
+            `;
+            document.getElementById("fileInputs").appendChild(fileInputGroup);
+        }
+
+        // Function to remove a file input group
+        function removeFileInput(button) {
+            const fileInputGroup = button.parentElement;
+            document.getElementById("fileInputs").removeChild(fileInputGroup);
+        }
+    </script>
 </body>
 </html>
