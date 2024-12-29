@@ -1,0 +1,3 @@
+{
+    "low_quantity_check": "that checks For all the rows in the material_usage_table, check if the the actual_quantity for all the raw materials is within the allowed_range_min and allowed_range_max"
+}
