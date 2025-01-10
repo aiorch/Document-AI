@@ -3,9 +3,9 @@ import os
 from dotenv import load_dotenv
 from langchain import hub
 from langchain.agents import create_sql_agent
-from langchain.agents.agent_toolkits import SQLDatabaseToolkit
 from langchain.sql_database import SQLDatabase
 from langchain_openai import ChatOpenAI
+from utils import SQL_QA_TEMPLATE
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 ENV_PATH = os.path.join(script_dir, ".env")
@@ -33,7 +33,7 @@ class SQLQAAgent:
 
         # Prompt template for SQL Agent
         prompt_template = hub.pull("langchain-ai/sql-agent-system-prompt")
-        system_message = prompt_template.format(dialect="SQLite", top_k=5)
+        system_message = prompt_template.format(dialect="SQLite", top_k=50)
 
         # SQL toolkit and agent creation
         # self.toolkit = SQLDatabaseToolkit(db=self.db, llm=self.llm)
@@ -41,6 +41,7 @@ class SQLQAAgent:
             llm=self.llm,
             db=self.db,
             agent_type="tool-calling",
+            top_k=50,
             system_message=system_message,
             verbose=True,
             agent_executor_kwargs={"handle_parsing_errors": True},
@@ -57,8 +58,13 @@ class SQLQAAgent:
         Returns:
             str: Agent's response.
         """
+        prompt = f"""
+        The user's query is: {question}. Answer it based on the previous system instruction you recevied."""
+
+        prompt += "\n" + SQL_QA_TEMPLATE
+
         try:
-            return self.agent_executor.invoke({"input": question})
+            return self.agent_executor.invoke({"input": prompt})
         except Exception as e:
             return f"An error occurred: {e}"
 
@@ -73,6 +79,7 @@ if __name__ == "__main__":
         if user_input.lower() == "q":
             print("Exiting. Goodbye!")
             break
-        response = agent.ask_question(user_input)
+        response = agent.ask_question(user_input)["output"]
+        response = response.strip("```").lstrip("json").strip()
         print("\nResponse:")
         print(response)
