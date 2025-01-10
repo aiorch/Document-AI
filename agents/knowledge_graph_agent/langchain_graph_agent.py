@@ -1,8 +1,14 @@
 import os
 
 from dotenv import load_dotenv
+from langchain_core.prompts.prompt import PromptTemplate
 from langchain_neo4j import GraphCypherQAChain, Neo4jGraph
 from langchain_openai import ChatOpenAI
+
+from agents.knowledge_graph_agent.utils import (
+    CYPHER_GENERATION_TEMPLATE,
+    CYPHER_QA_TEMPLATE,
+)
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 ENV_PATH = os.path.join(script_dir, ".env")
@@ -23,9 +29,23 @@ class GraphQAAgent:
         self.graph.refresh_schema()  # Fetch graph schema
         self.llm = ChatOpenAI(model=llm_model, temperature=0)
 
+        CYPHER_GENERATION_PROMPT = PromptTemplate(
+            input_variables=["schema", "question"], template=CYPHER_GENERATION_TEMPLATE
+        )
+
+        CYPHER_QA_PROMPT = PromptTemplate(
+            input_variables=["context", "question"], template=CYPHER_QA_TEMPLATE
+        )
+
         # Build QA Chain
         self.chain = GraphCypherQAChain.from_llm(
-            graph=self.graph, llm=self.llm, verbose=True, allow_dangerous_requests=True
+            graph=self.graph,
+            llm=self.llm,
+            verbose=True,
+            cypher_prompt=CYPHER_GENERATION_PROMPT,
+            qa_prompt=CYPHER_QA_PROMPT,
+            allow_dangerous_requests=True,
+            top_k=50,
         )
 
     def ask_question(self, question):
