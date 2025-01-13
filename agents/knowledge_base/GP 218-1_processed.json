@@ -1,0 +1,180 @@
+{
+    "batch_details": {
+        "product_name": "Gabapentin",
+        "stage": "GP (IPA + Methanol + Water)",
+        "batch_no": "GP/08 2024 0218",
+        "batch_started_on": "2024-08-26T00:00:00",
+        "batch_completed_on": "2024-08-29T00:00:00"
+    },
+    "material_usage_table": {
+        "rows": [
+            {
+                "raw_material": "Purified water (Lot-I)",
+                "unit": "L",
+                "standard_quantity": 2500,
+                "allowed_range_min": 2450,
+                "allowed_range_max": 2550,
+                "actual_quantity": 2500,
+                "in_house_batch_no": "UP-08",
+                "performed_by": "John Doe",
+                "checked_by": "Michael Johnson",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "GP HCI",
+                "unit": "Kg",
+                "standard_quantity": 1800,
+                "allowed_range_min": 1728,
+                "allowed_range_max": 2090,
+                "actual_quantity": 1999,
+                "in_house_batch_no": "0139, 0140, 0141, 0142",
+                "performed_by": "Jane Smith",
+                "checked_by": "Emily White",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "CS Lye (48% w/w) (Lot-I)",
+                "unit": "L",
+                "standard_quantity": 190,
+                "allowed_range_min": 180,
+                "allowed_range_max": 200,
+                "actual_quantity": 190,
+                "in_house_batch_no": "CL/200412",
+                "performed_by": "Alex Brown",
+                "checked_by": "Chris Green",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Activated Carbon",
+                "unit": "Kg",
+                "standard_quantity": 10,
+                "allowed_range_min": 8,
+                "allowed_range_max": 12,
+                "actual_quantity": 10,
+                "in_house_batch_no": "PSCB/200 404",
+                "performed_by": "Emma Davis",
+                "checked_by": "Sophia Carter",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Purified water (Lot-II)",
+                "unit": "L",
+                "standard_quantity": 20,
+                "allowed_range_min": 15,
+                "allowed_range_max": 25,
+                "actual_quantity": 20,
+                "in_house_batch_no": "UP-08",
+                "performed_by": "Daniel Garcia",
+                "checked_by": "Jacob Miller",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Purified water (Lot-III)",
+                "unit": "L",
+                "standard_quantity": 500,
+                "allowed_range_min": 450,
+                "allowed_range_max": 550,
+                "actual_quantity": 500,
+                "in_house_batch_no": "UP-08",
+                "performed_by": "Sophia Lee",
+                "checked_by": "Ella Thomas",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "CS Lye (48% w/w) (Lot-II)",
+                "unit": "L",
+                "standard_quantity": 250,
+                "allowed_range_min": 225,
+                "allowed_range_max": 275,
+                "actual_quantity": 250,
+                "in_house_batch_no": null,
+                "performed_by": "Michael Clark",
+                "checked_by": "Liam Walker",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Purified water (Lot-IV)",
+                "unit": "L",
+                "standard_quantity": 100,
+                "allowed_range_min": 90,
+                "allowed_range_max": 110,
+                "actual_quantity": 100,
+                "in_house_batch_no": null,
+                "performed_by": "Emily White",
+                "checked_by": "Grace Hall",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "IPA (Lot -I)",
+                "unit": "L",
+                "standard_quantity": 100,
+                "allowed_range_min": 90,
+                "allowed_range_max": 110,
+                "actual_quantity": 100,
+                "in_house_batch_no": null,
+                "performed_by": "Chris Green",
+                "checked_by": "Ethan Adams",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Methanol",
+                "unit": "L",
+                "standard_quantity": 100,
+                "allowed_range_min": 90,
+                "allowed_range_max": 110,
+                "actual_quantity": 100,
+                "in_house_batch_no": "UP-05",
+                "performed_by": "Sophia Carter",
+                "checked_by": "Mia Robinson",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Purified water (Lot-V)",
+                "unit": "L",
+                "standard_quantity": 800,
+                "allowed_range_min": 2200,
+                "allowed_range_max": 2260,
+                "actual_quantity": 2230,
+                "in_house_batch_no": "PA1240628M",
+                "performed_by": "David Wilson",
+                "checked_by": "Lucas Allen",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "IPA (Lot -II)",
+                "unit": "L",
+                "standard_quantity": 450,
+                "allowed_range_min": 425,
+                "allowed_range_max": 475,
+                "actual_quantity": 450,
+                "in_house_batch_no": "OH/240424M",
+                "performed_by": "Olivia Johnson",
+                "checked_by": "Charlotte Young",
+                "remarks": null,
+                "quantity_within_range": true
+            }
+        ]
+    },
+    "approval_details": {
+        "prepared_by": "Asst.Manager-Production/designee",
+        "reviewed_by": "Head - Production/designee",
+        "approved_by": "Head - QA/designee"
+    },
+    "document_metadata": {
+        "revision_no": "04",
+        "effective_date": "2024-08-01T00:00:00",
+        "mfr_ref_no": "RD/MF/GP/II(W)/GP-004",
+        "format_no": "OSP-021/F-002/00"
+    }
+}

@@ -80,7 +80,7 @@ def generate_schema_with_gpt(image_data_list, document_type):
 
             # Prepare the prompt
             prompt = f"""
-        You are provided with an image of page {idx + 1} of a document. 
+        You are provided with an image of page {idx + 1} of a document coming from the work logs of a Chemical factory. 
         Your task is to create a Pydantic schema that represents the structure of this document type.
         
         The schema should have:

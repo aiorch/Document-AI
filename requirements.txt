@@ -24,3 +24,5 @@ redis
 celery
 pdf2image
 importlib
+jsonify
+flask-cors

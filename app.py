@@ -1,17 +1,19 @@
 # app.py
 from celery import Celery
-from flask import Flask, request, render_template, flash
+from flask import Flask, request, render_template, flash, jsonify
 from src.processing import process_pdf_pages
 from dotenv import load_dotenv
 import json
 import os
 from threading import Lock
 from schema_helper import SCHEMA_DIR, load_schema, save_schema, generate_schema_with_gpt, convert_pdf_to_images
+from flask_cors import CORS
 
 load_dotenv()
 app = Flask(__name__)
 app.secret_key = "your_secret_key"
 app.config["UPLOAD_FOLDER"] = "uploads"
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 
 DOCUMENT_TYPES_FILE = "document_types.json"
@@ -75,51 +77,88 @@ def parse_pages_input(pages_input):
             pages.append(int(part))
     return pages
 
-@app.route("/", methods=["GET", "POST"])
-def upload_file():
-    if request.method == "POST":
-        files = request.files.getlist("files[]")
-        document_types_selected = request.form.getlist("document_types[]")
-
-        if not files:
-            flash("No files uploaded.")
-            return render_template("index.html", document_types=document_types)
-
-        if len(files) != len(document_types_selected):
-            flash("Each file must have a corresponding document type.")
-            return render_template("index.html", document_types=document_types)
-
-        task_ids = []
-        for file, doc_type in zip(files, document_types_selected):
-            if file and file.filename.endswith(".pdf"):
-                filepath = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
-                file.save(filepath)
-
-                # Trigger Celery task for each file
-                task = process_pdf_task.delay(filepath, [], doc_type)
-                task_ids.append(task.id)
-                flash(f"Task created for file: {file.filename} with document type: {doc_type}")
-
-        flash("All files uploaded and tasks created successfully!")
-        return render_template("index.html", document_types=document_types, task_ids=task_ids)
-
+# HTML Route for the Website
+@app.route("/", methods=["GET"])
+def index():
     return render_template("index.html", document_types=document_types)
 
-@app.route("/status/<task_id>")
+# API Route for Document Upload
+# @app.route("/api/document_process", methods=["POST"])
+# def document_upload():
+#     files = request.files.getlist("files[]")
+#     document_types_selected = request.form.getlist("document_types[]")
+
+#     if not files:
+#         return jsonify({"error": "No files uploaded."}), 400
+
+#     if len(files) != len(document_types_selected):
+#         return jsonify({"error": "Each file must have a corresponding document type."}), 400
+
+#     task_ids = []
+#     for file, doc_type in zip(files, document_types_selected):
+#         if file and file.filename.endswith(".pdf"):
+#             filepath = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
+#             file.save(filepath)
+
+#             # Trigger Celery task for each file
+#             task = process_pdf_task.delay(filepath, [], doc_type)
+#             task_ids.append(task.id)
+
+#     return jsonify({"message": "Files uploaded successfully!", "task_ids": task_ids})
+
+@app.route("/api/document_process", methods=["POST"])
+def upload_document():
+    file = request.files.get("file")
+    doc_type = request.form.get("document_type")
+
+    if not file or not doc_type:
+        return jsonify({"error": "File and document type are required."}), 400
+
+    if not file.filename.endswith(".pdf"):
+        return jsonify({"error": "Only PDF files are supported."}), 400
+
+    # Save the file
+    filepath = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
+    file.save(filepath)
+
+    # Trigger the Celery task
+    task = process_pdf_task.delay(filepath, [], doc_type)
+
+    # Return the task ID
+    return jsonify({"message": "Document uploaded successfully!", "task_id": task.id}), 202
+
+
+# @app.route("/api/status/<task_id>")
+# def task_status(task_id):
+#     task = process_pdf_task.AsyncResult(task_id)
+#     if task.state == "PENDING":
+#         response = {"state": task.state, "status": "Pending..."}
+#     elif task.state == "SUCCESS":
+#         response = {"state": task.state, "result": task.result}
+#     elif task.state == "FAILURE":
+#         response = {"state": task.state, "status": str(task.info)}
+#     else:
+#         response = {"state": task.state, "status": task.info}
+
+#     return render_template("task_status.html", response=response)
+
+@app.route("/api/status/<task_id>", methods=["GET"])
 def task_status(task_id):
     task = process_pdf_task.AsyncResult(task_id)
+    
+    # Build the response object based on task state
     if task.state == "PENDING":
-        response = {"state": task.state, "status": "Pending..."}
+        response = {"state": "PENDING", "status": "Pending..."}
     elif task.state == "SUCCESS":
-        response = {"state": task.state, "result": task.result}
+        response = {"state": "SUCCESS", "result": task.result}
     elif task.state == "FAILURE":
-        response = {"state": task.state, "status": str(task.info)}
+        response = {"state": "FAILURE", "error": str(task.info)}
     else:
         response = {"state": task.state, "status": task.info}
 
-    return render_template("task_status.html", response=response)
+    return jsonify(response), 200
 
-@app.route("/add_document_type", methods=["POST"])
+@app.route("/api/add_document_type", methods=["POST"])
 def add_document_type():
     new_type = request.form.get("document_type")
     if not new_type or new_type in document_types:
@@ -131,5 +170,18 @@ def add_document_type():
     flash(f"Document type '{new_type}' added successfully!")
     return render_template("index.html", document_types=document_types)
 
+@app.route("/chat", methods=["GET"])
+def chat_interface():
+    return render_template("chat.html")
+
+@app.route("/chat", methods=["POST"])
+def chat():
+    data = request.json  # Get JSON data from the request
+    user_message = data.get("message")  # Extract the user's message
+    # Log the message for debugging
+    print(f"User message: {user_message}")
+    # Placeholder response
+    return jsonify({"reply": "Message processed"})
+
 if __name__ == "__main__":
-   app.run(host="0.0.0.0", port=5001, debug=True)
+   app.run(host="0.0.0.0", port=5002, debug=True)

@@ -8,7 +8,7 @@
     <h1>Upload PDFs for Processing</h1>
 
     <!-- Form for uploading PDFs -->
-    <form action="/" method="POST" enctype="multipart/form-data">
+    <form action="/api/document_process" method="POST" enctype="multipart/form-data">
         <div id="fileInputs">
             <!-- Initial file input -->
             <div class="file-input-group">
@@ -31,7 +31,7 @@
 
     <!-- Form for adding a new document type -->
     <h2>Add a New Document Type</h2>
-    <form action="/add_document_type" method="POST">
+    <form action="/api/add_document_type" method="POST">
         <label for="new_document_type">New Document Type:</label>
         <input type="text" name="document_type" id="new_document_type" required>
         <button type="submit">Add</button>

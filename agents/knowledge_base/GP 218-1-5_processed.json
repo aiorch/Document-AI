@@ -1,891 +1,612 @@
 {
-    "batch_details": {
-        "product_name": "Gabapentin",
+    "page_1": {
+        "product": "Gabapentin",
         "stage": "GP (IPA + Methanol + Water)",
         "batch_no": "GP/08 2024 0218",
-        "batch_started_on": "2024-08-26T00:00:00",
-        "batch_completed_on": "2024-08-29T00:00:00"
-    },
-    "material_usage_table": {
-        "rows": [
+        "batch_started_on": "26/08/24",
+        "batch_completed_on": "29/08/24",
+        "raw_material_details": [
             {
+                "s_no": 1,
                 "raw_material": "Purified water (Lot-I)",
                 "unit": "L",
                 "standard_quantity": 2500,
-                "allowed_range_min": 2450,
-                "allowed_range_max": 2550,
+                "allowed_range": "2450 to 2550",
                 "actual_quantity": 2500,
-                "in_house_batch_no": "UP-08",
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
-                "remarks": null,
-                "quantity_within_range": true
+                "in_house_b_no_ar_no": "UP-08",
+                "performed_by": "Ky",
+                "checked_by": null,
+                "remarks": null
             },
             {
+                "s_no": 2,
                 "raw_material": "GP HCI",
                 "unit": "Kg",
                 "standard_quantity": 1800,
-                "allowed_range_min": 1728,
-                "allowed_range_max": 2090,
+                "allowed_range": "1728 to 2090",
                 "actual_quantity": 1999,
-                "in_house_batch_no": "0139, 0140, 0141, 0142",
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
-                "remarks": null,
-                "quantity_within_range": true
+                "in_house_b_no_ar_no": "0139, 0140, 0141, 0142",
+                "performed_by": "Ky",
+                "checked_by": null,
+                "remarks": null
             },
             {
+                "s_no": 3,
                 "raw_material": "CS Lye (48% w/w) (Lot-I)",
                 "unit": "L",
                 "standard_quantity": 190,
-                "allowed_range_min": 180,
-                "allowed_range_max": 200,
+                "allowed_range": "180 to 200",
                 "actual_quantity": 190,
-                "in_house_batch_no": "CL/200412",
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
-                "remarks": null,
-                "quantity_within_range": true
+                "in_house_b_no_ar_no": "CL/200412",
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
+                "s_no": 4,
                 "raw_material": "Activated Carbon",
                 "unit": "Kg",
                 "standard_quantity": 10,
-                "allowed_range_min": 8,
-                "allowed_range_max": 12,
+                "allowed_range": "8 to 12",
                 "actual_quantity": 10,
-                "in_house_batch_no": "PSCB/200 404",
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
-                "remarks": null,
-                "quantity_within_range": true
+                "in_house_b_no_ar_no": "PSCB/200 404",
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
+                "s_no": 5,
                 "raw_material": "Purified water (Lot-II)",
                 "unit": "L",
                 "standard_quantity": 20,
-                "allowed_range_min": 15,
-                "allowed_range_max": 25,
+                "allowed_range": "15 to 25",
                 "actual_quantity": 20,
-                "in_house_batch_no": "UP-08",
-                "performed_by": "Daniel Garcia",
-                "checked_by": "Jacob Miller",
-                "remarks": null,
-                "quantity_within_range": true
+                "in_house_b_no_ar_no": "UP-08",
+                "performed_by": "ky",
+                "checked_by": null,
+                "remarks": null
             },
             {
+                "s_no": 6,
                 "raw_material": "Purified water (Lot-III)",
                 "unit": "L",
                 "standard_quantity": 500,
-                "allowed_range_min": 450,
-                "allowed_range_max": 550,
+                "allowed_range": "450 to 550",
                 "actual_quantity": 500,
-                "in_house_batch_no": "UP-08",
-                "performed_by": "Sophia Lee",
-                "checked_by": "Ella Thomas",
-                "remarks": null,
-                "quantity_within_range": true
+                "in_house_b_no_ar_no": "UP-08",
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
+                "s_no": 7,
                 "raw_material": "CS Lye (48% w/w) (Lot-II)",
                 "unit": "L",
                 "standard_quantity": 250,
-                "allowed_range_min": 225,
-                "allowed_range_max": 275,
+                "allowed_range": "225 to 275",
                 "actual_quantity": 250,
-                "in_house_batch_no": null,
-                "performed_by": "Michael Clark",
-                "checked_by": "Liam Walker",
-                "remarks": null,
-                "quantity_within_range": true
+                "in_house_b_no_ar_no": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
+                "s_no": 8,
                 "raw_material": "Purified water (Lot-IV)",
                 "unit": "L",
                 "standard_quantity": 100,
-                "allowed_range_min": 90,
-                "allowed_range_max": 110,
+                "allowed_range": "90 to 110",
                 "actual_quantity": 100,
-                "in_house_batch_no": null,
-                "performed_by": "Emily White",
-                "checked_by": "Grace Hall",
-                "remarks": null,
-                "quantity_within_range": true
+                "in_house_b_no_ar_no": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "raw_material": "IPA (Lot-I)",
+                "s_no": 9,
+                "raw_material": "IPA (Lot -I)",
                 "unit": "L",
                 "standard_quantity": 100,
-                "allowed_range_min": 90,
-                "allowed_range_max": 110,
+                "allowed_range": "90 to 110",
                 "actual_quantity": 100,
-                "in_house_batch_no": "UP-05",
-                "performed_by": "Chris Green",
-                "checked_by": "Ethan Adams",
-                "remarks": null,
-                "quantity_within_range": true
+                "in_house_b_no_ar_no": "UP-05",
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
+                "s_no": 10,
                 "raw_material": "Methanol",
                 "unit": "L",
                 "standard_quantity": 100,
-                "allowed_range_min": 90,
-                "allowed_range_max": 110,
+                "allowed_range": "90 to 110",
                 "actual_quantity": 100,
-                "in_house_batch_no": null,
-                "performed_by": "Sophia Carter",
-                "checked_by": "Mia Robinson",
-                "remarks": null,
-                "quantity_within_range": true
+                "in_house_b_no_ar_no": "UP-05",
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
+                "s_no": 11,
                 "raw_material": "Purified water (Lot-V)",
                 "unit": "L",
                 "standard_quantity": 100,
-                "allowed_range_min": 90,
-                "allowed_range_max": 110,
+                "allowed_range": "90 to 110",
                 "actual_quantity": 100,
-                "in_house_batch_no": "UP-05",
-                "performed_by": "David Wilson",
-                "checked_by": "Lucas Allen",
-                "remarks": null,
-                "quantity_within_range": true
+                "in_house_b_no_ar_no": "UP-05",
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "raw_material": "IPA (Lot-II)",
+                "s_no": 12,
+                "raw_material": "IPA (Lot -II)",
                 "unit": "L",
                 "standard_quantity": 100,
-                "allowed_range_min": 90,
-                "allowed_range_max": 110,
+                "allowed_range": "90 to 110",
                 "actual_quantity": 100,
-                "in_house_batch_no": "UP-05",
-                "performed_by": "Olivia Johnson",
-                "checked_by": "Charlotte Young",
-                "remarks": null,
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "Purified water",
-                "unit": "L",
-                "standard_quantity": 2230,
-                "allowed_range_min": 2200,
-                "allowed_range_max": 2260,
-                "actual_quantity": 2230,
-                "in_house_batch_no": "PA1240628M",
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
-                "remarks": null,
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "CS Lye",
-                "unit": "L",
-                "standard_quantity": 450,
-                "allowed_range_min": 425,
-                "allowed_range_max": 475,
-                "actual_quantity": 450,
-                "in_house_batch_no": "OH/240424M",
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
-                "remarks": null,
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "Purified water",
-                "unit": "L",
-                "standard_quantity": 270,
-                "allowed_range_min": 250,
-                "allowed_range_max": 270,
-                "actual_quantity": 270,
-                "in_house_batch_no": "UP-07",
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
-                "remarks": null,
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "Methanol",
-                "unit": "L",
-                "standard_quantity": 500,
-                "allowed_range_min": 480,
-                "allowed_range_max": 520,
-                "actual_quantity": 500,
-                "in_house_batch_no": "PAL 240428M",
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
-                "remarks": null,
-                "quantity_within_range": true
+                "in_house_b_no_ar_no": "UP-05",
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             }
-        ]
+        ],
+        "prepared_by": "Asst.Manager-Production/designee",
+        "prepared_date": "15/07/2024",
+        "reviewed_by": "Head - Production/designee",
+        "reviewed_date": "16/07/24",
+        "approved_by": "Head - QA/designee",
+        "approved_date": "16/02/24",
+        "revision_no": "04",
+        "effective_date": "01-08-2024",
+        "format_no": "OSP-021/F-002/00",
+        "page": "1 of 15"
     },
-    "equipment_list": {
-        "equipments": [
+    "page_2": {
+        "batch_no": "GP/08 2024 0218",
+        "list_of_equipments": [
             {
-                "serial_no": 1,
+                "s_no": 1,
                 "name": "Glass Lined reactor",
                 "id_no": "GLRE-1010"
             },
             {
-                "serial_no": 2,
+                "s_no": 2,
                 "name": "Glass Lined reactor",
                 "id_no": "GLRE-1014"
             },
             {
-                "serial_no": 3,
+                "s_no": 3,
                 "name": "Stainless steel Centrifuge",
                 "id_no": "SSCF-1001"
             },
             {
-                "serial_no": 4,
+                "s_no": 4,
                 "name": "Stainless steel Centrifuge",
                 "id_no": "SSCF-1002"
             },
             {
-                "serial_no": 5,
+                "s_no": 5,
                 "name": "SSPCS",
                 "id_no": "SSPCS-1001"
             },
             {
-                "serial_no": 6,
+                "s_no": 6,
                 "name": "Glass Lined reactor",
                 "id_no": "GLRE-1015"
             },
             {
-                "serial_no": 7,
+                "s_no": 7,
                 "name": "SSANFD\u00ae",
                 "id_no": "SSANFD-1006"
             },
             {
-                "serial_no": 8,
+                "s_no": 8,
                 "name": "Stainless steel Hopper",
                 "id_no": "SSHP-1001"
             },
             {
-                "serial_no": 9,
+                "s_no": 9,
                 "name": "SSRCVD",
                 "id_no": "SSRCVD-1001"
             }
-        ]
-    },
-    "raw_material_sheet": {
-        "measurements": [
+        ],
+        "raw_material_measuring_sheet": [
             {
-                "id": "Purified Water , Flow meter No. FM-1010",
                 "op_no": 1,
-                "initial_volume": 2500,
-                "final_volume": 0,
-                "difference_volume": 2500
+                "initial_reading_l": 2500,
+                "final_reading_l": 0,
+                "difference_l": 2500
             },
             {
-                "id": "Purified Water , Flow meter No. FM-1010",
                 "op_no": 5,
-                "initial_volume": 20,
-                "final_volume": 0,
-                "difference_volume": 20
+                "initial_reading_l": 20,
+                "final_reading_l": 0,
+                "difference_l": 20
             },
             {
-                "id": "Purified Water , Flow meter No. FM-1010",
-                "op_no": 9,
-                "initial_volume": 500,
-                "final_volume": 0,
-                "difference_volume": 500
-            },
-            {
-                "id": "Purified Water (SSJRC 1005)",
                 "op_no": 17,
-                "initial_volume": 800,
-                "final_volume": 700,
-                "difference_volume": 100
+                "initial_reading_l": 800,
+                "final_reading_l": 700,
+                "difference_l": 100
             },
             {
-                "id": "Purified Water (SSJRC 1005)",
                 "op_no": 22,
-                "initial_volume": 700,
-                "final_volume": 600,
-                "difference_volume": 100
+                "initial_reading_l": 700,
+                "final_reading_l": 600,
+                "difference_l": 100
             },
             {
-                "id": "Purified Water (SSJRC 1005)",
                 "op_no": 27,
-                "initial_volume": 600,
-                "final_volume": 500,
-                "difference_volume": 100
+                "initial_reading_l": 600,
+                "final_reading_l": 500,
+                "difference_l": 100
             },
             {
-                "id": "Purified Water (SSJRC 1005)",
                 "op_no": 32,
-                "initial_volume": 500,
-                "final_volume": 400,
-                "difference_volume": 100
+                "initial_reading_l": 500,
+                "final_reading_l": 400,
+                "difference_l": 100
             },
             {
-                "id": "Purified Water (SSJRC 1005)",
                 "op_no": 37,
-                "initial_volume": 400,
-                "final_volume": 300,
-                "difference_volume": 100
+                "initial_reading_l": 400,
+                "final_reading_l": 300,
+                "difference_l": 100
             },
             {
-                "id": "Purified Water (SSJRC 1005)",
                 "op_no": 42,
-                "initial_volume": 300,
-                "final_volume": 200,
-                "difference_volume": 100
+                "initial_reading_l": 300,
+                "final_reading_l": 200,
+                "difference_l": 100
             },
             {
-                "id": "Purified Water (SSJRC 1005)",
                 "op_no": 47,
-                "initial_volume": 200,
-                "final_volume": 100,
-                "difference_volume": 100
+                "initial_reading_l": 200,
+                "final_reading_l": 100,
+                "difference_l": 100
             },
             {
-                "id": "Purified Water (SSJRC 1005)",
                 "op_no": 52,
-                "initial_volume": 100,
-                "final_volume": 0,
-                "difference_volume": 100
+                "initial_reading_l": 100,
+                "final_reading_l": 0,
+                "difference_l": 100
             },
             {
-                "id": "CS Lye (SSRC 1010)",
                 "op_no": 4,
-                "initial_volume": 190,
-                "final_volume": 0,
-                "difference_volume": 190
+                "initial_reading_l": 190,
+                "final_reading_l": 0,
+                "difference_l": 190
             },
             {
-                "id": "CS Lye (SSRC 1004)",
                 "op_no": 12,
-                "initial_volume": 250,
-                "final_volume": 0,
-                "difference_volume": 250
+                "initial_reading_l": 250,
+                "final_reading_l": 0,
+                "difference_l": 250
             },
             {
-                "id": "IPA (SSRC 1011)",
                 "op_no": 55,
-                "initial_volume": 2230,
-                "final_volume": 0,
-                "difference_volume": 230
+                "initial_reading_l": 2230,
+                "final_reading_l": 0,
+                "difference_l": 230
             },
             {
-                "id": "Methanol (SSRC 1012)",
                 "op_no": 56,
-                "initial_volume": 450,
-                "final_volume": 0,
-                "difference_volume": 450
+                "initial_reading_l": 450,
+                "final_reading_l": 0,
+                "difference_l": 450
             },
             {
-                "id": "IPA (SSRC 1011)",
                 "op_no": 66,
-                "initial_volume": 2230,
-                "final_volume": 0,
-                "difference_volume": 230
+                "initial_reading_l": 2230,
+                "final_reading_l": 0,
+                "difference_l": 230
             }
-        ]
+        ],
+        "prepared_by": "Asst.Manager-Production/designee",
+        "reviewed_by": "Head - Production/designee",
+        "approved_by": "Head - QA/designee",
+        "sign_date_prepared_by": "15/07/2024",
+        "sign_date_reviewed_by": "16/07/24",
+        "sign_date_approved_by": "16/07/24",
+        "revision_no": "04",
+        "effective_date": "01-08-2024",
+        "mfr_ref_no": "RD/MF/GP/II(W)/GP-004",
+        "format_no": "QSP-021/F-002/00",
+        "page_info": "2 of 15"
     },
-    "manufacturing_procedure": {
-        "steps": [
+    "page_3": {
+        "batch_no": "GP/08 2024 0218",
+        "date": "27/08/24",
+        "op_records": [
             {
-                "op_no": 1,
+                "operation_number": 1,
                 "description": "Check the cleanliness of the reactor.",
-                "equipment_no": [
-                    "GLRE-1010"
-                ],
-                "date": "2024-08-26T00:00:00",
+                "equipment_number": "GLRE-1010",
+                "date": "26/08/24",
                 "time_from": "16:00",
                 "time_to": "17:40",
                 "duration": null,
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
-                "remarks": "Cleaned/Uncleaned",
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": "Cleaned/Uncleaned"
             },
             {
-                "op_no": 2,
+                "operation_number": 2,
                 "description": "Charge Purified Water (Lot-I) into the reactor.",
-                "equipment_no": [
-                    "GLRE-1010"
-                ],
-                "date": "2024-08-26T00:00:00",
+                "equipment_number": "GLRE-1010",
+                "date": "26/08/24",
                 "time_from": "17:40",
                 "time_to": "19:00",
                 "duration": null,
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
-                "remarks": "Vol: 28001",
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": "Vol: 28001"
             },
             {
-                "op_no": 3,
+                "operation_number": 3,
                 "description": "Charge GP HCI into the reactor under stirring.",
-                "equipment_no": [
-                    "GLRE-1010"
-                ],
-                "date": "2024-08-26T00:00:00",
+                "equipment_number": "GLRE-1010",
+                "date": "26/08/24",
                 "time_from": "19:00",
                 "time_to": "19:30",
                 "duration": null,
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
-                "remarks": null,
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 4,
-                "description": "Charge CS Lye (Lot-I) from the receiver SSRC-1010 to the reactor below 30\u00b0C.",
-                "equipment_no": [
-                    "SSRC-1010",
-                    "GLRE-1010"
-                ],
-                "date": "2024-08-26T00:00:00",
+                "operation_number": 4,
+                "description": "Stir for 20 to 30 minutes.",
+                "equipment_number": "GLRE-1010",
+                "date": "26/08/24",
                 "time_from": "19:30",
                 "time_to": "20:00",
                 "duration": null,
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
-                "remarks": "Temp: Vol: 190L, Clear / Not Clear",
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 5,
-                "description": "Charge Activated carbon slurry (Purified Water Lot-II + Activated carbon) into the reactor.",
-                "equipment_no": [
-                    "GLRE-1010"
-                ],
-                "date": "2024-08-26T00:00:00",
+                "operation_number": 5,
+                "description": "Charge CS Lye ( Lot-I ) from the receiver SSRC-1010 to the reactor below 30\u00b0C.",
+                "equipment_number": "SSRC-1010 to GLRE-1010",
+                "date": "26/08/24",
                 "time_from": "20:00",
                 "time_to": "20:10",
                 "duration": null,
-                "performed_by": "Daniel Garcia",
-                "checked_by": "Jacob Miller",
-                "remarks": null,
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": "Vol: 190L, Clear / Not Clear"
             },
             {
-                "op_no": 6,
-                "description": "Stir for 20 to 30 minutes.",
-                "equipment_no": [
-                    "GLRE-1010"
-                ],
-                "date": "2024-08-26T00:00:00",
+                "operation_number": 6,
+                "description": "Charge Activated carbon slurry (Purified Water Lot-II + Activated carbon) into the reactor.",
+                "equipment_number": "GLRE-1010",
+                "date": "26/08/24",
                 "time_from": "20:10",
+                "time_to": "20:20",
+                "duration": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
+            },
+            {
+                "operation_number": 7,
+                "description": "Stir for 20 to 30 minutes.",
+                "equipment_number": "GLRE-1010",
+                "date": "26/08/24",
+                "time_from": "20:20",
                 "time_to": "20:40",
                 "duration": null,
-                "performed_by": "Sophia Lee",
-                "checked_by": "Ella Thomas",
-                "remarks": null,
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 7,
-                "description": "Check the cleanliness of the reactor. Filter reaction mass through the filter setup (SSCF-1001,SSMF-1001&SSMF-1002). Initially re-circulate the mass for 10 to 15 minutes.",
-                "equipment_no": [
-                    "GLRE-1014"
-                ],
-                "date": "2024-08-26T00:00:00",
+                "operation_number": 8,
+                "description": "Check the cleanliness of the reactor.Filter reaction mass through the filter setup (SSCF-1001,SSMF-1001&SSMF-1002). Initially re-circulate the mass for 10 to 15 minutes.",
+                "equipment_number": "GLRE-1014",
+                "date": "26/08/24",
                 "time_from": "20:40",
-                "time_to": "22:40",
+                "time_to": "21:00",
                 "duration": null,
-                "performed_by": "Michael Clark",
-                "checked_by": "Liam Walker",
-                "remarks": "Solution : Clear/Unclear",
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": "Solution : Clear/Unclear"
             },
             {
-                "op_no": 8,
+                "operation_number": 9,
                 "description": "If found satisfactory, transfer the filtered mass to another clean reactor (GLRE 1014).",
-                "equipment_no": [
-                    "GLRE-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "equipment_number": "GLRE-1014",
+                "date": "27/08/24",
                 "time_from": "01:00",
                 "time_to": "01:15",
                 "duration": null,
-                "performed_by": "Emily White",
-                "checked_by": "Grace Hall",
-                "remarks": null,
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 9,
+                "operation_number": 10,
                 "description": "After completion of filtration flush the filter setup with Nitrogen pressure.",
-                "equipment_no": [
-                    "GLRE-1010"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "equipment_number": "GLRE-1010",
+                "date": "27/08/24",
                 "time_from": "01:15",
                 "time_to": "01:30",
                 "duration": null,
-                "performed_by": "Chris Green",
-                "checked_by": "Ethan Adams",
-                "remarks": null,
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 10,
+                "operation_number": 11,
                 "description": "Charge Purified Water Lot-III into reactor.",
-                "equipment_no": [
-                    "GLRE-1010"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "equipment_number": "GLRE-1010",
+                "date": "27/08/24",
                 "time_from": "01:30",
                 "time_to": "01:45",
                 "duration": null,
-                "performed_by": "Sophia Carter",
-                "checked_by": "Mia Robinson",
-                "remarks": null,
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 11,
+                "operation_number": 12,
                 "description": "Transfer the Water through the filter setup into GLRE 1014.",
-                "equipment_no": [
-                    "SSLF-1002",
-                    "SSMF-1001",
-                    "SSMF-1002"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "equipment_number": "GLRE-1010",
+                "date": "27/08/24",
                 "time_from": "01:45",
                 "time_to": "02:00",
                 "duration": null,
-                "performed_by": "David Wilson",
-                "checked_by": "Lucas Allen",
-                "remarks": null,
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 12,
+                "operation_number": 13,
                 "description": "Slowly adjust the mass pH to 7.0 to 7.5 with filtered CS Lye (Lot-II) from receiver SSRC-1004 below 40\u2103.",
-                "equipment_no": [
-                    "GLRE-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "equipment_number": "GLRE-1014",
+                "date": "27/08/24",
                 "time_from": "02:00",
                 "time_to": "03:30",
                 "duration": null,
-                "performed_by": "Olivia Johnson",
-                "checked_by": "Charlotte Young",
-                "remarks": "PH: 7.17",
-                "temperature_records": [
-                    {
-                        "time": "02:00",
-                        "temp_c": 27.2,
-                        "sign": "PSI"
-                    },
-                    {
-                        "time": "02:30",
-                        "temp_c": 30.1,
-                        "sign": "153"
-                    },
-                    {
-                        "time": "03:00",
-                        "temp_c": 35.6,
-                        "sign": "PSD"
-                    },
-                    {
-                        "time": "03:30",
-                        "temp_c": 39.8,
-                        "sign": "fss"
-                    }
-                ]
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": "PH: 7.17"
             },
             {
-                "op_no": 13,
-                "description": "Maintain for 30 minutes at 30\u00b0C to 40\u00b0C.",
-                "equipment_no": [
-                    "GLRE-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "operation_number": 14,
+                "description": "Maintain for 30 minutes at 30\u00b0 C to 40\u00b0C.",
+                "equipment_number": "GLRE-1014",
+                "date": "27/08/24",
                 "time_from": "03:30",
                 "time_to": "04:00",
                 "duration": null,
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
-                "remarks": null,
-                "temperature_records": [
-                    {
-                        "time": "04:00",
-                        "temp_c": 39.8,
-                        "sign": "855"
-                    }
-                ]
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 14,
+                "operation_number": 15,
                 "description": "Cool to below 5\u00baC.",
-                "equipment_no": [
-                    "GLRE-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "equipment_number": "GLRE-1014",
+                "date": "27/08/24",
                 "time_from": "04:00",
+                "time_to": "05:00",
+                "duration": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
+            },
+            {
+                "operation_number": 16,
+                "description": "Check the cleanliness of Centrifuge.",
+                "equipment_number": "GLRE-1014",
+                "date": "27/08/24",
+                "time_from": "05:00",
                 "time_to": "06:00",
                 "duration": null,
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
-                "remarks": null,
-                "temperature_records": [
-                    {
-                        "time": "05:00",
-                        "temp_c": 34.2,
-                        "sign": "851"
-                    },
-                    {
-                        "time": "06:00",
-                        "temp_c": 29.5,
-                        "sign": "V Rio"
-                    }
-                ]
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": "Cleaned/Uncleaned"
             },
             {
-                "op_no": 15,
-                "description": "Check the cleanliness of Centrifuge.",
-                "equipment_no": [
-                    "GLRE-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
-                "time_from": "06:00",
-                "time_to": "06:30",
-                "duration": null,
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
-                "remarks": "Cleaned/Uncleaned",
-                "temperature_records": null
-            },
-            {
-                "op_no": 16,
+                "operation_number": 17,
                 "description": "Load the Lot-I material into the centrifuge at speed knob position 1",
-                "equipment_no": [
-                    "SSCF-1001",
-                    "SSCF-1002"
-                ],
-                "date": "2024-08-27T00:00:00",
-                "time_from": "06:30",
+                "equipment_number": "SSCF-1001/1002",
+                "date": "27/08/24",
+                "time_from": "06:00",
                 "time_to": "07:00",
                 "duration": null,
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
-                "remarks": null,
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 17,
+                "operation_number": 18,
                 "description": "Spin dry the material for 15 to 30 min. by using centrifuge speed knob at position 3",
-                "equipment_no": [
-                    "SSCF-1001",
-                    "SSCF-1002"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "equipment_number": "SSCF-1001/1002",
+                "date": "27/08/24",
                 "time_from": "07:00",
-                "time_to": "07:30",
-                "duration": null,
-                "performed_by": "Daniel Garcia",
-                "checked_by": "Jacob Miller",
-                "remarks": null,
-                "temperature_records": null
-            },
-            {
-                "op_no": 18,
-                "description": "Wash the material with chilled Purified water (Lot-IV) from receiver SSJRC-1005 by using speed knob at position 1 and collect the ML's into receiver SSRC-1014.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSRC-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
-                "time_from": "07:30",
                 "time_to": "08:00",
                 "duration": null,
-                "performed_by": "Sophia Lee",
-                "checked_by": "Ella Thomas",
-                "remarks": "Vol : 100 L",
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 19,
-                "description": "Spin dry the material for 30 to 45 min. by using at speed knob position 3",
-                "equipment_no": [
-                    "SSCF-1001",
-                    "SSCF-1002"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "operation_number": 19,
+                "description": "Wash the material with chilled Purified water (Lot-IV) from receiver SSJRC-1005 by using speed knob at position 1 and collect the ML's into receiver SSRC-1014.",
+                "equipment_number": "SSCF-1001/1002",
+                "date": "27/08/24",
                 "time_from": "08:00",
-                "time_to": "08:45",
-                "duration": null,
-                "performed_by": "Michael Clark",
-                "checked_by": "Liam Walker",
-                "remarks": null,
-                "temperature_records": null
-            },
-            {
-                "op_no": 20,
-                "description": "Check the sample for chloride content (Chlorides : NMT 100 ppm)",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSRC-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
-                "time_from": "08:45",
                 "time_to": "09:00",
                 "duration": null,
-                "performed_by": "Emily White",
-                "checked_by": "Grace Hall",
-                "remarks": "Complies / Does not comply.",
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": "Vol : 100 L"
             },
             {
-                "op_no": 21,
-                "description": "If not, repeat the operation no. 17 & 18.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSRC-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "operation_number": 20,
+                "description": "Spin dry the material for 30 to 45 min. by using at speed knob position 3",
+                "equipment_number": "SSCF-1001/1002",
+                "date": "27/08/24",
                 "time_from": "09:00",
-                "time_to": "09:30",
-                "duration": null,
-                "performed_by": "Chris Green",
-                "checked_by": "Ethan Adams",
-                "remarks": "Volume :",
-                "temperature_records": null
-            },
-            {
-                "op_no": 22,
-                "description": "Unload the material into a single poly lined HDPE container",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSRC-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
-                "time_from": "09:30",
                 "time_to": "10:00",
                 "duration": null,
-                "performed_by": "Sophia Carter",
-                "checked_by": "Mia Robinson",
-                "remarks": null,
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 23,
-                "description": "Load the Lot-II material into the centrifuge at speed knob position 1",
-                "equipment_no": [
-                    "SSCF-1001",
-                    "SSCF-1002"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "operation_number": 21,
+                "description": "Check the sample for chloride content (Chlorides : NMT 100 ppm)",
+                "equipment_number": "SSCF-1001/1002",
+                "date": "27/08/24",
                 "time_from": "10:00",
                 "time_to": "10:30",
                 "duration": null,
-                "performed_by": "David Wilson",
-                "checked_by": "Lucas Allen",
-                "remarks": null,
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": "Complies / Does not comply."
             },
             {
-                "op_no": 24,
-                "description": "Spin dry the material for 15 to 30 min. by using centrifuge speed knob at position 3",
-                "equipment_no": [
-                    "SSCF-1001",
-                    "SSCF-1002"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "operation_number": 22,
+                "description": "Unload the material into a single poly lined HDPE container",
+                "equipment_number": "SSCF-1001/1002",
+                "date": "27/08/24",
                 "time_from": "10:30",
                 "time_to": "11:00",
                 "duration": null,
-                "performed_by": "Olivia Johnson",
-                "checked_by": "Charlotte Young",
-                "remarks": null,
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 25,
-                "description": "Wash the material with chilled Purified water (Lot-IV) from receiver SSJRC-1005 by using speed knob at position 1 and collect the ML's into receiver SSRC-1014.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSRC-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "operation_number": 23,
+                "description": "Load the Lot-II material into the centrifuge at speed knob position 1",
+                "equipment_number": "SSCF-1001/1002",
+                "date": "27/08/24",
                 "time_from": "11:00",
                 "time_to": "11:30",
                 "duration": null,
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
-                "remarks": "Vol : 100L",
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             },
             {
-                "op_no": 26,
-                "description": "Spin dry the material for 30 to 45 min.by using at speed knob position 3",
-                "equipment_no": [
-                    "SSCF-1001",
-                    "SSCF-1002"
-                ],
-                "date": "2024-08-27T00:00:00",
+                "operation_number": 24,
+                "description": "Spin dry the material for 15 to 30 min. by using centrifuge speed knob at position 3",
+                "equipment_number": "SSCF-1001/1002",
+                "date": "27/08/24",
                 "time_from": "11:30",
                 "time_to": "12:00",
                 "duration": null,
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
-                "remarks": null,
-                "temperature_records": null
-            },
-            {
-                "op_no": 27,
-                "description": "Check the sample for chloride content (Chlorides : NMT 100 ppm)",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSRC-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
-                "time_from": "12:00",
-                "time_to": "12:30",
-                "duration": null,
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
-                "remarks": "Complies / Does not comply.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 28,
-                "description": "If not, repeat the operation no. 22 & 23.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSRC-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
-                "time_from": "12:30",
-                "time_to": "13:00",
-                "duration": null,
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
-                "remarks": "Volume :",
-                "temperature_records": null
-            },
-            {
-                "op_no": 29,
-                "description": "Unload the material into single poly lined HDPE container.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSRC-1014"
-                ],
-                "date": "2024-08-27T00:00:00",
-                "time_from": "13:00",
-                "time_to": "13:30",
-                "duration": null,
-                "performed_by": "Daniel Garcia",
-                "checked_by": "Jacob Miller",
-                "remarks": null,
-                "temperature_records": null
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null
             }
         ]
-    },
-    "approval_details": {
-        "prepared_by": "Asst.Manager-Production/designee",
-        "reviewed_by": "Head - Production/designee",
-        "approved_by": "Head - QA/designee"
-    },
-    "document_metadata": {
-        "revision_no": "04",
-        "effective_date": "2024-08-01T00:00:00",
-        "mfr_ref_no": "RD/MF/GP/II(W)/GP-004",
-        "format_no": "OSP-021/F-002/00"
     }
 }
