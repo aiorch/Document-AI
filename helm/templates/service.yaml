@@ -1,12 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Release.Name }}-service
+  name: {{ include "docai-app.fullname" . }}
+  labels:
+    {{- include "docai-app.labels" . | nindent 4 }}
 spec:
-  selector:
-    app.kubernetes.io/instance: {{ .Release.Name }}
   type: {{ .Values.service.type }}
   ports:
-    - protocol: {{ .Values.service.protocol | default "TCP" }}
-      port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.targetPort }}
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "docai-app.selectorLabels" . | nindent 4 }}

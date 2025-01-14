@@ -1,31 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-docaiapp
+  name: {{ include "docai-app.fullname" . }}
   labels:
-    app: docaiapp
+    {{- include "docai-app.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: docaiapp
+      {{- include "docai-app.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        app: docaiapp
+        {{- include "docai-app.selectorLabels" . | nindent 8 }}
     spec:
+      serviceAccountName: {{ include "docai-app.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
               containerPort: 5001
               protocol: TCP
-          volumeMounts:
-            - name: shared-file
-              mountPath: /usr/share/
-      volumes:
-        - name: shared-file
-          configMap:
-            name: {{ .Release.Name }}-docaicontent-configmap
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
