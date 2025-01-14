@@ -6,9 +6,9 @@ from agents.knowledge_graph_agent.langchain_graph_agent import GraphQAAgent
 from agents.sql_agent.langchain_sql_agent import SQLQAAgent
 from agents.workflow_agent.workflow_main import WorkflowAgent
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-ENV_PATH = os.path.join(script_dir, "../.env")
-load_dotenv(ENV_PATH, override=True)
+# script_dir = os.path.dirname(os.path.abspath(__file__))
+# ENV_PATH = os.path.join(script_dir, "../.env")
+# load_dotenv(ENV_PATH, override=True)
 
 
 def initialize_sql_agent():

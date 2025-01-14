@@ -6,3 +6,4 @@ __pycache__/
 myenv/
 venv/
 dump.rdb
+*_venv/

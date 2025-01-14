@@ -15,7 +15,7 @@ CELERY_PID=$!
 trap "echo 'Shutting down services...'; kill $REDIS_PID $CELERY_PID; exit" SIGINT SIGTERM
 
 echo "Starting Flask app..."
-python3 app.py  # Run Flask app in the foreground
+docai_venv/bin/python app.py  # Run Flask app in the foreground
 
 echo "Shutting down services..."
 kill $REDIS_PID $CELERY_PID

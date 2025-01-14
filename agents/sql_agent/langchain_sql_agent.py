@@ -5,7 +5,7 @@ from langchain import hub
 from langchain.agents import create_sql_agent
 from langchain.sql_database import SQLDatabase
 from langchain_openai import ChatOpenAI
-from utils import SQL_QA_TEMPLATE
+from agents.sql_agent.utils import SQL_QA_TEMPLATE
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 ENV_PATH = os.path.join(script_dir, ".env")

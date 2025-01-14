@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage
 from langchain_openai import ChatOpenAI
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-ENV_PATH = os.path.join(script_dir, "../.env")
-load_dotenv(ENV_PATH, override=True)
+# script_dir = os.path.dirname(os.path.abspath(__file__))
+# ENV_PATH = os.path.join(script_dir, "../.env")
+# load_dotenv(ENV_PATH, override=True)
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4")
 
 

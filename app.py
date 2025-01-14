@@ -8,12 +8,27 @@ import os
 from threading import Lock
 from schema_helper import SCHEMA_DIR, load_schema, save_schema, generate_schema_with_gpt, convert_pdf_to_images
 from flask_cors import CORS
+from agents.sql_agent.json_to_db import JSONToSQL
+from agents.sql_agent.utils import (
+    ensure_column_exists,
+    insert_data,
+)
+from agents.controller_agent.controller import app as controller_app
+import asyncio
 
 load_dotenv()
 app = Flask(__name__)
 app.secret_key = "your_secret_key"
 app.config["UPLOAD_FOLDER"] = "uploads"
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+#CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app, resources={
+    r"/api/*": {
+        "origins": ["http://localhost:5000"],  # Allow frontend origin
+        "methods": ["POST", "GET", "OPTIONS"],  # Allow specific methods
+        "allow_headers": ["Content-Type"],  # Allow specific headers
+        "supports_credentials": True
+    }
+})
 os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 
 DOCUMENT_TYPES_FILE = "document_types.json"
@@ -62,7 +77,8 @@ def process_pdf_task(filepath, pages, document_type):
 
 
     print(f"Processing file: {filepath}, Document Type: {document_type}")
-    return process_pdf_pages(filepath, document_type, page_numbers=pages)
+    result = process_pdf_pages(filepath, document_type, page_numbers=pages)
+    return {"filename": os.path.basename(filepath), "data": result}
 
 def parse_pages_input(pages_input):
     if not pages_input:
@@ -142,6 +158,21 @@ def upload_document():
 
 #     return render_template("task_status.html", response=response)
 
+DB_PATH = os.getenv("SQL_DB_PATH")
+
+def json_to_sql(filename, json_data):
+    loader = JSONToSQL(DB_PATH)
+
+    doc_id = loader.resolve_doc_id(filename)
+    loader.gather_schema("main_table", json_data)
+    loader.create_tables_from_schema()
+    insert_data(
+        loader.cursor, "main_table", json_data, doc_id, ensure_column_exists
+    )
+
+    loader.commit()
+    loader.close()
+
 @app.route("/api/status/<task_id>", methods=["GET"])
 def task_status(task_id):
     task = process_pdf_task.AsyncResult(task_id)
@@ -150,7 +181,12 @@ def task_status(task_id):
     if task.state == "PENDING":
         response = {"state": "PENDING", "status": "Pending..."}
     elif task.state == "SUCCESS":
-        response = {"state": "SUCCESS", "result": task.result}
+        task_result = task.result
+        filename = task_result.get("filename")
+        json_data = task_result.get("data")
+        if filename and json_data:
+            json_to_sql(filename, json_data)
+        response = {"state": "SUCCESS", "result": json_data}
     elif task.state == "FAILURE":
         response = {"state": "FAILURE", "error": str(task.info)}
     else:
@@ -170,18 +206,48 @@ def add_document_type():
     flash(f"Document type '{new_type}' added successfully!")
     return render_template("index.html", document_types=document_types)
 
-@app.route("/chat", methods=["GET"])
+@app.route("/api/chat", methods=["GET"])
 def chat_interface():
     return render_template("chat.html")
 
-@app.route("/chat", methods=["POST"])
+@app.route("/api/chat", methods=["POST"])
 def chat():
-    data = request.json  # Get JSON data from the request
-    user_message = data.get("message")  # Extract the user's message
-    # Log the message for debugging
+    data = request.json
+    print(f"Data: {data}")
+    user_message = data.get("message")
+    
+    if not user_message:
+        return jsonify({"error": "No message provided"}), 400
+
+    # Log the user's message
     print(f"User message: {user_message}")
-    # Placeholder response
-    return jsonify({"reply": "Message processed"})
+    
+    # Prepare configuration for the controller agent
+    config = {"configurable": {"thread_id": "workflow-thread"}}
+    
+    try:
+        # Invoke the controller agent's app with the user input
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        state = loop.run_until_complete(controller_app.ainvoke({"user_input": user_message}, config=config))
+        
+        
+        # Extract the response from the state
+        response = {
+            "input": state.get("user_input"),
+            "answer": state.get("final_answer"),
+            "result": state.get("final_result"),
+        }
+
+        # Log the response for debugging
+        print(f"Response: {response}")
+
+        # Return the response to the user
+        return jsonify(response), 200
+    except Exception as e:
+        # Handle errors gracefully
+        print(f"Error: {e}")
+        return jsonify({"error": "An error occurred while processing your request"}), 500
 
 if __name__ == "__main__":
    app.run(host="0.0.0.0", port=5002, debug=True)

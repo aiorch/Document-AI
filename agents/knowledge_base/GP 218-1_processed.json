@@ -132,7 +132,7 @@
                 "allowed_range_min": 90,
                 "allowed_range_max": 110,
                 "actual_quantity": 100,
-                "in_house_batch_no": "UP-05",
+                "in_house_batch_no": null,
                 "performed_by": "Sophia Carter",
                 "checked_by": "Mia Robinson",
                 "remarks": null,

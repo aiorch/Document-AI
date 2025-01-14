@@ -23,9 +23,9 @@ from agents.controller_agent.utils.init_agents import (
 )
 
 # Load environment variables
-script_dir = os.path.dirname(os.path.abspath(__file__))
-ENV_PATH = os.path.join(script_dir, ".env")
-load_dotenv(ENV_PATH, override=True)
+# script_dir = os.path.dirname(os.path.abspath(__file__))
+# ENV_PATH = os.path.join(script_dir, ".env")
+# load_dotenv(ENV_PATH, override=True)
 
 # Initialize agents and tools
 sql_agent = initialize_sql_agent()
