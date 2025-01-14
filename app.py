@@ -20,15 +20,7 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = "your_secret_key"
 app.config["UPLOAD_FOLDER"] = "uploads"
-#CORS(app, resources={r"/api/*": {"origins": "*"}})
-CORS(app, resources={
-    r"/api/*": {
-        "origins": ["http://localhost:5000"],  # Allow frontend origin
-        "methods": ["POST", "GET", "OPTIONS"],  # Allow specific methods
-        "allow_headers": ["Content-Type"],  # Allow specific headers
-        "supports_credentials": True
-    }
-})
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 
 DOCUMENT_TYPES_FILE = "document_types.json"
@@ -206,11 +198,11 @@ def add_document_type():
     flash(f"Document type '{new_type}' added successfully!")
     return render_template("index.html", document_types=document_types)
 
-@app.route("/api/chat", methods=["GET"])
+@app.route("/api/chat_process", methods=["GET"])
 def chat_interface():
     return render_template("chat.html")
 
-@app.route("/api/chat", methods=["POST"])
+@app.route("/api/chat_process", methods=["POST"])
 def chat():
     data = request.json
     print(f"Data: {data}")
@@ -230,17 +222,15 @@ def chat():
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         state = loop.run_until_complete(controller_app.ainvoke({"user_input": user_message}, config=config))
-        
+        answer = state["final_answer"]['output']
+        raw_json = answer.strip("```json").strip("```")        
+        parsed_data = json.loads(raw_json)
+        output = parsed_data.get("output")
         
         # Extract the response from the state
         response = {
-            "input": state.get("user_input"),
-            "answer": state.get("final_answer"),
-            "result": state.get("final_result"),
+            "answer": output,
         }
-
-        # Log the response for debugging
-        print(f"Response: {response}")
 
         # Return the response to the user
         return jsonify(response), 200
