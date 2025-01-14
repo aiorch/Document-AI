@@ -1,0 +1,15 @@
+replicaCount: 1
+
+image:
+  repository: litewavedev/docaiapp
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  name: docai-service
+  type: NodePort
+  port: 80
+  targetPort: 5001
+
+env:
+  name: dev

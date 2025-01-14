@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
         python3-virtualenv \
     libpq-dev
+    redis-server
 
 RUN mkdir /app
 RUN chown airflow /app

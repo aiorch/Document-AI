@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-docaiapp
+  labels:
+    app: docaiapp
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: docaiapp
+  template:
+    metadata:
+      labels:
+        app: docaiapp
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 5001
+              protocol: TCP
+          volumeMounts:
+            - name: shared-file
+              mountPath: /usr/share/
+      volumes:
+        - name: shared-file
+          configMap:
+            name: {{ .Release.Name }}-docaicontent-configmap
