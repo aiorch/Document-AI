@@ -16,6 +16,10 @@ def initialize_llm():
 
 
 def invoke_llm_with_prompt(llm, prompt):
-    """Send a prompt to the LLM and return its response."""
-    messages = [HumanMessage(content=prompt)]
-    return llm.invoke(messages).content
+    """Send a prompt to the LLM and return its response, with error handling."""
+    try:
+        messages = [HumanMessage(content=prompt)]
+        return llm.invoke(messages).content
+    except Exception as e:
+        print(f"[ERROR] LLM Invocation failed: {e}")
+        return "error"

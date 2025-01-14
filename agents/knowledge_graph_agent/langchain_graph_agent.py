@@ -5,10 +5,8 @@ from langchain_core.prompts.prompt import PromptTemplate
 from langchain_neo4j import GraphCypherQAChain, Neo4jGraph
 from langchain_openai import ChatOpenAI
 
-from agents.knowledge_graph_agent.utils import (
-    CYPHER_GENERATION_TEMPLATE,
-    CYPHER_QA_TEMPLATE,
-)
+from agents.knowledge_graph_agent.utils import (CYPHER_GENERATION_TEMPLATE,
+                                                CYPHER_QA_TEMPLATE)
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 ENV_PATH = os.path.join(script_dir, ".env")
@@ -47,6 +45,8 @@ class GraphQAAgent:
             allow_dangerous_requests=True,
             top_k=50,
         )
+
+        print("Knowledge Graph Q&A Agent initialized successfully!")
 
     def ask_question(self, question):
         response = self.chain.invoke({"query": question})

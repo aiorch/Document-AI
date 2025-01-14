@@ -8,19 +8,11 @@ from langgraph.graph import END, START, StateGraph
 
 from agents.controller_agent.langgraph_components.helpers import initialize_llm
 from agents.controller_agent.langgraph_components.nodes import (
-    ControllerState,
-    create_workflow_node,
-    kg_node,
-    parse_intent,
-    run_workflow_node,
-    sql_node,
-)
+    ControllerState, create_workflow_node, kg_node, parse_intent,
+    run_workflow_node, sql_node)
 from agents.controller_agent.langgraph_components.tools import initialize_tools
 from agents.controller_agent.utils.init_agents import (
-    initialize_kg_agent,
-    initialize_sql_agent,
-    initialize_workflow_agent,
-)
+    initialize_kg_agent, initialize_sql_agent, initialize_workflow_agent)
 
 # Load environment variables
 # script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -44,7 +36,7 @@ controller_tool = tools["controller_tool"]
 # Build LangGraph
 # Build Graph
 graph = StateGraph(ControllerState)
-graph.add_node("parse_intent", parse_intent)
+graph.add_node("parse_intent", partial(parse_intent, llm=llm))
 graph.add_node(
     "create_workflow_node",
     partial(create_workflow_node, workflow_create_tool=workflow_create_tool),
@@ -57,6 +49,7 @@ graph.add_node(
         sql_agent_tool=sql_agent_tool,
         controller_tool=controller_tool,
         workflow_notify_tool=workflow_notify_tool,
+        llm=llm,
     ),
 )
 graph.add_node("sql_node", partial(sql_node, sql_agent_tool=sql_agent_tool))

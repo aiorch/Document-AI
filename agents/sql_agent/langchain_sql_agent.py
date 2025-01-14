@@ -5,6 +5,7 @@ from langchain import hub
 from langchain.agents import create_sql_agent
 from langchain.sql_database import SQLDatabase
 from langchain_openai import ChatOpenAI
+
 from agents.sql_agent.utils import SQL_QA_TEMPLATE
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -64,7 +65,7 @@ class SQLQAAgent:
         prompt += "\n" + SQL_QA_TEMPLATE
 
         try:
-            return self.agent_executor.invoke({"input": prompt})
+            return self.agent_executor.invoke({"input": prompt})["output"]
         except Exception as e:
             return f"An error occurred: {e}"
 

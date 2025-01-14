@@ -222,14 +222,15 @@ def chat():
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         state = loop.run_until_complete(controller_app.ainvoke({"user_input": user_message}, config=config))
-        answer = state["final_answer"]['output']
-        raw_json = answer.strip("```json").strip("```")        
-        parsed_data = json.loads(raw_json)
-        output = parsed_data.get("output")
+        answer = state["final_answer"]
+        # print(answer)
+        # raw_json = answer.strip("```json").strip("```")        
+        # parsed_data = json.loads(raw_json)
+        # output = parsed_data.get("output")
         
         # Extract the response from the state
         response = {
-            "answer": output,
+            "answer": answer,
         }
 
         # Return the response to the user
