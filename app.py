@@ -147,4 +147,7 @@ def chat():
     return jsonify({"reply": "Message processed"})
 
 if __name__ == "__main__":
-   app.run(host="0.0.0.0", port=5002, debug=True)
+    host = os.getenv("FLASK_HOST", "0.0.0.0")  # Default to "0.0.0.0" if not set
+    port = int(os.getenv("FLASK_PORT", 5002))  # Default to 5002 if not set
+    debug = os.getenv("FLASK_DEBUG", "True").lower() == "true"  # Default to True if not set
+    app.run(host=host, port=port, debug=debug)
