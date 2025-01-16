@@ -82,29 +82,6 @@ def parse_pages_input(pages_input):
 def index():
     return render_template("index.html", document_types=document_types)
 
-# API Route for Document Upload
-# @app.route("/api/document_process", methods=["POST"])
-# def document_upload():
-#     files = request.files.getlist("files[]")
-#     document_types_selected = request.form.getlist("document_types[]")
-
-#     if not files:
-#         return jsonify({"error": "No files uploaded."}), 400
-
-#     if len(files) != len(document_types_selected):
-#         return jsonify({"error": "Each file must have a corresponding document type."}), 400
-
-#     task_ids = []
-#     for file, doc_type in zip(files, document_types_selected):
-#         if file and file.filename.endswith(".pdf"):
-#             filepath = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
-#             file.save(filepath)
-
-#             # Trigger Celery task for each file
-#             task = process_pdf_task.delay(filepath, [], doc_type)
-#             task_ids.append(task.id)
-
-#     return jsonify({"message": "Files uploaded successfully!", "task_ids": task_ids})
 
 @app.route("/api/document_process", methods=["POST"])
 def upload_document():
@@ -127,20 +104,6 @@ def upload_document():
     # Return the task ID
     return jsonify({"message": "Document uploaded successfully!", "task_id": task.id}), 202
 
-
-# @app.route("/api/status/<task_id>")
-# def task_status(task_id):
-#     task = process_pdf_task.AsyncResult(task_id)
-#     if task.state == "PENDING":
-#         response = {"state": task.state, "status": "Pending..."}
-#     elif task.state == "SUCCESS":
-#         response = {"state": task.state, "result": task.result}
-#     elif task.state == "FAILURE":
-#         response = {"state": task.state, "status": str(task.info)}
-#     else:
-#         response = {"state": task.state, "status": task.info}
-
-#     return render_template("task_status.html", response=response)
 
 @app.route("/api/status/<task_id>", methods=["GET"])
 def task_status(task_id):
