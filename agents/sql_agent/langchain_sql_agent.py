@@ -77,6 +77,7 @@ class SQLQAAgent:
         except Exception as e:
             return str(e)
 
+
 if __name__ == "__main__":
     # Initialize SQL Q&A Agent
     agent = SQLQAAgent(db_path=DB_PATH, llm_model=LLM_MODEL)
@@ -87,7 +88,7 @@ if __name__ == "__main__":
         if user_input.lower() == "q":
             print("Exiting. Goodbye!")
             break
-        response = agent.ask_question(user_input) #["output"]
+        response = agent.ask_question(user_input)  # ["output"]
         # response = response.strip("```").lstrip("json").strip()
         print("\nResponse:")
         # print(response)

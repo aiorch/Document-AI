@@ -27,7 +27,7 @@ async def parse_intent(state: ControllerState, llm: Any):
 
     If the query is about workflows, specify:
       - "create_workflow" if it requests creating a workflow.
-      - "run_workflow" if it requests running a workflow. Include the workflow name.
+      - "run_workflow" if it requests running a workflow. Include the workflow name in your response as run_workflow <workflow_name>
 
     If it's a direct question, 
     Two databases are available:
@@ -86,7 +86,7 @@ async def run_workflow_node(
     recipient: str = None,
 ):
     """Handle workflow execution and decide between SQL or KG."""
-    workflow_name = state.get("workflow_name", "low_quantity_check")
+    workflow_name = state.get("workflow_name")
     workflow_prompt = workflow_prompt_tool(workflow_name)
 
     # Check if the workflow exists

@@ -90,30 +90,6 @@ def parse_pages_input(pages_input):
 def index():
     return render_template("index.html", document_types=document_types)
 
-# API Route for Document Upload
-# @app.route("/api/document_process", methods=["POST"])
-# def document_upload():
-#     files = request.files.getlist("files[]")
-#     document_types_selected = request.form.getlist("document_types[]")
-
-#     if not files:
-#         return jsonify({"error": "No files uploaded."}), 400
-
-#     if len(files) != len(document_types_selected):
-#         return jsonify({"error": "Each file must have a corresponding document type."}), 400
-
-#     task_ids = []
-#     for file, doc_type in zip(files, document_types_selected):
-#         if file and file.filename.endswith(".pdf"):
-#             filepath = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
-#             file.save(filepath)
-
-#             # Trigger Celery task for each file
-#             task = process_pdf_task.delay(filepath, [], doc_type)
-#             task_ids.append(task.id)
-
-#     return jsonify({"message": "Files uploaded successfully!", "task_ids": task_ids})
-
 @app.route("/api/document_process", methods=["POST"])
 def upload_document():
     file = request.files.get("file")
@@ -135,20 +111,6 @@ def upload_document():
     # Return the task ID
     return jsonify({"message": "Document uploaded successfully!", "task_id": task.id}), 202
 
-
-# @app.route("/api/status/<task_id>")
-# def task_status(task_id):
-#     task = process_pdf_task.AsyncResult(task_id)
-#     if task.state == "PENDING":
-#         response = {"state": task.state, "status": "Pending..."}
-#     elif task.state == "SUCCESS":
-#         response = {"state": task.state, "result": task.result}
-#     elif task.state == "FAILURE":
-#         response = {"state": task.state, "status": str(task.info)}
-#     else:
-#         response = {"state": task.state, "status": task.info}
-
-#     return render_template("task_status.html", response=response)
 
 DB_PATH = os.getenv("SQL_DB_PATH")
 
@@ -223,12 +185,9 @@ def chat():
         asyncio.set_event_loop(loop)
         state = loop.run_until_complete(controller_app.ainvoke({"user_input": user_message}, config=config))
         answer = state["final_answer"]
-        # print(answer)
-        # raw_json = answer.strip("```json").strip("```")        
-        # parsed_data = json.loads(raw_json)
-        # output = parsed_data.get("output")
         
         # Extract the response from the state
+        print("Answer: {}".format(answer))
         response = {
             "answer": answer,
         }
@@ -239,6 +198,58 @@ def chat():
         # Handle errors gracefully
         print(f"Error: {e}")
         return jsonify({"error": "An error occurred while processing your request"}), 500
+
+@app.route("/api/run_workflow", methods=["POST"])
+def run_workflow():
+    data = request.json
+    workflow_name = data.get("workflow_name")
+    workflow_rule = data.get("rule")
+
+    if not workflow_name or not workflow_rule:
+        return jsonify({"error": "Both 'workflow_name' and 'rule' are required."}), 400
+
+    workflows_file = "/Users/siyengar/Desktop/dev/Document-AI/agents/workflow_agent/workflows.json"
+
+    # Load existing workflows
+    if not os.path.exists(workflows_file):
+        with open(workflows_file, "w") as wf:
+            json.dump({}, wf)  # Initialize as empty JSON
+
+    with open(workflows_file, "r") as wf:
+        workflows = json.load(wf)
+
+    config = {"configurable": {"thread_id": "workflow-thread"}}
+
+    # Check if workflow exists
+    if workflow_name not in workflows:
+        create_prompt = f"Create a workflow called {workflow_name} {workflow_rule}"
+        try:
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            state = loop.run_until_complete(controller_app.ainvoke({"user_input": create_prompt}, config=config))
+            print(state['final_answer'])
+        except Exception as e:
+            print(state['final_answer'])
+            return jsonify({"error": "An error occurred while processing the workflow."}), 500
+
+    run_prompt = f"run workflow {workflow_name}"
+    try:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        state = loop.run_until_complete(controller_app.ainvoke({"user_input": run_prompt}, config=config))
+        # Parse the result
+        final_result = state.get("final_result")
+        if "condition failed" in final_result:
+            # Workflow condition failed
+            return jsonify({"message": final_result}), 422
+        else:
+            # Workflow executed successfully
+            return jsonify({"message": final_result}), 200
+    except Exception as e:
+        # Handle other errors
+        print(f"Error running workflow: {e}")
+        return jsonify({"error": "An error occurred while processing the workflow."}), 500
+
 
 if __name__ == "__main__":
    app.run(host="0.0.0.0", port=5002, debug=True)

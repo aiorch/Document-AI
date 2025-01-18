@@ -47,6 +47,7 @@ graph.add_node(
         run_workflow_node,
         workflow_prompt_tool=workflow_prompt_tool,
         sql_agent_tool=sql_agent_tool,
+        kg_agent_tool=kg_agent_tool,
         controller_tool=controller_tool,
         workflow_notify_tool=workflow_notify_tool,
         llm=llm,
