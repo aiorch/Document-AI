@@ -90,10 +90,6 @@ def parse_pages_input(pages_input):
 def index():
     return render_template("index.html", document_types=document_types)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
 @app.route("/api/document_process", methods=["POST"])
 def upload_document():
     file = request.files.get("file")
@@ -116,8 +112,6 @@ def upload_document():
     return jsonify({"message": "Document uploaded successfully!", "task_id": task.id}), 202
 
 
-<<<<<<< HEAD
-=======
 DB_PATH = os.getenv("SQL_DB_PATH")
 
 def json_to_sql(filename, json_data):
@@ -133,7 +127,6 @@ def json_to_sql(filename, json_data):
     loader.commit()
     loader.close()
 
->>>>>>> dev
 @app.route("/api/status/<task_id>", methods=["GET"])
 def task_status(task_id):
     task = process_pdf_task.AsyncResult(task_id)
