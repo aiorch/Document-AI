@@ -15,6 +15,13 @@ from agents.sql_agent.utils import (
 )
 from agents.controller_agent.controller import app as controller_app
 import asyncio
+import random
+import openai
+from langchain.prompts import (ChatPromptTemplate, HumanMessagePromptTemplate,
+                               SystemMessagePromptTemplate)
+from langchain_openai import ChatOpenAI
+from openai import OpenAI
+from typing import Optional
 
 load_dotenv()
 app = Flask(__name__)
@@ -22,6 +29,7 @@ app.secret_key = "your_secret_key"
 app.config["UPLOAD_FOLDER"] = "uploads"
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 DOCUMENT_TYPES_FILE = "document_types.json"
 
@@ -90,10 +98,6 @@ def parse_pages_input(pages_input):
 def index():
     return render_template("index.html", document_types=document_types)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
 @app.route("/api/document_process", methods=["POST"])
 def upload_document():
     file = request.files.get("file")
@@ -116,8 +120,6 @@ def upload_document():
     return jsonify({"message": "Document uploaded successfully!", "task_id": task.id}), 202
 
 
-<<<<<<< HEAD
-=======
 DB_PATH = os.getenv("SQL_DB_PATH")
 
 def json_to_sql(filename, json_data):
@@ -133,7 +135,6 @@ def json_to_sql(filename, json_data):
     loader.commit()
     loader.close()
 
->>>>>>> dev
 @app.route("/api/status/<task_id>", methods=["GET"])
 def task_status(task_id):
     task = process_pdf_task.AsyncResult(task_id)
@@ -154,6 +155,48 @@ def task_status(task_id):
         response = {"state": task.state, "status": task.info}
 
     return jsonify(response), 200
+
+client = OpenAI()  # Assumes OPENAI_API_KEY is set in environment variables
+
+@app.route("/api/enhance_prompt", methods=["POST"])
+def enhance_prompt():
+    """
+    Enhance the input prompt to make it effective for a SQL agent that
+    will use another LLM for text-to-SQL conversion and database extraction.
+    """
+    data = request.json
+    prompt: Optional[str] = data.get("prompt")
+    
+    if not prompt:
+        return jsonify({"error": "Prompt is required."}), 400
+
+    try:
+        # Define the system message to instruct the model
+        system_message = (
+            "You are an assistant that enhances user prompts intended for a SQL agent. "
+            "The SQL agent will use another LLM to convert text to SQL queries and extract data from a SQL database. "
+            "Your task is to make the user's prompt as effective as possible for this scenario."
+            "DO NOT respond with any questions. Do the best you can in formulating a better prompt that the user can use."
+        )
+
+        # Call the OpenAI API using the new client
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.0
+        )
+
+        # Extract the enhanced prompt from the response
+        enhanced_prompt = response.choices[0].message.content.strip()
+
+        return jsonify({"enhanced_prompt": enhanced_prompt}), 200
+
+    except Exception as e:
+        print(f"Error while enhancing prompt: {e}")
+        return jsonify({"error": "Failed to enhance prompt.", "details": str(e)}), 500
 
 @app.route("/api/add_document_type", methods=["POST"])
 def add_document_type():
