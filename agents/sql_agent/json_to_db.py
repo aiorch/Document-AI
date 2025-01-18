@@ -4,13 +4,8 @@ from typing import Any, Dict
 
 from dotenv import load_dotenv
 
-from agents.sql_agent.utils import (
-    connect_to_db,
-    ensure_column_exists,
-    get_sql_type,
-    insert_data,
-    table_exists,
-)
+from agents.sql_agent.utils import (connect_to_db, ensure_column_exists,
+                                    get_sql_type, insert_data, table_exists)
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 ENV_PATH = os.path.join(script_dir, ".env")

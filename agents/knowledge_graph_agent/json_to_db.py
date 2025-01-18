@@ -5,12 +5,10 @@ from typing import Any
 from dotenv import load_dotenv
 from neo4j import GraphDatabase
 
-from agents.knowledge_graph_agent.utils import (
-    attach_all_descendants,
-    create_or_merge_json_node,
-    create_relationship,
-    merge_document_node,
-)
+from agents.knowledge_graph_agent.utils import (attach_all_descendants,
+                                                create_or_merge_json_node,
+                                                create_relationship,
+                                                merge_document_node)
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 ENV_PATH = os.path.join(script_dir, ".env")

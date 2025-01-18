@@ -8,6 +8,13 @@ import os
 from threading import Lock
 from schema_helper import SCHEMA_DIR, load_schema, save_schema, generate_schema_with_gpt, convert_pdf_to_images
 from flask_cors import CORS
+from agents.sql_agent.json_to_db import JSONToSQL
+from agents.sql_agent.utils import (
+    ensure_column_exists,
+    insert_data,
+)
+from agents.controller_agent.controller import app as controller_app
+import asyncio
 
 load_dotenv()
 app = Flask(__name__)
@@ -62,7 +69,8 @@ def process_pdf_task(filepath, pages, document_type):
 
 
     print(f"Processing file: {filepath}, Document Type: {document_type}")
-    return process_pdf_pages(filepath, document_type, page_numbers=pages)
+    result = process_pdf_pages(filepath, document_type, page_numbers=pages)
+    return {"filename": os.path.basename(filepath), "data": result}
 
 def parse_pages_input(pages_input):
     if not pages_input:
@@ -82,7 +90,10 @@ def parse_pages_input(pages_input):
 def index():
     return render_template("index.html", document_types=document_types)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
 @app.route("/api/document_process", methods=["POST"])
 def upload_document():
     file = request.files.get("file")
@@ -105,6 +116,24 @@ def upload_document():
     return jsonify({"message": "Document uploaded successfully!", "task_id": task.id}), 202
 
 
+<<<<<<< HEAD
+=======
+DB_PATH = os.getenv("SQL_DB_PATH")
+
+def json_to_sql(filename, json_data):
+    loader = JSONToSQL(DB_PATH)
+
+    doc_id = loader.resolve_doc_id(filename)
+    loader.gather_schema("main_table", json_data)
+    loader.create_tables_from_schema()
+    insert_data(
+        loader.cursor, "main_table", json_data, doc_id, ensure_column_exists
+    )
+
+    loader.commit()
+    loader.close()
+
+>>>>>>> dev
 @app.route("/api/status/<task_id>", methods=["GET"])
 def task_status(task_id):
     task = process_pdf_task.AsyncResult(task_id)
@@ -113,7 +142,12 @@ def task_status(task_id):
     if task.state == "PENDING":
         response = {"state": "PENDING", "status": "Pending..."}
     elif task.state == "SUCCESS":
-        response = {"state": "SUCCESS", "result": task.result}
+        task_result = task.result
+        filename = task_result.get("filename")
+        json_data = task_result.get("data")
+        if filename and json_data:
+            json_to_sql(filename, json_data)
+        response = {"state": "SUCCESS", "result": json_data}
     elif task.state == "FAILURE":
         response = {"state": "FAILURE", "error": str(task.info)}
     else:
@@ -133,18 +167,96 @@ def add_document_type():
     flash(f"Document type '{new_type}' added successfully!")
     return render_template("index.html", document_types=document_types)
 
-@app.route("/chat", methods=["GET"])
+@app.route("/api/chat_process", methods=["GET"])
 def chat_interface():
     return render_template("chat.html")
 
-@app.route("/chat", methods=["POST"])
+@app.route("/api/chat_process", methods=["POST"])
 def chat():
-    data = request.json  # Get JSON data from the request
-    user_message = data.get("message")  # Extract the user's message
-    # Log the message for debugging
+    data = request.json
+    print(f"Data: {data}")
+    user_message = data.get("message")
+    
+    if not user_message:
+        return jsonify({"error": "No message provided"}), 400
+
+    # Log the user's message
     print(f"User message: {user_message}")
-    # Placeholder response
-    return jsonify({"reply": "Message processed"})
+    
+    # Prepare configuration for the controller agent
+    config = {"configurable": {"thread_id": "workflow-thread"}}
+    
+    try:
+        # Invoke the controller agent's app with the user input
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        state = loop.run_until_complete(controller_app.ainvoke({"user_input": user_message}, config=config))
+        answer = state["final_answer"]
+        
+        # Extract the response from the state
+        print("Answer: {}".format(answer))
+        response = {
+            "answer": answer,
+        }
+
+        # Return the response to the user
+        return jsonify(response), 200
+    except Exception as e:
+        # Handle errors gracefully
+        print(f"Error: {e}")
+        return jsonify({"error": "An error occurred while processing your request"}), 500
+
+@app.route("/api/run_workflow", methods=["POST"])
+def run_workflow():
+    data = request.json
+    workflow_name = data.get("workflow_name")
+    workflow_rule = data.get("rule")
+
+    if not workflow_name or not workflow_rule:
+        return jsonify({"error": "Both 'workflow_name' and 'rule' are required."}), 400
+
+    workflows_file = "/Users/siyengar/Desktop/dev/Document-AI/agents/workflow_agent/workflows.json"
+
+    # Load existing workflows
+    if not os.path.exists(workflows_file):
+        with open(workflows_file, "w") as wf:
+            json.dump({}, wf)  # Initialize as empty JSON
+
+    with open(workflows_file, "r") as wf:
+        workflows = json.load(wf)
+
+    config = {"configurable": {"thread_id": "workflow-thread"}}
+
+    # Check if workflow exists
+    if workflow_name not in workflows:
+        create_prompt = f"Create a workflow called {workflow_name} {workflow_rule}"
+        try:
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            state = loop.run_until_complete(controller_app.ainvoke({"user_input": create_prompt}, config=config))
+            print(state['final_answer'])
+        except Exception as e:
+            print(state['final_answer'])
+            return jsonify({"error": "An error occurred while processing the workflow."}), 500
+
+    run_prompt = f"run workflow {workflow_name}"
+    try:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        state = loop.run_until_complete(controller_app.ainvoke({"user_input": run_prompt}, config=config))
+        # Parse the result
+        final_result = state.get("final_result")
+        if "condition failed" in final_result:
+            # Workflow condition failed
+            return jsonify({"message": final_result}), 422
+        else:
+            # Workflow executed successfully
+            return jsonify({"message": final_result}), 200
+    except Exception as e:
+        # Handle other errors
+        print(f"Error running workflow: {e}")
+        return jsonify({"error": "An error occurred while processing the workflow."}), 500
+
 
 if __name__ == "__main__":
     host = os.getenv("FLASK_HOST", "0.0.0.0")  # Default to "0.0.0.0" if not set

@@ -14,7 +14,7 @@
                 "standard_quantity": 2500,
                 "allowed_range_min": 2450,
                 "allowed_range_max": 2550,
-                "actual_quantity": 2500,
+                "actual_quantity": 2400,
                 "in_house_batch_no": "UP-08",
                 "performed_by": "John Doe",
                 "checked_by": "Michael Johnson",

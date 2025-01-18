@@ -5,7 +5,8 @@ from langchain import hub
 from langchain.agents import create_sql_agent
 from langchain.sql_database import SQLDatabase
 from langchain_openai import ChatOpenAI
-from utils import SQL_QA_TEMPLATE
+
+from agents.sql_agent.utils import SQL_QA_TEMPLATE
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 ENV_PATH = os.path.join(script_dir, ".env")
@@ -59,14 +60,22 @@ class SQLQAAgent:
             str: Agent's response.
         """
         prompt = f"""
-        The user's query is: {question}. Answer it based on the previous system instruction you recevied."""
+        Format your response in a clean, structured way:
+        1. If returning tabular data, format it as a list of objects with clear headers
+        2. For text responses, use clear paragraphs with proper line breaks
+        3. Highlight important information using bold markdown (**text**)
+        4. If showing steps or lists, use proper markdown numbering
+        The user's query is: {question}. 
+        Answer it based on the previous system instruction you recevied.
+        """
 
         prompt += "\n" + SQL_QA_TEMPLATE
 
         try:
-            return self.agent_executor.invoke({"input": prompt})
+            result = self.agent_executor.invoke({"input": prompt})
+            return result["output"]
         except Exception as e:
-            return f"An error occurred: {e}"
+            return str(e)
 
 
 if __name__ == "__main__":
@@ -79,7 +88,8 @@ if __name__ == "__main__":
         if user_input.lower() == "q":
             print("Exiting. Goodbye!")
             break
-        response = agent.ask_question(user_input)["output"]
-        response = response.strip("```").lstrip("json").strip()
+        response = agent.ask_question(user_input)  # ["output"]
+        # response = response.strip("```").lstrip("json").strip()
         print("\nResponse:")
+        # print(response)
         print(response)

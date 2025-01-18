@@ -6,47 +6,9 @@ SQL_QA_TEMPLATE = f"""Addtionally, follow these instructions:
 
         Always verify your SQL query includes the name of the relevant documents in the result set before execution. If it doesn't, modify the query to include it.
 
-        ### Response Format Example
-        Your final response must be in the following JSON format:
-
-        ```json
-        {{
-        "input": "<User's original question>",
-        "output": [
-            {{
-            "doc_name": "<Name of the document>",
-            "<relevant_field_1>": "<value>",
-            "<relevant_field_2>": "<value>",
-            ...
-            }},
-            ...
-        ]
-        }}
-        ```
-
-        For example, if the input is: "Check if there are any instances of people signing more than 3 times."
-        Your response should look like this:
-
-        ```json
-        {{
-            "input": "Check if there are any instances of people signing more than 3 times.",
-            "output": [
-                {{
-                "doc_name": "Document A",
-                "signer_name": "Head - QA",
-                "signature_count": 4
-                }},
-                {{
-                "doc_name": "Document B",
-                "signer_name": "Supervisor",
-                "signature_count": 5
-                }}
-            ]
-        }}
-        ```
-        This ensures that:
-        
-        ALWAYS validate that your output adheres to this format before returning it to the user. If the query cannot return any results, indicate this explicitly in the output field as an empty array.
+        ### Response Format
+        Please format your response using markdown, in the best way possible, Your output must be such that it can easily be displayed in a chat window on a website, so it must follow a simple, yet descriptive human-readable format. 
+        Do not skip out on core details, but make sure not to be overly verbose.
         """
 
 import sqlite3

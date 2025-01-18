@@ -143,7 +143,9 @@ class WorkflowAgent:
             msg.attach(MIMEText(body, "plain"))
 
             with smtplib.SMTP(self.smtp_server, self.smtp_port) as server:
+                server.ehlo()
                 server.starttls()
+                server.ehlo()
                 server.login(self.email_user, self.email_password)
                 server.sendmail(self.email_user, recipient_email, msg.as_string())
 

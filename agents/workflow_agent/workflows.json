@@ -1,3 +1,5 @@
 {
-    "low_quantity_check": "that checks For all the rows in the material_usage_table, check if the the actual_quantity for all the raw materials is within the allowed_range_min and allowed_range_max"
+    "low_quantity_check": "checks For all the rows in the materials usage table to see if the actual quantities of all raw materials are in the allowed range",
+    "signature": "forgery  message when signature might be forged\n\ntest update to rule",
+    "test": "test"
 }

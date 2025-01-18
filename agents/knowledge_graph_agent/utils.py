@@ -167,7 +167,9 @@ def create_or_merge_json_node(
     node_type = (
         "dict"
         if isinstance(data, dict)
-        else "list" if isinstance(data, list) else "scalar"
+        else "list"
+        if isinstance(data, list)
+        else "scalar"
     )
 
     merge_query = """

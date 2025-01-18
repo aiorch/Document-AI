@@ -1,6 +1,7 @@
 from langchain_core.tools import tool
 
-from agents.controller_agent.langgraph_components.helpers import invoke_llm_with_prompt
+from agents.controller_agent.langgraph_components.helpers import \
+    invoke_llm_with_prompt
 
 
 def initialize_tools(sql_agent, kg_agent, workflow_agent, llm):
@@ -34,7 +35,7 @@ def initialize_tools(sql_agent, kg_agent, workflow_agent, llm):
 
     @tool
     def controller_tool(input_text: str) -> str:
-        """Uses the controller LLM to reason about the SQL Agent's response."""
+        """Uses the controller LLM to reason about the Q&A Agent's response."""
         return invoke_llm_with_prompt(llm, input_text)
 
     return {

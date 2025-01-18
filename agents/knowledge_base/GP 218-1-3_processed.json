@@ -18,7 +18,7 @@
                 "in_house_batch_no": "UP-08",
                 "performed_by": "John Doe",
                 "checked_by": "Michael Johnson",
-                "remarks": "-",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -27,11 +27,11 @@
                 "standard_quantity": 1800,
                 "allowed_range_min": 1728,
                 "allowed_range_max": 2090,
-                "actual_quantity": 1999.0,
+                "actual_quantity": 1999,
                 "in_house_batch_no": "0139, 0140, 0141, 0142",
                 "performed_by": "Jane Smith",
                 "checked_by": "Emily White",
-                "remarks": "-",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -44,7 +44,7 @@
                 "in_house_batch_no": "CL/200412",
                 "performed_by": "Alex Brown",
                 "checked_by": "Chris Green",
-                "remarks": "-",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -57,7 +57,7 @@
                 "in_house_batch_no": "PSCB/200 404",
                 "performed_by": "Emma Davis",
                 "checked_by": "Sophia Carter",
-                "remarks": "-",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -70,7 +70,7 @@
                 "in_house_batch_no": "UP-08",
                 "performed_by": "Daniel Garcia",
                 "checked_by": "Jacob Miller",
-                "remarks": "-",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -83,7 +83,7 @@
                 "in_house_batch_no": "UP-08",
                 "performed_by": "Sophia Lee",
                 "checked_by": "Ella Thomas",
-                "remarks": "-",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -93,10 +93,10 @@
                 "allowed_range_min": 225,
                 "allowed_range_max": 275,
                 "actual_quantity": 250,
-                "in_house_batch_no": "UP-05",
+                "in_house_batch_no": null,
                 "performed_by": "Michael Clark",
                 "checked_by": "Liam Walker",
-                "remarks": "-",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -106,10 +106,10 @@
                 "allowed_range_min": 90,
                 "allowed_range_max": 110,
                 "actual_quantity": 100,
-                "in_house_batch_no": "UP-05",
+                "in_house_batch_no": null,
                 "performed_by": "Emily White",
                 "checked_by": "Grace Hall",
-                "remarks": "-",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -119,10 +119,10 @@
                 "allowed_range_min": 90,
                 "allowed_range_max": 110,
                 "actual_quantity": 100,
-                "in_house_batch_no": "UP-05",
+                "in_house_batch_no": null,
                 "performed_by": "Chris Green",
                 "checked_by": "Ethan Adams",
-                "remarks": "-",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -132,10 +132,10 @@
                 "allowed_range_min": 90,
                 "allowed_range_max": 110,
                 "actual_quantity": 100,
-                "in_house_batch_no": "UP-05",
+                "in_house_batch_no": null,
                 "performed_by": "Sophia Carter",
                 "checked_by": "Mia Robinson",
-                "remarks": "-",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -145,23 +145,23 @@
                 "allowed_range_min": 90,
                 "allowed_range_max": 110,
                 "actual_quantity": 100,
-                "in_house_batch_no": "UP-05",
+                "in_house_batch_no": null,
                 "performed_by": "David Wilson",
                 "checked_by": "Lucas Allen",
-                "remarks": "-",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
                 "raw_material": "IPA (Lot -II)",
                 "unit": "L",
-                "standard_quantity": 2230,
-                "allowed_range_min": 2200,
-                "allowed_range_max": 2260,
-                "actual_quantity": 2230,
-                "in_house_batch_no": "PA1240628M",
+                "standard_quantity": 100,
+                "allowed_range_min": 90,
+                "allowed_range_max": 110,
+                "actual_quantity": 100,
+                "in_house_batch_no": null,
                 "performed_by": "Olivia Johnson",
                 "checked_by": "Charlotte Young",
-                "remarks": "-",
+                "remarks": null,
                 "quantity_within_range": true
             }
         ]
@@ -225,73 +225,10 @@
                 "difference_volume": 2500
             },
             {
-                "id": "Purified Water , Flow meter No. FM-1010",
-                "op_no": 5,
-                "initial_volume": 20,
-                "final_volume": 0,
-                "difference_volume": 20
-            },
-            {
-                "id": "Purified Water , Flow meter No. FM-1010",
-                "op_no": 9,
-                "initial_volume": 500,
-                "final_volume": 0,
-                "difference_volume": 500
-            },
-            {
                 "id": "Purified Water (SSJRC 1005)",
                 "op_no": 17,
                 "initial_volume": 800,
                 "final_volume": 700,
-                "difference_volume": 100
-            },
-            {
-                "id": "Purified Water (SSJRC 1005)",
-                "op_no": 22,
-                "initial_volume": 700,
-                "final_volume": 600,
-                "difference_volume": 100
-            },
-            {
-                "id": "Purified Water (SSJRC 1005)",
-                "op_no": 27,
-                "initial_volume": 600,
-                "final_volume": 500,
-                "difference_volume": 100
-            },
-            {
-                "id": "Purified Water (SSJRC 1005)",
-                "op_no": 32,
-                "initial_volume": 500,
-                "final_volume": 400,
-                "difference_volume": 100
-            },
-            {
-                "id": "Purified Water (SSJRC 1005)",
-                "op_no": 37,
-                "initial_volume": 400,
-                "final_volume": 300,
-                "difference_volume": 100
-            },
-            {
-                "id": "Purified Water (SSJRC 1005)",
-                "op_no": 42,
-                "initial_volume": 300,
-                "final_volume": 200,
-                "difference_volume": 100
-            },
-            {
-                "id": "Purified Water (SSJRC 1005)",
-                "op_no": 47,
-                "initial_volume": 200,
-                "final_volume": 100,
-                "difference_volume": 100
-            },
-            {
-                "id": "Purified Water (SSJRC 1005)",
-                "op_no": 52,
-                "initial_volume": 100,
-                "final_volume": 0,
                 "difference_volume": 100
             },
             {
@@ -327,7 +264,7 @@
                 "op_no": 66,
                 "initial_volume": 2230,
                 "final_volume": 0,
-                "difference_volume": 230
+                "difference_volume": 2230
             }
         ]
     },
@@ -369,12 +306,12 @@
                 "duration": null,
                 "performed_by": "Alex Brown",
                 "checked_by": "Chris Green",
-                "remarks": "Stir for 20 to 30 minutes.",
+                "remarks": null,
                 "temperature_records": null
             },
             {
                 "op_no": 4,
-                "description": "Charge CS Lye ( Lot-I ) from the receiver SSRC-1010 to the reactor below 30\u00b0C.",
+                "description": "Stir for 20 to 30 minutes.",
                 "equipment_no": "SSRC-1010 to GLRE-1010",
                 "date": "2024-08-26T00:00:00",
                 "time_from": "19:30",
@@ -395,29 +332,29 @@
                 "duration": null,
                 "performed_by": "Daniel Garcia",
                 "checked_by": "Jacob Miller",
-                "remarks": "Stir for 20 to 30 minutes.",
+                "remarks": null,
                 "temperature_records": null
             },
             {
                 "op_no": 6,
-                "description": "Check the cleanliness of the reactor.Filter reaction mass through the filter setup (SSCF-1001,SSMF-1001&SSMF-1002). Initially re-circulate the mass for 10 to 15 minutes.",
-                "equipment_no": "GLRE-1014",
+                "description": "Stir for 20 to 30 minutes.",
+                "equipment_no": "GLRE-1010",
                 "date": "2024-08-26T00:00:00",
                 "time_from": "20:10",
                 "time_to": "20:40",
                 "duration": null,
                 "performed_by": "Sophia Lee",
                 "checked_by": "Ella Thomas",
-                "remarks": "Note: Check the solution is clear and free from charcoal particles through view glass",
+                "remarks": null,
                 "temperature_records": null
             },
             {
                 "op_no": 7,
-                "description": "If found satisfactory, transfer the filtered mass to another clean reactor (GLRE 1014).",
-                "equipment_no": null,
+                "description": "Check the cleanliness of the reactor.Filter reaction mass through the filter setup (SSCF-1001,SSMF-1001&SSMF-1002). Initially re-circulate the mass for 10 to 15 minutes.",
+                "equipment_no": "GLRE-1014",
                 "date": "2024-08-26T00:00:00",
-                "time_from": "22:40",
-                "time_to": "01:00",
+                "time_from": "20:40",
+                "time_to": "22:40",
                 "duration": null,
                 "performed_by": "Michael Clark",
                 "checked_by": "Liam Walker",
@@ -426,8 +363,8 @@
             },
             {
                 "op_no": 8,
-                "description": "After completion of filtration flush the filter setup with Nitrogen pressure.",
-                "equipment_no": null,
+                "description": "If found satisfactory, transfer the filtered mass to another clean reactor (GLRE 1014).",
+                "equipment_no": "GLRE-1014",
                 "date": "2024-08-27T00:00:00",
                 "time_from": "01:00",
                 "time_to": "01:15",
@@ -439,7 +376,7 @@
             },
             {
                 "op_no": 9,
-                "description": "Charge Purified Water Lot-III into reactor.",
+                "description": "After completion of filtration flush the filter setup with Nitrogen pressure.",
                 "equipment_no": "GLRE-1010",
                 "date": "2024-08-27T00:00:00",
                 "time_from": "01:15",
@@ -452,7 +389,7 @@
             },
             {
                 "op_no": 10,
-                "description": "Transfer the Water through the filter setup into GLRE 1014.",
+                "description": "Charge Purified Water Lot-III into reactor.",
                 "equipment_no": "GLRE-1010",
                 "date": "2024-08-27T00:00:00",
                 "time_from": "01:30",
@@ -474,6 +411,6 @@
         "revision_no": "04",
         "effective_date": "2024-08-01T00:00:00",
         "mfr_ref_no": "RD/MF/GP/II(W)/GP-004",
-        "format_no": "QSP-021/F-002/00"
+        "format_no": "OSP-021/F-002/00"
     }
 }
