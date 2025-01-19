@@ -151,7 +151,7 @@ NEO4J_USERNAME = os.getenv("NEO4J_USERNAME", "neo4j")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "neo4j")
 
 
-def json_to_sql(filename, json_data):
+def json_to_kg(filename, json_data):
     loader = JSONToKnowledgeGraph(NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD)
     loader._process_single_document(json_data, filename)
     loader.close()
@@ -170,6 +170,7 @@ def task_status(task_id):
         json_data = task_result.get("data")
         if filename and json_data:
             json_to_sql(filename, json_data)
+            json_to_kg(filename, json_data)
         response = {"state": "SUCCESS", "result": json_data}
     elif task.state == "FAILURE":
         response = {"state": "FAILURE", "error": str(task.info)}
