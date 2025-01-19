@@ -9,8 +9,8 @@ from langchain_openai import ChatOpenAI
 from agents.sql_agent.utils import SQL_QA_TEMPLATE
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-ENV_PATH = os.path.join(script_dir, ".env")
-load_dotenv(ENV_PATH)
+# ENV_PATH = os.path.join(script_dir, ".env")
+# load_dotenv(ENV_PATH)
 
 DB_PATH = os.getenv("SQL_DB_PATH", os.path.join(script_dir, "batch_data.db"))
 
