@@ -22,7 +22,7 @@ NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "neo4j")
 KNOWLEDGE_BASE_DIR = os.path.join(script_dir, "../knowledge_base")
 
 
-class DynamicKnowledgeGraphLoader:
+class JSONToKnowledgeGraph:
     def __init__(self, uri: str, user: str, password: str):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
 
@@ -65,7 +65,7 @@ if __name__ == "__main__":
             session.run("MATCH (n) DETACH DELETE n")
         print("Deleted all existing data from Neo4j. Starting fresh.")
 
-    loader = DynamicKnowledgeGraphLoader(NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD)
+    loader = JSONToKnowledgeGraph(NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD)
     loader.ingest_directory(KNOWLEDGE_BASE_DIR)
     loader.close()
     print("\n[ALL DONE] Knowledge graph ingestion complete!")
