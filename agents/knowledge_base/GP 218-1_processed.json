@@ -27,7 +27,7 @@
                 "standard_quantity": 1800,
                 "allowed_range_min": 1728,
                 "allowed_range_max": 2090,
-                "actual_quantity": 1999.0,
+                "actual_quantity": 1999,
                 "in_house_batch_no": "0139, 0140, 0141, 0142",
                 "performed_by": "Jane Smith",
                 "checked_by": "Emily White",
@@ -141,11 +141,11 @@
             {
                 "raw_material": "Purified water (Lot-V)",
                 "unit": "L",
-                "standard_quantity": 100,
-                "allowed_range_min": 90,
-                "allowed_range_max": 110,
-                "actual_quantity": 100,
-                "in_house_batch_no": null,
+                "standard_quantity": 800,
+                "allowed_range_min": 2200,
+                "allowed_range_max": 2260,
+                "actual_quantity": 2230,
+                "in_house_batch_no": "PA1240628M",
                 "performed_by": "David Wilson",
                 "checked_by": "Lucas Allen",
                 "remarks": null,
@@ -154,61 +154,22 @@
             {
                 "raw_material": "IPA (Lot -II)",
                 "unit": "L",
-                "standard_quantity": 2230,
-                "allowed_range_min": 2200,
-                "allowed_range_max": 2260,
-                "actual_quantity": 2230,
-                "in_house_batch_no": "PA1240628M",
-                "performed_by": "Olivia Johnson",
-                "checked_by": "Charlotte Young",
-                "remarks": null,
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "Methanol",
-                "unit": "L",
                 "standard_quantity": 450,
                 "allowed_range_min": 425,
                 "allowed_range_max": 475,
                 "actual_quantity": 450,
                 "in_house_batch_no": "OH/240424M",
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
-                "remarks": null,
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "Purified water",
-                "unit": "L",
-                "standard_quantity": 270,
-                "allowed_range_min": 250,
-                "allowed_range_max": 270,
-                "actual_quantity": 270,
-                "in_house_batch_no": "UP-07",
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
-                "remarks": null,
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "IPA",
-                "unit": "L",
-                "standard_quantity": 500,
-                "allowed_range_min": 480,
-                "allowed_range_max": 520,
-                "actual_quantity": 500,
-                "in_house_batch_no": "PAL 240428M",
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
+                "performed_by": "Olivia Johnson",
+                "checked_by": "Charlotte Young",
                 "remarks": null,
                 "quantity_within_range": true
             }
         ]
     },
     "approval_details": {
-        "prepared_by": "(Asst.Manager-Production/designee)",
-        "reviewed_by": "(Head - Production/designee)",
-        "approved_by": "(Head - QA/designee)"
+        "prepared_by": "Asst.Manager-Production/designee",
+        "reviewed_by": "Head - Production/designee",
+        "approved_by": "Head - QA/designee"
     },
     "document_metadata": {
         "revision_no": "04",
