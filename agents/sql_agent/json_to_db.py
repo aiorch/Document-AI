@@ -11,7 +11,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 ENV_PATH = os.path.join(script_dir, ".env")
 load_dotenv(ENV_PATH)
 
-DB_PATH = "/Users/siyengar/Desktop/dev/Document-AI/agents/sql_agent/batch_data_json.db"
+DB_PATH = os.path.join(script_dir, "batch_data_json.db")
 KNOWLEDGE_BASE_DIR = os.path.join(script_dir, "../knowledge_base")
 
 
