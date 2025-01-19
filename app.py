@@ -109,6 +109,9 @@ def upload_document():
     if not file.filename.endswith(".pdf"):
         return jsonify({"error": "Only PDF files are supported."}), 400
 
+    # Preprocess the document type
+    doc_type = doc_type.strip().lower().replace(" ", "_")
+
     # Save the file
     filepath = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
     file.save(filepath)
