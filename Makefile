@@ -1,10 +1,10 @@
 APPLICATION_NAME ?= docaiapp
 
 build:
-	docker build --tag ${ env.DOCKER_REGISTRY_USER }/${APPLICATION_NAME}:${ GITHUB_SHA } .
+	docker build --tag ${env.DOCKER_REGISTRY_USER}/${APPLICATION_NAME}:${GITHUB_SHA} .
 
 push:
-	docker push ${ env.DOCKER_REGISTRY_USER }/${APPLICATION_NAME}:${ GITHUB_SHA }
+	docker push ${env.DOCKER_REGISTRY_USER}/${APPLICATION_NAME}:${GITHUB_SHA}
 
 
 release:
