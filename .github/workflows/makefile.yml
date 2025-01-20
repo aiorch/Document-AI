@@ -1,15 +1,27 @@
-GIT_HASH ?= $(shell git log --format="%h" -n 1)
+name: Makefile CI
 
-APPLICATION_NAME ?= docaiapp
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
-build:
-	docker build --tag ${DOCKER_REGISTRY_USER}/${APPLICATION_NAME}\:$(GIT_HASH) .
+jobs:
+  build:
 
-push:
-	docker push ${DOCKER_REGISTRY_USER}/${APPLICATION_NAME}\:${GIT_HASH}
+    runs-on: ubuntu-latest
 
+    steps:
+    - uses: actions/checkout@v4
 
-release:
-	docker pull ${DOCKER_REGISTRY_USER}/${APPLICATION_NAME}\:${GIT_HASH}
-	docker tag  ${DOCKER_REGISTRY_USER}/${APPLICATION_NAME}\:${GIT_HASH} ${DOCKER_USERNAME}/${APPLICATION_NAME}\:latest
-	docker push ${DOCKER_REGISTRY_USER}/${APPLICATION_NAME}\:latest
+    - name: configure
+      run: ./configure
+
+    - name: Install dependencies
+      run: make
+
+    - name: Run check
+      run: make check
+
+    - name: Run distcheck
+      run: make distcheck
