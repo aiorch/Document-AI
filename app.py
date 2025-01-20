@@ -293,9 +293,8 @@ def run_workflow():
     if not workflow_name or not workflow_rule:
         return jsonify({"error": "Both 'workflow_name' and 'rule' are required."}), 400
 
-    workflows_file = (
-        "/Users/siyengar/Desktop/dev/Document-AI/agents/workflow_agent/workflows.json"
-    )
+    cwd = os.getcwd()
+    workflows_file = os.path.join(cwd, "agents", "workflow_agent", "workflows.json")
 
     # Load existing workflows
     if not os.path.exists(workflows_file):
