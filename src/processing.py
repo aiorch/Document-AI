@@ -66,15 +66,11 @@ def process_inspection_information(extracted_text, doc_type):
     # TEMPORARY:Lists of names to fill in the "performed_by" and "checked_by" fields
     # Example list of names for "performed_by" and "checked_by" (one name per row in the table)
     names_performed_by = [
-        "John Doe", "Jane Smith", "Alex Brown", "Emma Davis", 
-        "Daniel Garcia", "Sophia Lee", "Michael Clark", "Emily White", 
-        "Chris Green", "Sophia Carter", "David Wilson", "Olivia Johnson"
+        "M. Praveen Reddy", "M. Praveen Reddy", "M. Praveen Reddy", "M. Praveen Reddy", "M. Praveen Reddy", "P. Venkatesh", "P. Venkatesh", "U. Sankara Rao", "U. Sankara Rao", "U. Sankara Rao", "Ravi Chatragadda", "Ravi Chatragadda", "Ravi Chatragadda", "G. Nithin Kumar", "K. Chinna Rao", "U. Sankara Rao"
     ]
 
     names_checked_by = [
-        "Michael Johnson", "Emily White", "Chris Green", "Sophia Carter", 
-        "Jacob Miller", "Ella Thomas", "Liam Walker", "Grace Hall", 
-        "Ethan Adams", "Mia Robinson", "Lucas Allen", "Charlotte Young"
+        "K. Chinna Rao", "K. Chinna Rao", "K. Chinna Rao", "K. Chinna Rao", "K. Chinna Rao", "S.K. Saidavali", "S.K. Saidavali", "K. Chinna Rao", "K. Chinna Rao", "K. Chinna Rao", "K. Chinna Rao", "K. Chinna Rao", "K. Chinna Rao", "K. Chinna Rao", "K. Chinna Rao", "Amit Kumar", "A. Bala Swamy", "Ravi Chatragadda"
     ]
 
 

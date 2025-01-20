@@ -16,8 +16,8 @@
                 "allowed_range_max": 2550,
                 "actual_quantity": 2500,
                 "in_house_batch_no": "UP-08",
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "quantity_within_range": true
             },
@@ -29,8 +29,8 @@
                 "allowed_range_max": 2090,
                 "actual_quantity": 1999,
                 "in_house_batch_no": "0139, 0140, 0141, 0142",
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "quantity_within_range": true
             },
@@ -42,8 +42,8 @@
                 "allowed_range_max": 200,
                 "actual_quantity": 190,
                 "in_house_batch_no": "CL/200412",
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "quantity_within_range": true
             },
@@ -55,8 +55,8 @@
                 "allowed_range_max": 12,
                 "actual_quantity": 10,
                 "in_house_batch_no": "PSCB/200 404",
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "quantity_within_range": true
             },
@@ -68,8 +68,8 @@
                 "allowed_range_max": 25,
                 "actual_quantity": 20,
                 "in_house_batch_no": "UP-08",
-                "performed_by": "Daniel Garcia",
-                "checked_by": "Jacob Miller",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "quantity_within_range": true
             },
@@ -81,8 +81,8 @@
                 "allowed_range_max": 550,
                 "actual_quantity": 500,
                 "in_house_batch_no": "UP-08",
-                "performed_by": "Sophia Lee",
-                "checked_by": "Ella Thomas",
+                "performed_by": "P. Venkatesh",
+                "checked_by": "S.K. Saidavali",
                 "remarks": null,
                 "quantity_within_range": true
             },
@@ -94,8 +94,8 @@
                 "allowed_range_max": 275,
                 "actual_quantity": 250,
                 "in_house_batch_no": null,
-                "performed_by": "Michael Clark",
-                "checked_by": "Liam Walker",
+                "performed_by": "P. Venkatesh",
+                "checked_by": "S.K. Saidavali",
                 "remarks": null,
                 "quantity_within_range": true
             },
@@ -107,8 +107,8 @@
                 "allowed_range_max": 110,
                 "actual_quantity": 100,
                 "in_house_batch_no": null,
-                "performed_by": "Emily White",
-                "checked_by": "Grace Hall",
+                "performed_by": "U. Sankara Rao",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "quantity_within_range": true
             },
@@ -120,8 +120,8 @@
                 "allowed_range_max": 110,
                 "actual_quantity": 100,
                 "in_house_batch_no": null,
-                "performed_by": "Chris Green",
-                "checked_by": "Ethan Adams",
+                "performed_by": "U. Sankara Rao",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "quantity_within_range": true
             },
@@ -133,8 +133,8 @@
                 "allowed_range_max": 110,
                 "actual_quantity": 100,
                 "in_house_batch_no": null,
-                "performed_by": "Sophia Carter",
-                "checked_by": "Mia Robinson",
+                "performed_by": "U. Sankara Rao",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "quantity_within_range": true
             },
@@ -146,8 +146,8 @@
                 "allowed_range_max": 110,
                 "actual_quantity": 100,
                 "in_house_batch_no": null,
-                "performed_by": "David Wilson",
-                "checked_by": "Lucas Allen",
+                "performed_by": "Ravi Chatragadda",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "quantity_within_range": true
             },
@@ -159,8 +159,8 @@
                 "allowed_range_max": 110,
                 "actual_quantity": 100,
                 "in_house_batch_no": null,
-                "performed_by": "Olivia Johnson",
-                "checked_by": "Charlotte Young",
+                "performed_by": "Ravi Chatragadda",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "quantity_within_range": true
             }
@@ -264,7 +264,7 @@
                 "op_no": 66,
                 "initial_volume": 2230,
                 "final_volume": 0,
-                "difference_volume": 2230
+                "difference_volume": 230
             }
         ]
     },
@@ -278,8 +278,8 @@
                 "time_from": "16:00",
                 "time_to": "17:40",
                 "duration": null,
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
+                "performed_by": "Ravi Chatragadda",
+                "checked_by": "K. Chinna Rao",
                 "remarks": "Cleaned/Uncleaned",
                 "temperature_records": null
             },
@@ -291,8 +291,8 @@
                 "time_from": "17:40",
                 "time_to": "19:00",
                 "duration": null,
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
+                "performed_by": "G. Nithin Kumar",
+                "checked_by": "K. Chinna Rao",
                 "remarks": "Vol: 28001",
                 "temperature_records": null
             },
@@ -304,8 +304,8 @@
                 "time_from": "19:00",
                 "time_to": "19:30",
                 "duration": null,
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
+                "performed_by": "K. Chinna Rao",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "temperature_records": null
             },
@@ -317,8 +317,8 @@
                 "time_from": "19:30",
                 "time_to": "20:00",
                 "duration": null,
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
+                "performed_by": "U. Sankara Rao",
+                "checked_by": "K. Chinna Rao",
                 "remarks": "Temp: Vol: 190L, Clear / Not Clear",
                 "temperature_records": null
             },
@@ -330,8 +330,8 @@
                 "time_from": "20:00",
                 "time_to": "20:10",
                 "duration": null,
-                "performed_by": "Daniel Garcia",
-                "checked_by": "Jacob Miller",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "Amit Kumar",
                 "remarks": null,
                 "temperature_records": null
             },
@@ -343,8 +343,8 @@
                 "time_from": "20:10",
                 "time_to": "20:40",
                 "duration": null,
-                "performed_by": "Sophia Lee",
-                "checked_by": "Ella Thomas",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "A. Bala Swamy",
                 "remarks": null,
                 "temperature_records": null
             },
@@ -356,8 +356,8 @@
                 "time_from": "20:40",
                 "time_to": "22:40",
                 "duration": null,
-                "performed_by": "Michael Clark",
-                "checked_by": "Liam Walker",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "Ravi Chatragadda",
                 "remarks": "Solution : Clear/Unclear",
                 "temperature_records": null
             },
@@ -369,8 +369,8 @@
                 "time_from": "01:00",
                 "time_to": "01:15",
                 "duration": null,
-                "performed_by": "Emily White",
-                "checked_by": "Grace Hall",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "temperature_records": null
             },
@@ -382,8 +382,8 @@
                 "time_from": "01:15",
                 "time_to": "01:30",
                 "duration": null,
-                "performed_by": "Chris Green",
-                "checked_by": "Ethan Adams",
+                "performed_by": "P. Venkatesh",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "temperature_records": null
             },
@@ -395,8 +395,8 @@
                 "time_from": "01:30",
                 "time_to": "01:45",
                 "duration": null,
-                "performed_by": "Sophia Carter",
-                "checked_by": "Mia Robinson",
+                "performed_by": "P. Venkatesh",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
                 "temperature_records": null
             }
