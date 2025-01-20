@@ -1,7 +1,7 @@
 APPLICATION_NAME ?= docaiapp
 
 build:
-	docker build --tag ${DOCKER_REGISTRY_USER}/${APPLICATION_NAME}:${GITHUB_SHA} .
+	docker build --tag $(DOCKER_REGISTRY_USER)/${APPLICATION_NAME}:${GITHUB_SHA} .
 
 push:
 	docker push ${DOCKER_REGISTRY_USER}/${APPLICATION_NAME}:${GITHUB_SHA}
