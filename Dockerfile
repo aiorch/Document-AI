@@ -2,8 +2,8 @@ FROM apache/airflow:2.9.3
 USER root
 RUN apt-get update && apt-get install -y \
     python3-dev \
-        python3-virtualenv \
-    libpq-dev
+    python3-virtualenv \
+    libpq-dev \
     redis-server
 
 RUN mkdir /app
