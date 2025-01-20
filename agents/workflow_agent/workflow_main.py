@@ -96,33 +96,63 @@ class WorkflowAgent:
 
         parts = user_text.split("called")
         if len(parts) < 2:
-            return None, "Could not parse name."
+            return None, "Could not parse workflow creation request."
+
         after_called = parts[1].strip()
+
+        # Extract workflow name and remaining details
         first_space = after_called.find(" ")
         if first_space == -1:
             name = after_called
             prompt = "No prompt found."
+            email_list = []
         else:
             name = after_called[:first_space]
             rest = after_called[first_space:].strip()
-            prompt = rest
+
+            # Extract email list if present
+            if "with email list" in rest:
+                email_split = rest.split("with email list")
+                prompt = email_split[0].strip()
+                email_list = [
+                    email.strip().strip("[]'\"")  # Clean up brackets and quotes
+                    for email in email_split[1].strip().split(",")
+                    if email.strip()
+                ]
+            else:
+                prompt = rest
+                email_list = []
 
         if name in self.workflows:
             return None, f"Workflow '{name}' already exists."
 
-        self.workflows[name] = prompt
+        # Store the workflow details
+        self.workflows[name] = {
+            "prompt": prompt,
+            "email_list": email_list,
+        }
         self._save_workflows()
-        return name, f"Workflow '{name}' created successfully!"
+
+        success_message = f"Workflow '{name}' created successfully!"
+        if email_list:
+            success_message += (
+                f" Notifications will be sent to: {', '.join(email_list)}."
+            )
+
+        return name, success_message
 
     def get_prompt(self, workflow_name: str) -> str:
         """Return the stored natural-language prompt for the given workflow."""
-        return self.workflows.get(workflow_name, "Workflow not found.")
+        workflow = self.workflows.get(workflow_name)
+        if not workflow:
+            return f"Workflow not found."
+        return workflow.get("prompt", "Workflow not found.")
 
     def notify_user(
         self, workflow_name: str, message: str, recipient: Optional[str] = None
     ) -> str:
         """
-        Send an email notification for the workflow.
+        Send email notifications for the workflow.
 
         Args:
           workflow_name (str): Name of the workflow
@@ -132,23 +162,43 @@ class WorkflowAgent:
         Returns:
           str: Confirmation message
         """
-        recipient_email = recipient or self.default_recipient
-        try:
-            msg = MIMEMultipart()
-            msg["From"] = self.email_user
-            msg["To"] = recipient_email
-            msg["Subject"] = f"Notification for Workflow '{workflow_name}'"
+        workflow = self.workflows.get(workflow_name)
+        if not workflow:
+            return f"Workflow '{workflow_name}' not found."
 
-            body = f"Workflow: {workflow_name}\n\nMessage:\n{message}"
-            msg.attach(MIMEText(body, "plain"))
+        # Use recipient or fallback to email list from workflow
+        email_list = workflow.get("email_list", [])
+        if not email_list:
+            return f"No email addresses configured for workflow '{workflow_name}'."
 
-            with smtplib.SMTP(self.smtp_server, self.smtp_port) as server:
-                server.ehlo()
-                server.starttls()
-                server.ehlo()
-                server.login(self.email_user, self.email_password)
-                server.sendmail(self.email_user, recipient_email, msg.as_string())
+        success_count = 0
+        failure_count = 0
+        failed_recipients = []
 
-            return f"Notification sent to {recipient_email} for workflow '{workflow_name}'."
-        except Exception as e:
-            return f"Failed to send notification: {e}"
+        for recipient_email in email_list:
+            try:
+                msg = MIMEMultipart()
+                msg["From"] = self.email_user
+                msg["To"] = recipient_email
+                msg["Subject"] = f"Notification for Workflow '{workflow_name}'"
+
+                body = f"Workflow: {workflow_name}\n\nMessage:\n{message}"
+                msg.attach(MIMEText(body, "plain"))
+
+                with smtplib.SMTP(self.smtp_server, self.smtp_port) as server:
+                    server.ehlo()
+                    server.starttls()
+                    server.ehlo()
+                    server.login(self.email_user, self.email_password)
+                    server.sendmail(self.email_user, recipient_email, msg.as_string())
+
+                success_count += 1
+            except Exception as e:
+                failure_count += 1
+                failed_recipients.append(f"{recipient_email}: {e}")
+
+        response_message = f"Notifications sent to {success_count} recipients for workflow '{workflow_name}'."
+        if failure_count > 0:
+            response_message += f" Failed to send to {failure_count} recipients: {', '.join(failed_recipients)}."
+
+        return response_message

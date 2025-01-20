@@ -1,5 +1,9 @@
 {
-    "low_quantity_check": "checks For all the rows in the materials usage table to see if the actual quantities of all raw materials are in the allowed range",
-    "signature": "forgery  message when signature might be forged\n\ntest update to rule",
-    "test": "test"
+    "low_quantity_check": {
+        "prompt": "checks For all the rows in the materials usage table to see if the actual quantities of all raw materials are in the allowed range",
+        "email_list": [
+            "shreyash.sridhar@blueware.io",
+            "shreyash.sridhar@gmail.com"
+        ]
+    }
 }

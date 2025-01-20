@@ -288,6 +288,7 @@ def run_workflow():
     data = request.json
     workflow_name = data.get("workflow_name")
     workflow_rule = data.get("rule")
+    email_list = data.get("email_list")
 
     if not workflow_name or not workflow_rule:
         return jsonify({"error": "Both 'workflow_name' and 'rule' are required."}), 400
@@ -308,7 +309,7 @@ def run_workflow():
 
     # Check if workflow exists
     if workflow_name not in workflows:
-        create_prompt = f"Create a workflow called {workflow_name} {workflow_rule}"
+        create_prompt = f"Create a workflow called {workflow_name} {workflow_rule} with email list {email_list}"
         try:
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
