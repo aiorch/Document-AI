@@ -14,11 +14,20 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Install dependencies
-      run: make
+    - name: Build
+      run: make build
+      env:
+        DOCKER_REGISTRY_USER: ${{ env.DOCKER_REGISTRY_USER }}
+        DOCKER_REGISTRY_PASS: ${{ secrets.DOCKER_REGISTRY_PASS }}
 
-    - name: Run check
-      run: make check
+    - name: push
+      run: make push
+      env:
+        DOCKER_REGISTRY_USER: ${{ env.DOCKER_REGISTRY_USER }}
+        DOCKER_REGISTRY_PASS: ${{ secrets.DOCKER_REGISTRY_PASS }}
 
-    - name: Run distcheck
-      run: make distcheck
+    - name: Release
+      run: make release
+      env:
+        DOCKER_REGISTRY_USER: ${{ env.DOCKER_REGISTRY_USER }}
+        DOCKER_REGISTRY_PASS: ${{ secrets.DOCKER_REGISTRY_PASS }}
