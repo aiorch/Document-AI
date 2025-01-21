@@ -16,8 +16,13 @@ from agents.controller_agent.controller import app as controller_app
 from agents.knowledge_graph_agent.json_to_db import JSONToKnowledgeGraph
 from agents.sql_agent.json_to_db import JSONToSQL
 from agents.sql_agent.utils import ensure_column_exists, insert_data
-from schema_helper import (SCHEMA_DIR, convert_pdf_to_images,
-                           generate_schema_with_gpt, load_schema, save_schema)
+from schema_helper import (
+    SCHEMA_DIR,
+    convert_pdf_to_images,
+    generate_schema_with_gpt,
+    load_schema,
+    save_schema,
+)
 from src.processing import process_pdf_pages
 
 load_dotenv()
@@ -80,7 +85,11 @@ def process_pdf_task(filepath, pages, document_type):
 
     print(f"Processing file: {filepath}, Document Type: {document_type}")
     result = process_pdf_pages(filepath, document_type, page_numbers=pages)
-    return {"filename": os.path.basename(filepath), "data": result}
+    filename = os.path.basename(filepath)
+    if result:
+        json_to_sql(filename, result)
+        json_to_kg(filename, result)
+    return {"filename": filename, "data": result}
 
 
 def parse_pages_input(pages_input):
@@ -165,12 +174,6 @@ def task_status(task_id):
     if task.state == "PENDING":
         response = {"state": "PENDING", "status": "Pending..."}
     elif task.state == "SUCCESS":
-        task_result = task.result
-        filename = task_result.get("filename")
-        json_data = task_result.get("data")
-        if filename and json_data:
-            json_to_sql(filename, json_data)
-            json_to_kg(filename, json_data)
         response = {"state": "SUCCESS", "result": json_data}
     elif task.state == "FAILURE":
         response = {"state": "FAILURE", "error": str(task.info)}
