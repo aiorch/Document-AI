@@ -290,6 +290,7 @@ def chat():
 def run_workflow():
     data = request.json
     workflow_name = data.get("workflow_name")
+    workflow_name = workflow_name.strip().lower().replace(" ", "_")
     workflow_rule = data.get("rule")
     email_list = data.get("email_list")
 
