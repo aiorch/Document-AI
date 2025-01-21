@@ -86,9 +86,9 @@ def process_pdf_task(filepath, pages, document_type):
     print(f"Processing file: {filepath}, Document Type: {document_type}")
     result = process_pdf_pages(filepath, document_type, page_numbers=pages)
     filename = os.path.basename(filepath)
-    if result:
-        json_to_sql(filename, result)
-        json_to_kg(filename, result)
+    # if result:
+    #     json_to_sql(filename, result)
+    #     json_to_kg(filename, result)
     return {"filename": filename, "data": result}
 
 
@@ -174,7 +174,7 @@ def task_status(task_id):
     if task.state == "PENDING":
         response = {"state": "PENDING", "status": "Pending..."}
     elif task.state == "SUCCESS":
-        response = {"state": "SUCCESS", "result": json_data}
+        response = {"state": "SUCCESS", "result": task.result.get("data")}
     elif task.state == "FAILURE":
         response = {"state": "FAILURE", "error": str(task.info)}
     else:
