@@ -1,0 +1,518 @@
+{
+    "batch_details": {
+        "product_name": "Gabapentin",
+        "stage": "GP (IPA + Methanol + Water)",
+        "batch_no": "GP/08 2024 0218",
+        "batch_started_on": "2024-08-26T00:00:00",
+        "batch_completed_on": "2024-08-29T00:00:00"
+    },
+    "material_usage_table": {
+        "rows": [
+            {
+                "raw_material": "Purified water (Lot-I)",
+                "unit": "L",
+                "standard_quantity": 2500,
+                "allowed_range_min": 2450,
+                "allowed_range_max": 2550,
+                "actual_quantity": 2500,
+                "in_house_batch_no": "UP-08",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "GP HCI",
+                "unit": "Kg",
+                "standard_quantity": 1800,
+                "allowed_range_min": 1728,
+                "allowed_range_max": 2090,
+                "actual_quantity": 1999,
+                "in_house_batch_no": "0139, 0140, 0141, 0142",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "CS Lye (48% w/w) (Lot-I)",
+                "unit": "L",
+                "standard_quantity": 190,
+                "allowed_range_min": 180,
+                "allowed_range_max": 200,
+                "actual_quantity": 190,
+                "in_house_batch_no": "CL/200412",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Activated Carbon",
+                "unit": "Kg",
+                "standard_quantity": 10,
+                "allowed_range_min": 8,
+                "allowed_range_max": 12,
+                "actual_quantity": 10,
+                "in_house_batch_no": "PSCB/200 404",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Purified water (Lot-II)",
+                "unit": "L",
+                "standard_quantity": 20,
+                "allowed_range_min": 15,
+                "allowed_range_max": 25,
+                "actual_quantity": 20,
+                "in_house_batch_no": "UP-08",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Purified water (Lot-III)",
+                "unit": "L",
+                "standard_quantity": 500,
+                "allowed_range_min": 450,
+                "allowed_range_max": 550,
+                "actual_quantity": 500,
+                "in_house_batch_no": "UP-08",
+                "performed_by": "P. Venkatesh",
+                "checked_by": "S.K. Saidavali",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "CS Lye (48% w/w) (Lot-II)",
+                "unit": "L",
+                "standard_quantity": 250,
+                "allowed_range_min": 225,
+                "allowed_range_max": 275,
+                "actual_quantity": 250,
+                "in_house_batch_no": null,
+                "performed_by": "P. Venkatesh",
+                "checked_by": "S.K. Saidavali",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Purified water (Lot-IV)",
+                "unit": "L",
+                "standard_quantity": 100,
+                "allowed_range_min": 90,
+                "allowed_range_max": 110,
+                "actual_quantity": 100,
+                "in_house_batch_no": null,
+                "performed_by": "U. Sankara Rao",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "IPA (Lot -I)",
+                "unit": "L",
+                "standard_quantity": 100,
+                "allowed_range_min": 90,
+                "allowed_range_max": 110,
+                "actual_quantity": 100,
+                "in_house_batch_no": null,
+                "performed_by": "U. Sankara Rao",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Methanol",
+                "unit": "L",
+                "standard_quantity": 100,
+                "allowed_range_min": 90,
+                "allowed_range_max": 110,
+                "actual_quantity": 100,
+                "in_house_batch_no": null,
+                "performed_by": "U. Sankara Rao",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Purified water (Lot-V)",
+                "unit": "L",
+                "standard_quantity": 100,
+                "allowed_range_min": 90,
+                "allowed_range_max": 110,
+                "actual_quantity": 100,
+                "in_house_batch_no": null,
+                "performed_by": "Ravi Chatragadda",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "IPA (Lot -II)",
+                "unit": "L",
+                "standard_quantity": 2230,
+                "allowed_range_min": 2200,
+                "allowed_range_max": 2260,
+                "actual_quantity": 2230,
+                "in_house_batch_no": "PA1240628M",
+                "performed_by": "Ravi Chatragadda",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Methanol",
+                "unit": "L",
+                "standard_quantity": 450,
+                "allowed_range_min": 425,
+                "allowed_range_max": 475,
+                "actual_quantity": 450,
+                "in_house_batch_no": "OH/240424M",
+                "performed_by": "Ravi Chatragadda",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "Purified water",
+                "unit": "L",
+                "standard_quantity": 270,
+                "allowed_range_min": 250,
+                "allowed_range_max": 270,
+                "actual_quantity": 270,
+                "in_house_batch_no": "UP-07",
+                "performed_by": "G. Nithin Kumar",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
+                "quantity_within_range": true
+            },
+            {
+                "raw_material": "IPA (Lot -II)",
+                "unit": "L",
+                "standard_quantity": 500,
+                "allowed_range_min": 480,
+                "allowed_range_max": 520,
+                "actual_quantity": 500,
+                "in_house_batch_no": "PAL 240428M",
+                "performed_by": "K. Chinna Rao",
+                "checked_by": "Amit Kumar",
+                "remarks": null,
+                "quantity_within_range": true
+            }
+        ]
+    },
+    "equipment_list": {
+        "equipments": [
+            {
+                "serial_no": 1,
+                "name": "Glass Lined reactor",
+                "id_no": "GLRE-1010"
+            },
+            {
+                "serial_no": 2,
+                "name": "Glass Lined reactor",
+                "id_no": "GLRE-1014"
+            },
+            {
+                "serial_no": 3,
+                "name": "Stainless steel Centrifuge",
+                "id_no": "SSCF-1001"
+            },
+            {
+                "serial_no": 4,
+                "name": "Stainless steel Centrifuge",
+                "id_no": "SSCF-1002"
+            },
+            {
+                "serial_no": 5,
+                "name": "SSPCS",
+                "id_no": "SSPCS-1001"
+            },
+            {
+                "serial_no": 6,
+                "name": "Glass Lined reactor",
+                "id_no": "GLRE-1015"
+            },
+            {
+                "serial_no": 7,
+                "name": "SSANFD\u00ae",
+                "id_no": "SSANFD-1006"
+            },
+            {
+                "serial_no": 8,
+                "name": "Stainless steel Hopper",
+                "id_no": "SSHP-1001"
+            },
+            {
+                "serial_no": 9,
+                "name": "SSRCVD",
+                "id_no": "SSRCVD-1001"
+            }
+        ]
+    },
+    "raw_material_sheet": {
+        "measurements": [
+            {
+                "id": "Purified Water , Flow meter No. FM-1010",
+                "op_no": 1,
+                "initial_volume": 2500,
+                "final_volume": 0,
+                "difference_volume": 2500
+            },
+            {
+                "id": "Purified Water , Flow meter No. FM-1010",
+                "op_no": 5,
+                "initial_volume": 20,
+                "final_volume": 0,
+                "difference_volume": 20
+            },
+            {
+                "id": "Purified Water , Flow meter No. FM-1010",
+                "op_no": 9,
+                "initial_volume": 500,
+                "final_volume": 0,
+                "difference_volume": 500
+            },
+            {
+                "id": "Purified Water (SSJRC 1005)",
+                "op_no": 17,
+                "initial_volume": 800,
+                "final_volume": 700,
+                "difference_volume": 100
+            },
+            {
+                "id": "Purified Water (SSJRC 1005)",
+                "op_no": 22,
+                "initial_volume": 700,
+                "final_volume": 600,
+                "difference_volume": 100
+            },
+            {
+                "id": "Purified Water (SSJRC 1005)",
+                "op_no": 27,
+                "initial_volume": 600,
+                "final_volume": 500,
+                "difference_volume": 100
+            },
+            {
+                "id": "Purified Water (SSJRC 1005)",
+                "op_no": 32,
+                "initial_volume": 500,
+                "final_volume": 400,
+                "difference_volume": 100
+            },
+            {
+                "id": "Purified Water (SSJRC 1005)",
+                "op_no": 37,
+                "initial_volume": 400,
+                "final_volume": 300,
+                "difference_volume": 100
+            },
+            {
+                "id": "Purified Water (SSJRC 1005)",
+                "op_no": 42,
+                "initial_volume": 300,
+                "final_volume": 200,
+                "difference_volume": 100
+            },
+            {
+                "id": "Purified Water (SSJRC 1005)",
+                "op_no": 47,
+                "initial_volume": 200,
+                "final_volume": 100,
+                "difference_volume": 100
+            },
+            {
+                "id": "Purified Water (SSJRC 1005)",
+                "op_no": 52,
+                "initial_volume": 100,
+                "final_volume": 0,
+                "difference_volume": 100
+            },
+            {
+                "id": "CS Lye (SSRC 1010)",
+                "op_no": 4,
+                "initial_volume": 190,
+                "final_volume": 0,
+                "difference_volume": 190
+            },
+            {
+                "id": "CS Lye (SSRC 1004)",
+                "op_no": 12,
+                "initial_volume": 250,
+                "final_volume": 0,
+                "difference_volume": 250
+            },
+            {
+                "id": "IPA (SSRC 1011)",
+                "op_no": 55,
+                "initial_volume": 2230,
+                "final_volume": 0,
+                "difference_volume": 230
+            },
+            {
+                "id": "Methanol (SSRC 1012)",
+                "op_no": 56,
+                "initial_volume": 450,
+                "final_volume": 0,
+                "difference_volume": 450
+            },
+            {
+                "id": "IPA (SSRC 1011)",
+                "op_no": 66,
+                "initial_volume": 2230,
+                "final_volume": 0,
+                "difference_volume": 230
+            }
+        ]
+    },
+    "manufacturing_procedure": {
+        "steps": [
+            {
+                "op_no": 1,
+                "description": "Check the cleanliness of the reactor.",
+                "equipment_no": null,
+                "date": "2024-08-26T00:00:00",
+                "time_from": null,
+                "time_to": null,
+                "duration": null,
+                "performed_by": "A. Bala Swamy",
+                "checked_by": "Ravi Chatragadda",
+                "remarks": "Cleaned/Uncleaned",
+                "temperature_records": null
+            },
+            {
+                "op_no": 2,
+                "description": "Charge Purified Water (Lot-I) into the reactor.",
+                "equipment_no": "GLRE-1010",
+                "date": "2024-08-26T00:00:00",
+                "time_from": "16:00",
+                "time_to": "17:40",
+                "duration": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": "Vol: 28001",
+                "temperature_records": null
+            },
+            {
+                "op_no": 3,
+                "description": "Charge GP HCI into the reactor under stirring.",
+                "equipment_no": "GLRE-1010",
+                "date": "2024-08-26T00:00:00",
+                "time_from": "17:40",
+                "time_to": "19:00",
+                "duration": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 4,
+                "description": "Stir for 20 to 30 minutes. Charge CS Lye (Lot-I) from the receiver SSRC-1010 to the reactor below 30\u00b0C.",
+                "equipment_no": "SSRC-1010 to GLRE-1010",
+                "date": "2024-08-26T00:00:00",
+                "time_from": "19:00",
+                "time_to": "19:30",
+                "duration": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": "Temp: Vol: 190L, Clear / Not Clear",
+                "temperature_records": null
+            },
+            {
+                "op_no": 5,
+                "description": "Charge Activated carbon slurry (Purified Water Lot-II + Activated carbon) into the reactor.",
+                "equipment_no": "GLRE-1010",
+                "date": "2024-08-26T00:00:00",
+                "time_from": "20:00",
+                "time_to": "20:10",
+                "duration": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 6,
+                "description": "Stir for 20 to 30 minutes.",
+                "equipment_no": "GLRE-1010",
+                "date": "2024-08-26T00:00:00",
+                "time_from": "20:10",
+                "time_to": "20:40",
+                "duration": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 7,
+                "description": "Check the cleanliness of the reactor. Filter reaction mass through the filter setup (SSCF-1001,SSMF-1001&SSMF-1002). Initially re-circulate the mass for 10 to 15 minutes. Note: Check the solution is clear and free from charcoal particles through view glass",
+                "equipment_no": "GLRE-1014",
+                "date": "2024-08-26T00:00:00",
+                "time_from": "20:40",
+                "time_to": "22:40",
+                "duration": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": "Solution : Clear/Unclear",
+                "temperature_records": null
+            },
+            {
+                "op_no": 8,
+                "description": "If found satisfactory, transfer the filtered mass to another clean reactor (GLRE 1014).",
+                "equipment_no": "GLRE-1014",
+                "date": "2024-08-27T00:00:00",
+                "time_from": "01:00",
+                "time_to": "01:15",
+                "duration": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 9,
+                "description": "After completion of filtration flush the filter setup with Nitrogen pressure.",
+                "equipment_no": "GLRE-1010",
+                "date": "2024-08-27T00:00:00",
+                "time_from": "01:15",
+                "time_to": "01:30",
+                "duration": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null,
+                "temperature_records": null
+            },
+            {
+                "op_no": 10,
+                "description": "Charge Purified Water Lot-III into reactor.",
+                "equipment_no": "GLRE-1010",
+                "date": "2024-08-27T00:00:00",
+                "time_from": "01:30",
+                "time_to": "01:45",
+                "duration": null,
+                "performed_by": null,
+                "checked_by": null,
+                "remarks": null,
+                "temperature_records": null
+            }
+        ]
+    },
+    "approval_details": {
+        "prepared_by": "Asst.Manager-Production/designee",
+        "reviewed_by": "Head - Production/designee",
+        "approved_by": "Head - QA/designee"
+    },
+    "document_metadata": {
+        "revision_no": "04",
+        "effective_date": "2024-08-01T00:00:00",
+        "mfr_ref_no": "RD/MF/GP/II(W)/GP-004",
+        "format_no": "QSP-021/F-002/00"
+    }
+}

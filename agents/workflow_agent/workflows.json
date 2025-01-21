@@ -3,7 +3,14 @@
         "prompt": "checks For all the rows in the materials usage table to see if the actual quantities of all raw materials are in the allowed range",
         "email_list": [
             "shreyash.sridhar@blueware.io",
-            "shreyash.sridhar@gmail.com"
+            "shreyash.sridhar@gmail.com",
+            "savinay.chandrupatla@gmail.com"
+        ]
+    },
+    "quantity_validation": {
+        "prompt": "Checks for all the rows in the materials usage table to see if the actual quantities of all raw materials are in the allowed range",
+        "email_list": [
+            "savinay.chandrupatla@gmail.com"
         ]
     }
 }

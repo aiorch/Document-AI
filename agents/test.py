@@ -1,5 +1,5 @@
 import sqlite3
-DB_PATH = "./this_data.db"  # Update this if your database path is different
+DB_PATH = "./batch_data.db"  # Update this if your database path is different
 def inspect_database(db_path):
     """
     Inspect the database and print all tables, their schema, and a preview of their data.

@@ -198,6 +198,7 @@ class WorkflowAgent:
                 failed_recipients.append(f"{recipient_email}: {e}")
 
         response_message = f"Notifications sent to {success_count} recipients for workflow '{workflow_name}'."
+        print(f"Notifications sent to {success_count} recipients for workflow '{workflow_name}'.")
         if failure_count > 0:
             response_message += f" Failed to send to {failure_count} recipients: {', '.join(failed_recipients)}."
 

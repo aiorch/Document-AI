@@ -1,6 +1,6 @@
 import sqlite3
 
-DB_PATH = "./this_data.db"  # Update this if your database path is different
+DB_PATH = "./batch_data.db"  # Update this if your database path is different
 DOC_NAME_TO_DELETE = "GP 218-errors.pdf"
 
 def delete_document_dynamic(db_path, doc_name):
