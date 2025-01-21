@@ -1,4 +1,4 @@
-name: Makefile CI
+name: Build CI
 
 on:
   push:
@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -22,15 +21,5 @@ jobs:
         
     - name: Build
       run: make build
-      env:
-        DOCKER_REGISTRY_USER: ${{ vars.DOCKER_REGISTRY_USER }}
-
-    - name: push
-      run: make push
-      env:
-        DOCKER_REGISTRY_USER: ${{ vars.DOCKER_REGISTRY_USER }}
-
-    - name: Release
-      run: make release
       env:
         DOCKER_REGISTRY_USER: ${{ vars.DOCKER_REGISTRY_USER }}

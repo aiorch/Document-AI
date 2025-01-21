@@ -1,0 +1,35 @@
+name: Release CI
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+      runs-on: ubuntu-latest
+
+      steps:
+      - uses: actions/checkout@v4
+
+      - name: login
+        uses: docker/login-action@v3
+        with:
+          username: ${{ vars.DOCKER_REGISTRY_USER }}
+          password: ${{ secrets.DOCKER_REGISTRY_PASS }}
+          
+      - name: Build
+        run: make build
+        env:
+          DOCKER_REGISTRY_USER: ${{ vars.DOCKER_REGISTRY_USER }}
+
+      - name: push
+        run: make push
+        env:
+          DOCKER_REGISTRY_USER: ${{ vars.DOCKER_REGISTRY_USER }}
+          RELEASE: ${{ github.event.release.tag_name }}
+
+      - name: Release
+        run: make release
+        env:
+          DOCKER_REGISTRY_USER: ${{ vars.DOCKER_REGISTRY_USER }}
+          RELEASE: ${{ github.event.release.tag_name }}
