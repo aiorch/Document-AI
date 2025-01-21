@@ -25,8 +25,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'tejasrajeevab'
+          git config --global user.email 'tejasrajeevab@gmail.com'
           git add ./helm/Chart.yaml
-          git commit -m "chore: update helm chart version to ${{ steps.get_version.outputs.VERSION }}"
+          git commit -m "CI UPDATE VIA PAT: update helm chart version to ${{ steps.get_version.outputs.VERSION }}"
           git push 
