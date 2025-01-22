@@ -3,7 +3,7 @@ name: docaiapp
 description: Helm Chart for DocAI application
 type: application
 version: v0.0.1
-appVersion: v0.0.1
+appVersion: 0.0.1
 maintainers:
 - email: contact@litewave.ai
   name: litewave-admin
