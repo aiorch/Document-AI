@@ -1,4 +1,4 @@
-name: Release image
+name: Release Document AI
 
 on:
   release:
@@ -33,3 +33,30 @@ jobs:
         env:
           DOCKER_REGISTRY_USER: ${{ vars.DOCKER_REGISTRY_USER }}
           RELEASE: ${{ github.event.release.tag_name }}
+
+  release-helm-chart:
+    runs-on: ubuntu-latest
+    needs: release-image
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          ref: main
+
+      - name: Get release version
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Update Chart.yaml version
+        run: |
+          sed -i "s/^version:.*$/version: ${{ steps.get_version.outputs.VERSION }}/" ./helm/Chart.yaml
+          sed -i "s/^appVersion:.*$/appVersion: ${{ steps.get_version.outputs.VERSION }}/" ./helm/Chart.yaml
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'tejasrajeevab'
+          git config --global user.email 'tejasrajeevab@gmail.com'
+          git add ./helm/Chart.yaml
+          git commit -m "CI UPDATE VIA PAT: update helm chart version to ${{ steps.get_version.outputs.VERSION }}"
+          git push 
