@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-deployment
+  name: {{ include "docai-app.fullname" . }}
   labels:
-    {{- include "your-chart-name.labels" . | nindent 4 }}
+    {{- include "docai-app.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount | default 1 }}
   selector:
     matchLabels:
-      {{- include "your-chart-name.selectorLabels" . | nindent 6 }}
+      {{- include "docai-app.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "your-chart-name.selectorLabels" . | nindent 8 }}
+        {{- include "docai-app.selectorLabels" . | nindent 8 }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: OPENAI_API_KEY
