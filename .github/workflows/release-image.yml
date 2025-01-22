@@ -2,8 +2,7 @@ name: Release image
 
 on:
   release:
-    # temp for testing
-    types: [deleted]
+    types: [published]
 
 jobs:
   release-image:
