@@ -21,7 +21,7 @@ config:
     emailPassword: ""  # Fill in deployment
     defaultRecipient: ""  # Fill in deployment
   azure:
-    apiKey: ""  # Fill in deployment
+
     ocrUrl: ""  # Fill in deployment
     docEndpoint: ""  # Fill in deployment
     docKey: ""  # Fill in deployment
