@@ -1,7 +1,7 @@
 # Default values for hello-world.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-
+replicaCount: 1
 # Default configuration values
 config:
   openai:
@@ -28,11 +28,10 @@ config:
 
 # Deployment configuration
 image:
-  repository: your-registry/your-image
-  tag: latest
-  pullPolicy: IfNotPresent
-
-replicaCount: 1
+  repository: litewavedev/docaiapp
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  # tag: "latest"
 
 nameOverride: ""
 fullnameOverride: ""
