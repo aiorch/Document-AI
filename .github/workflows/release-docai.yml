@@ -50,7 +50,7 @@ jobs:
 
       - name: Update Chart.yaml version
         run: |
-          sed -i "s/^version:.*$/version: ${{ steps.get_version.outputs.VERSION }}/" ./helm/Chart.yaml
+          sed -i "s/^version:.*$/version: v${{ steps.get_version.outputs.VERSION }}/" ./helm/Chart.yaml
           sed -i "s/^appVersion:.*$/appVersion: ${{ steps.get_version.outputs.VERSION }}/" ./helm/Chart.yaml
 
       - name: Commit and push changes
