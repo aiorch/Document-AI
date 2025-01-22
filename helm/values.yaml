@@ -2,13 +2,37 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicaCount: 1
+# Default configuration values
+config:
+  openai:
+    apiKey: ""  # Fill in deployment
+    model: "gpt-4o-mini"
+  sql:
+    dbPath: ""  # Fill in deployment
+  neo4j:
+    uri: "bolt://localhost:7687"
+    username: ""  # Fill in deployment
+    password: ""  # Fill in deployment
+    acceptLicense: "yes"
+  smtp:
+    server: "smtp.gmail.com"
+    port: 587
+    emailUser: "litewaveaidev@gmail.com"
+    emailPassword: ""  # Fill in deployment
+    defaultRecipient: ""  # Fill in deployment
+  azure:
+    apiKey: ""  # Fill in deployment
+    ocrUrl: ""  # Fill in deployment
+    docEndpoint: ""  # Fill in deployment
+    docKey: ""  # Fill in deployment
 
+# Deployment configuration
 image:
-  repository: litewavedev/docaiapp
-  pullPolicy: Always
-  # Overrides the image tag whose default is the chart appVersion.
-  # tag: "latest"
+  repository: your-registry/your-image
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
 
 nameOverride: ""
 fullnameOverride: ""

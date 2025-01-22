@@ -1,24 +1,104 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "docai-app.fullname" . }}
+  name: {{ .Release.Name }}-deployment
   labels:
-    {{- include "docai-app.labels" . | nindent 4 }}
+    {{- include "your-chart-name.labels" . | nindent 4 }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.replicaCount | default 1 }}
   selector:
     matchLabels:
-      {{- include "docai-app.selectorLabels" . | nindent 6 }}
+      {{- include "your-chart-name.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "docai-app.selectorLabels" . | nindent 8 }}
+        {{- include "your-chart-name.selectorLabels" . | nindent 8 }}
     spec:
-      serviceAccountName: {{ include "docai-app.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: OPENAI_API_KEY
+            - name: OPENAI_MODEL
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: OPENAI_MODEL
+            - name: SQL_DB_PATH
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: SQL_DB_PATH
+            - name: NEO4J_URI
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: NEO4J_URI
+            - name: NEO4J_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: NEO4J_USERNAME
+            - name: NEO4J_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: NEO4J_PASSWORD
+            - name: NEO4J_ACCEPT_LICENSE_AGREEMENT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: NEO4J_ACCEPT_LICENSE_AGREEMENT
+            - name: SMTP_SERVER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: SMTP_SERVER
+            - name: SMTP_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: SMTP_PORT
+            - name: EMAIL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: EMAIL_USER
+            - name: EMAIL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: EMAIL_PASSWORD
+            - name: DEFAULT_RECIPIENT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: DEFAULT_RECIPIENT
+            - name: AZURE_DOC_ENDPOINT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: AZURE_DOC_ENDPOINT
+            - name: AZURE_DOC_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: AZURE_DOC_KEY
+            - name: AZURE_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: AZURE_API_KEY
+            - name: AZURE_OCR_URL
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-api-secrets
+                  key: AZURE_OCR_URL
           ports:
             - name: http
               containerPort: 5001
