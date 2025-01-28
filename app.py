@@ -2,6 +2,7 @@
 import asyncio
 import json
 import os
+import fitz
 from threading import Lock
 from typing import Optional
 
@@ -11,6 +12,8 @@ from dotenv import load_dotenv
 from flask import Flask, flash, jsonify, render_template, request
 from flask_cors import CORS
 from openai import OpenAI
+import base64
+from io import BytesIO
 
 from agents.controller_agent.controller import app as controller_app
 from agents.knowledge_graph_agent.json_to_db import JSONToKnowledgeGraph
@@ -243,6 +246,45 @@ def add_document_type():
 @app.route("/api/chat_process", methods=["GET"])
 def chat_interface():
     return render_template("chat.html")
+
+@app.route("/api/pdf_to_images", methods=["POST"])
+def pdf_to_images():
+    """
+    Convert a PDF to images and return the images as base64-encoded strings.
+    """
+    file = request.files.get("file")
+
+    if not file:
+        return jsonify({"error": "File is required."}), 400
+
+    if not file.filename.endswith(".pdf"):
+        return jsonify({"error": "Only PDF files are supported."}), 400
+
+    try:
+        # Open the PDF file with PyMuPDF
+        pdf_document = fitz.open(stream=file.read(), filetype="pdf")
+        images = []
+
+        for page_number in range(len(pdf_document)):
+            # Render each page to a pixmap (image)
+            page = pdf_document[page_number]
+            pix = page.get_pixmap(dpi=600)  # Adjust DPI as needed
+
+            # Convert pixmap to a PNG image in memory
+            image_io = BytesIO(pix.tobytes("png"))
+            base64_image = base64.b64encode(image_io.getvalue()).decode("utf-8")
+            images.append({
+                "page": page_number + 1,
+                "image": base64_image
+            })
+
+        pdf_document.close()
+
+        return jsonify({"images": images}), 200
+
+    except Exception as e:
+        print(f"Error processing PDF: {e}")
+        return jsonify({"error": "Failed to process PDF.", "details": str(e)}), 500
 
 
 @app.route("/api/chat_process", methods=["POST"])

@@ -36,3 +36,4 @@ pdf2image
 importlib
 jsonify
 flask-cors
+pymupdf

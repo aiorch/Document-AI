@@ -14,11 +14,11 @@
                 "standard_quantity": 2500,
                 "allowed_range_min": 2450,
                 "allowed_range_max": 2550,
-                "actual_quantity": 2600,
+                "actual_quantity": 2500,
                 "in_house_batch_no": "GP/GPH(0)|BROS/240508-618",
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
-                "remarks": "-",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -29,9 +29,9 @@
                 "allowed_range_max": 2090,
                 "actual_quantity": 1872,
                 "in_house_batch_no": "GP/GVHOS(W)240509-642",
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
-                "remarks": "-",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -40,11 +40,11 @@
                 "standard_quantity": 190,
                 "allowed_range_min": 180,
                 "allowed_range_max": 200,
-                "actual_quantity": 10,
+                "actual_quantity": 190,
                 "in_house_batch_no": "CL/2404943",
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
-                "remarks": "-",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -55,9 +55,9 @@
                 "allowed_range_max": 12,
                 "actual_quantity": 10,
                 "in_house_batch_no": "PSCB/240676",
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
-                "remarks": "-",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
                 "quantity_within_range": true
             },
             {
@@ -68,100 +68,9 @@
                 "allowed_range_max": 25,
                 "actual_quantity": 20,
                 "in_house_batch_no": "up-08",
-                "performed_by": "Daniel Garcia",
-                "checked_by": "Jacob Miller",
-                "remarks": "-",
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "Purified water (Lot-III)",
-                "unit": "L",
-                "standard_quantity": 500,
-                "allowed_range_min": 450,
-                "allowed_range_max": 550,
-                "actual_quantity": 500,
-                "in_house_batch_no": "UP-08",
-                "performed_by": "Sophia Lee",
-                "checked_by": "Ella Thomas",
-                "remarks": "-",
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "CS Lye (48% w/w) (Lot-II)",
-                "unit": "L",
-                "standard_quantity": 250,
-                "allowed_range_min": 225,
-                "allowed_range_max": 275,
-                "actual_quantity": 250,
-                "in_house_batch_no": "CL)240494M",
-                "performed_by": "Michael Clark",
-                "checked_by": "Liam Walker",
-                "remarks": "-",
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "Purified water (Lot-IV)",
-                "unit": "L",
-                "standard_quantity": 800,
-                "allowed_range_min": 750,
-                "allowed_range_max": 850,
-                "actual_quantity": 800,
-                "in_house_batch_no": "UP-05",
-                "performed_by": "Emily White",
-                "checked_by": "Grace Hall",
-                "remarks": "-",
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "IPA (Lot-I)",
-                "unit": "L",
-                "standard_quantity": 2230,
-                "allowed_range_min": 2200,
-                "allowed_range_max": 2260,
-                "actual_quantity": 2230,
-                "in_house_batch_no": "PA/240493m",
-                "performed_by": "Chris Green",
-                "checked_by": "Ethan Adams",
-                "remarks": "-",
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "Methanol",
-                "unit": "L",
-                "standard_quantity": 270,
-                "allowed_range_min": 250,
-                "allowed_range_max": 290,
-                "actual_quantity": 270,
-                "in_house_batch_no": "04/2404923",
-                "performed_by": "Sophia Carter",
-                "checked_by": "Mia Robinson",
-                "remarks": "-",
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "Purified water (Lot-V)",
-                "unit": "L",
-                "standard_quantity": 450,
-                "allowed_range_min": 425,
-                "allowed_range_max": 475,
-                "actual_quantity": 450,
-                "in_house_batch_no": "UP.07",
-                "performed_by": "David Wilson",
-                "checked_by": "Lucas Allen",
-                "remarks": "-",
-                "quantity_within_range": true
-            },
-            {
-                "raw_material": "IPA (Lot-II)",
-                "unit": "L",
-                "standard_quantity": 500,
-                "allowed_range_min": 480,
-                "allowed_range_max": 520,
-                "actual_quantity": 500,
-                "in_house_batch_no": "PA /240443M",
-                "performed_by": "Olivia Johnson",
-                "checked_by": "Charlotte Young",
-                "remarks": "-",
+                "performed_by": "M. Praveen Reddy",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
                 "quantity_within_range": true
             }
         ]
@@ -228,7 +137,7 @@
                 "id": "Purified Water (SSJRC 1005)",
                 "op_no": 17,
                 "initial_volume": 800,
-                "final_volume": 700,
+                "final_volume": 600,
                 "difference_volume": 100
             },
             {
@@ -237,13 +146,6 @@
                 "initial_volume": 190,
                 "final_volume": 0,
                 "difference_volume": 190
-            },
-            {
-                "id": "CS Lye (SSRC 1004)",
-                "op_no": 12,
-                "initial_volume": 250,
-                "final_volume": 0,
-                "difference_volume": 250
             },
             {
                 "id": "IPA (SSRC 1011)",
@@ -258,13 +160,6 @@
                 "initial_volume": 450,
                 "final_volume": 0,
                 "difference_volume": 450
-            },
-            {
-                "id": "IPA (SSRC 1011)",
-                "op_no": 66,
-                "initial_volume": 500,
-                "final_volume": 0,
-                "difference_volume": 500
             }
         ]
     },
@@ -277,10 +172,10 @@
                 "date": "2024-10-09T00:00:00",
                 "time_from": "16:30",
                 "time_to": "17:30",
-                "duration": "01:00",
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
-                "remarks": "Cleaned/Uncleaned",
+                "duration": "1:00",
+                "performed_by": "P. Venkatesh",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
                 "temperature_records": null
             },
             {
@@ -292,10 +187,10 @@
                 "date": "2024-10-09T00:00:00",
                 "time_from": "17:30",
                 "time_to": "18:30",
-                "duration": "01:00",
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
-                "remarks": "Vol: 2500L",
+                "duration": "1:00",
+                "performed_by": "P. Venkatesh",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
                 "temperature_records": null
             },
             {
@@ -307,10 +202,10 @@
                 "date": "2024-10-09T00:00:00",
                 "time_from": "18:30",
                 "time_to": "19:00",
-                "duration": "00:30",
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
-                "remarks": "Stir for 20 to 30 minutes.",
+                "duration": "0:30",
+                "performed_by": "U. Sankara Rao",
+                "checked_by": "K. Chinna Rao",
+                "remarks": null,
                 "temperature_records": null
             },
             {
@@ -323,9 +218,9 @@
                 "date": "2024-10-09T00:00:00",
                 "time_from": "19:00",
                 "time_to": "19:30",
-                "duration": "00:30",
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
+                "duration": "0:30",
+                "performed_by": "U. Sankara Rao",
+                "checked_by": "K. Chinna Rao",
                 "remarks": "Temp: Vol: 190 L, Clear /Not Clear",
                 "temperature_records": null
             },
@@ -338,1012 +233,10 @@
                 "date": "2024-10-09T00:00:00",
                 "time_from": "19:30",
                 "time_to": "20:00",
-                "duration": "00:30",
-                "performed_by": "Daniel Garcia",
-                "checked_by": "Jacob Miller",
-                "remarks": "Stir for 20 to 30 minutes.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 6,
-                "description": "Check the cleanliness of the reactor.Filter reaction mass through the filter setup (SSCF-1001,SSMF-1001&SSMF-1002). Initially re-circulate the mass for 10 to 15 minutes.",
-                "equipment_no": [
-                    "GLRE-1010"
-                ],
-                "date": "2024-10-09T00:00:00",
-                "time_from": "20:00",
-                "time_to": "20:30",
-                "duration": "00:30",
-                "performed_by": "Sophia Lee",
-                "checked_by": "Ella Thomas",
-                "remarks": "Solution : Clear/Unclear",
-                "temperature_records": null
-            },
-            {
-                "op_no": 7,
-                "description": "If found satisfactory, transfer the filtered mass to another clean reactor (GLRE 1014).",
-                "equipment_no": [
-                    "GLRE-1014"
-                ],
-                "date": "2024-10-09T00:00:00",
-                "time_from": "20:30",
-                "time_to": "21:00",
-                "duration": "00:30",
-                "performed_by": "Michael Clark",
-                "checked_by": "Liam Walker",
-                "remarks": "After completion of filtration flush the filter setup with Nitrogen pressure.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 8,
-                "description": "Charge Purified Water Lot-III into reactor.",
-                "equipment_no": [
-                    "GLRE-1010"
-                ],
-                "date": "2024-10-09T00:00:00",
-                "time_from": "21:00",
-                "time_to": "21:30",
-                "duration": "00:30",
-                "performed_by": "Emily White",
-                "checked_by": "Grace Hall",
-                "remarks": "Transfer the Water through the filter setup into GLRE 1014.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 9,
-                "description": "Slowly adjust the mass pH to 7.0 to 7.5 with filtered CS Lye (Lot-II) from receiver SSRC-1004 below 40\u2103.",
-                "equipment_no": [
-                    "GLRE-1014"
-                ],
-                "date": "2024-10-09T00:00:00",
-                "time_from": "23:00",
-                "time_to": "23:30",
-                "duration": "00:30",
-                "performed_by": "Chris Green",
-                "checked_by": "Ethan Adams",
-                "remarks": "PH: 7.30",
-                "temperature_records": [
-                    {
-                        "time": "23:00",
-                        "temp_c": 24.9,
-                        "sign": "Sophia Carter"
-                    },
-                    {
-                        "time": "23:30",
-                        "temp_c": 28.7,
-                        "sign": "David Wilson"
-                    },
-                    {
-                        "time": "00:00",
-                        "temp_c": 33.5,
-                        "sign": "Olivia Johnson"
-                    },
-                    {
-                        "time": "00:30",
-                        "temp_c": 36.4,
-                        "sign": "Michael Johnson"
-                    }
-                ]
-            },
-            {
-                "op_no": 10,
-                "description": "Cool to below 5\u00baC.",
-                "equipment_no": [
-                    "GLRE-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "01:00",
-                "time_to": "01:30",
-                "duration": "00:30",
-                "performed_by": "Sophia Carter",
-                "checked_by": "Mia Robinson",
-                "remarks": "Maintain for 30 minutes at 30\u00b0 C to 40\u00b0C.",
-                "temperature_records": [
-                    {
-                        "time": "01:00",
-                        "temp_c": 37.9,
-                        "sign": "Emily White"
-                    },
-                    {
-                        "time": "01:30",
-                        "temp_c": 31.2,
-                        "sign": "Chris Green"
-                    },
-                    {
-                        "time": "02:00",
-                        "temp_c": 24.0,
-                        "sign": "Sophia Carter"
-                    },
-                    {
-                        "time": "02:30",
-                        "temp_c": 18.6,
-                        "sign": "David Wilson"
-                    },
-                    {
-                        "time": "03:00",
-                        "temp_c": 14.5,
-                        "sign": "Olivia Johnson"
-                    },
-                    {
-                        "time": "03:30",
-                        "temp_c": 8.5,
-                        "sign": "Michael Johnson"
-                    },
-                    {
-                        "time": "04:00",
-                        "temp_c": 4.9,
-                        "sign": "Emily White"
-                    }
-                ]
-            },
-            {
-                "op_no": 11,
-                "description": "Check the cleanliness of the Centrifuge.",
-                "equipment_no": [
-                    "SSCF-1001A"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "08:30",
-                "time_to": "09:00",
-                "duration": "00:30",
-                "performed_by": "David Wilson",
-                "checked_by": "Lucas Allen",
-                "remarks": "Cleaned/Uncleaned",
-                "temperature_records": null
-            },
-            {
-                "op_no": 12,
-                "description": "Load the Lot-I material into the centrifuge at speed knob position 1",
-                "equipment_no": [
-                    "SSCF-1001A"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "09:00",
-                "time_to": "09:30",
-                "duration": "00:30",
-                "performed_by": "Olivia Johnson",
-                "checked_by": "Charlotte Young",
-                "remarks": "Spin dry the material for 15 to 30 min. by using centrifuge speed knob at position 3",
-                "temperature_records": null
-            },
-            {
-                "op_no": 13,
-                "description": "Wash the material with chilled Purified water (Lot-IV) from receiver SSJRC-1005 by using speed knob at position 1 and collect the ML's into receiver SSRC-1014.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "09:30",
-                "time_to": "10:00",
-                "duration": "00:30",
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
-                "remarks": "Vol : 100 L",
-                "temperature_records": null
-            },
-            {
-                "op_no": 14,
-                "description": "Spin dry the material for 30 to 45 min. by using at speed knob position 3",
-                "equipment_no": [
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "10:00",
-                "time_to": "10:45",
-                "duration": "00:45",
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
-                "remarks": "Check the sample for chloride content (Chlorides : NMT 100 ppm)",
-                "temperature_records": null
-            },
-            {
-                "op_no": 15,
-                "description": "Load the Lot-II material into the centrifuge at speed knob position 1",
-                "equipment_no": [
-                    "SSCF-1001A"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "10:45",
-                "time_to": "11:15",
-                "duration": "00:30",
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
-                "remarks": "Spin dry the material for 15 to 30 min. by using centrifuge speed knob at position 3",
-                "temperature_records": null
-            },
-            {
-                "op_no": 16,
-                "description": "Wash the material with chilled Purified water (Lot-IV) from receiver SSJRC-1005 by using speed knob at position 1 and collect the ML's into receiver SSRC-1014.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "11:15",
-                "time_to": "11:45",
-                "duration": "00:30",
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
-                "remarks": "Vol : 100 L",
-                "temperature_records": null
-            },
-            {
-                "op_no": 17,
-                "description": "Spin dry the material for 30 to 45 min. by using at speed knob position 3",
-                "equipment_no": [
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "11:45",
-                "time_to": "12:30",
-                "duration": "00:45",
-                "performed_by": "Daniel Garcia",
-                "checked_by": "Jacob Miller",
-                "remarks": "Check the sample for chloride content (Chlorides : NMT 100 ppm)",
-                "temperature_records": null
-            },
-            {
-                "op_no": 18,
-                "description": "Load the Lot-III material into the centrifuge at speed knob position 1",
-                "equipment_no": [
-                    "SSCF-1001A"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "12:30",
-                "time_to": "13:00",
-                "duration": "00:30",
-                "performed_by": "Sophia Lee",
-                "checked_by": "Ella Thomas",
-                "remarks": "Spin dry the material for 15 to 30 min. by using centrifuge speed knob at position 3",
-                "temperature_records": null
-            },
-            {
-                "op_no": 19,
-                "description": "Wash the material with chilled Purified water (Lot-IV) from receiver SSJRC-1005 by using speed knob at position 1 and collect the ML's into receiver SSRC-1014.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "13:00",
-                "time_to": "13:30",
-                "duration": "00:30",
-                "performed_by": "Michael Clark",
-                "checked_by": "Liam Walker",
-                "remarks": "Vol : 100 L",
-                "temperature_records": null
-            },
-            {
-                "op_no": 20,
-                "description": "Spin dry the material for 30 to 45 min. by using at speed knob position 3",
-                "equipment_no": [
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "13:30",
-                "time_to": "14:15",
-                "duration": "00:45",
-                "performed_by": "Emily White",
-                "checked_by": "Grace Hall",
-                "remarks": "Check the sample for chloride content (Chlorides : NMT 100 ppm)",
-                "temperature_records": null
-            },
-            {
-                "op_no": 21,
-                "description": "Load the Lot-IV material into the centrifuge at speed knob position 1",
-                "equipment_no": [
-                    "SSCF-1001A"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "14:15",
-                "time_to": "14:45",
-                "duration": "00:30",
-                "performed_by": "Chris Green",
-                "checked_by": "Ethan Adams",
-                "remarks": "Spin dry the material for 15 to 30 min. by using centrifuge speed knob at position 3",
-                "temperature_records": null
-            },
-            {
-                "op_no": 22,
-                "description": "Wash the material with chilled Purified water (Lot-IV) from receiver SSJRC-1005 by using speed knob at position 1 and collect the ML's into receiver SSRC-1014.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "14:45",
-                "time_to": "15:15",
-                "duration": "00:30",
-                "performed_by": "Sophia Carter",
-                "checked_by": "Mia Robinson",
-                "remarks": "Vol : 100 L",
-                "temperature_records": null
-            },
-            {
-                "op_no": 23,
-                "description": "Spin dry the material for 30 to 45 min. by using at speed knob position 3",
-                "equipment_no": [
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "15:15",
-                "time_to": "16:00",
-                "duration": "00:45",
-                "performed_by": "David Wilson",
-                "checked_by": "Lucas Allen",
-                "remarks": "Check the sample for chloride content (Chlorides : NMT 100 ppm)",
-                "temperature_records": null
-            },
-            {
-                "op_no": 24,
-                "description": "Load the Lot-V material into the centrifuge at speed knob position 1",
-                "equipment_no": [
-                    "SSCF-1001A"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "16:00",
-                "time_to": "16:30",
-                "duration": "00:30",
-                "performed_by": "Olivia Johnson",
-                "checked_by": "Charlotte Young",
-                "remarks": "Spin dry the material for 15 to 30 min. by using centrifuge speed knob at position 3",
-                "temperature_records": null
-            },
-            {
-                "op_no": 25,
-                "description": "Wash the material with chilled Purified water (Lot-IV) from receiver SSJRC-1005 by using speed knob at position 1 and collect the ML's into receiver SSRC-1014.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "16:30",
-                "time_to": "17:00",
-                "duration": "00:30",
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
-                "remarks": "Vol : 100 L",
-                "temperature_records": null
-            },
-            {
-                "op_no": 26,
-                "description": "Spin dry the material for 30 to 45 min. by using at speed knob position 3",
-                "equipment_no": [
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "17:00",
-                "time_to": "17:45",
-                "duration": "00:45",
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
-                "remarks": "Check the sample for chloride content (Chlorides : NMT 100 ppm)",
-                "temperature_records": null
-            },
-            {
-                "op_no": 27,
-                "description": "Load the Lot-VI material into the centrifuge at speed knob position 1",
-                "equipment_no": [
-                    "SSCF-1001A"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "17:45",
-                "time_to": "18:15",
-                "duration": "00:30",
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
-                "remarks": "Spin dry the material for 15 to 30 min. by using centrifuge speed knob at position 3",
-                "temperature_records": null
-            },
-            {
-                "op_no": 28,
-                "description": "Wash the material with chilled Purified water (Lot-IV) from receiver SSJRC-1005 by using speed knob at position 1 and collect the ML's into receiver SSRC-1014.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "18:15",
-                "time_to": "18:45",
-                "duration": "00:30",
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
-                "remarks": "Vol : 100 L",
-                "temperature_records": null
-            },
-            {
-                "op_no": 29,
-                "description": "Spin dry the material for 30 to 45 min. by using at speed knob position 3",
-                "equipment_no": [
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "18:45",
-                "time_to": "19:30",
-                "duration": "00:45",
-                "performed_by": "Daniel Garcia",
-                "checked_by": "Jacob Miller",
-                "remarks": "Check the sample for chloride content (Chlorides : NMT 100 ppm)",
-                "temperature_records": null
-            },
-            {
-                "op_no": 30,
-                "description": "Load the Lot-VII material into the centrifuge at speed knob position 1",
-                "equipment_no": [
-                    "SSCF-1001A"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "19:30",
-                "time_to": "20:00",
-                "duration": "00:30",
-                "performed_by": "Sophia Lee",
-                "checked_by": "Ella Thomas",
-                "remarks": "Spin dry the material for 15 to 30 min. by using centrifuge speed knob at position 3",
-                "temperature_records": null
-            },
-            {
-                "op_no": 31,
-                "description": "Wash the material with chilled Purified water (Lot-IV) from receiver SSJRC-1005 by using speed knob at position 1 and collect the ML's into receiver SSRC-1014.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "20:00",
-                "time_to": "20:30",
-                "duration": "00:30",
-                "performed_by": "Michael Clark",
-                "checked_by": "Liam Walker",
-                "remarks": "Vol : 100 L",
-                "temperature_records": null
-            },
-            {
-                "op_no": 32,
-                "description": "Spin dry the material for 30 to 45 min. by using at speed knob position 3",
-                "equipment_no": [
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "20:30",
-                "time_to": "21:15",
-                "duration": "00:45",
-                "performed_by": "Emily White",
-                "checked_by": "Grace Hall",
-                "remarks": "Check the sample for chloride content (Chlorides : NMT 100 ppm)",
-                "temperature_records": null
-            },
-            {
-                "op_no": 33,
-                "description": "Load the Lot-VIII material into the centrifuge at speed knob position 1",
-                "equipment_no": [
-                    "SSCF-1001A"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "21:15",
-                "time_to": "21:45",
-                "duration": "00:30",
-                "performed_by": "Chris Green",
-                "checked_by": "Ethan Adams",
-                "remarks": "Spin dry the material for 15 to 30 min. by using centrifuge speed knob at position 3",
-                "temperature_records": null
-            },
-            {
-                "op_no": 34,
-                "description": "Wash the material with chilled Purified water (Lot-IV) from receiver SSJRC-1005 by using speed knob at position 1 and collect the ML's into receiver SSRC-1014.",
-                "equipment_no": [
-                    "SSJRC-1005",
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "21:45",
-                "time_to": "22:15",
-                "duration": "00:30",
-                "performed_by": "Sophia Carter",
-                "checked_by": "Mia Robinson",
-                "remarks": "Vol : 100 L",
-                "temperature_records": null
-            },
-            {
-                "op_no": 35,
-                "description": "Spin dry the material for 30 to 45 min. by using at speed knob position 3",
-                "equipment_no": [
-                    "SSCF-1001A",
-                    "SSRC-1014"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "22:15",
-                "time_to": "23:00",
-                "duration": "00:45",
-                "performed_by": "David Wilson",
-                "checked_by": "Lucas Allen",
-                "remarks": "Check the sample for chloride content (Chlorides : NMT 100 ppm)",
-                "temperature_records": null
-            },
-            {
-                "op_no": 36,
-                "description": "Check the cleanliness of the reactor.",
-                "equipment_no": [
-                    "GLRE-1015"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "23:00",
-                "time_to": "23:30",
-                "duration": "00:30",
-                "performed_by": "Olivia Johnson",
-                "checked_by": "Charlotte Young",
-                "remarks": "Cleaned/Uncleaned",
-                "temperature_records": null
-            },
-            {
-                "op_no": 37,
-                "description": "Charge IPA (Lot-I) from receiver SSRC-1011 to reactor.",
-                "equipment_no": [
-                    "SSRC-1011",
-                    "GLRE-1015"
-                ],
-                "date": "2024-10-10T00:00:00",
-                "time_from": "23:30",
-                "time_to": "00:00",
-                "duration": "00:30",
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
-                "remarks": "Charge Methanol from receiver SSRC-1012 to reactor.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 38,
-                "description": "Charge Purified Water (Lot-V) and stir for 15 to 30 minutes.",
-                "equipment_no": [
-                    "GLRE-1015"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "00:00",
-                "time_to": "00:30",
-                "duration": "00:30",
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
-                "remarks": "Charge the GP Tech material into the reactor through PCS under stirring.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 39,
-                "description": "Stir for 15 to 30 min.",
-                "equipment_no": [
-                    "GLRE-1015"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "00:30",
-                "time_to": "01:00",
-                "duration": "00:30",
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
-                "remarks": "Raise the temperature to 40\u00b0C to 45\u00b0C.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 40,
-                "description": "Maintain the temperature for 30 to 45 minutes an hour at 40\u00b0C to 45\u2103.",
-                "equipment_no": [
-                    "GLRE-1015"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "01:00",
-                "time_to": "01:30",
-                "duration": "00:30",
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
-                "remarks": "Note; Record the temperature for every 10+5mintes.",
-                "temperature_records": [
-                    {
-                        "time": "01:00",
-                        "temp_c": 42.6,
-                        "sign": "Daniel Garcia"
-                    },
-                    {
-                        "time": "01:10",
-                        "temp_c": 43.4,
-                        "sign": "Sophia Lee"
-                    },
-                    {
-                        "time": "01:20",
-                        "temp_c": 44.1,
-                        "sign": "Michael Clark"
-                    },
-                    {
-                        "time": "01:30",
-                        "temp_c": 44.7,
-                        "sign": "Emily White"
-                    }
-                ]
-            },
-            {
-                "op_no": 41,
-                "description": "Cool the reaction mass 0\u00b0C to 5\u00b0C.",
-                "equipment_no": [
-                    "GLRE-1015"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "01:30",
-                "time_to": "02:00",
-                "duration": "00:30",
-                "performed_by": "Daniel Garcia",
-                "checked_by": "Jacob Miller",
-                "remarks": "Note: Record the temperature for every 30+5mintes.",
-                "temperature_records": [
-                    {
-                        "time": "01:30",
-                        "temp_c": 38.1,
-                        "sign": "Sophia Lee"
-                    },
-                    {
-                        "time": "02:00",
-                        "temp_c": 32.3,
-                        "sign": "Michael Clark"
-                    },
-                    {
-                        "time": "02:30",
-                        "temp_c": 26.9,
-                        "sign": "Emily White"
-                    },
-                    {
-                        "time": "03:00",
-                        "temp_c": 21.5,
-                        "sign": "Chris Green"
-                    },
-                    {
-                        "time": "03:30",
-                        "temp_c": 16.4,
-                        "sign": "Sophia Carter"
-                    },
-                    {
-                        "time": "04:00",
-                        "temp_c": 12.8,
-                        "sign": "David Wilson"
-                    },
-                    {
-                        "time": "04:30",
-                        "temp_c": 9.4,
-                        "sign": "Olivia Johnson"
-                    },
-                    {
-                        "time": "05:00",
-                        "temp_c": 4.9,
-                        "sign": "Michael Johnson"
-                    }
-                ]
-            },
-            {
-                "op_no": 42,
-                "description": "Maintain for 30 to 45 minutes at 0\u00b0C to 5\u00b0C.",
-                "equipment_no": [
-                    "GLRE-1015"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "05:00",
-                "time_to": "05:30",
-                "duration": "00:30",
-                "performed_by": "Sophia Lee",
-                "checked_by": "Ella Thomas",
-                "remarks": "Check the cleanliness of the ANFD.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 43,
-                "description": "Transfer the reaction mass from the reactor (GLRE-1015) to ANFD.",
-                "equipment_no": [
-                    "GLRE-1015",
-                    "SSANFD-1006"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "05:30",
-                "time_to": "06:00",
-                "duration": "00:30",
-                "performed_by": "Michael Clark",
-                "checked_by": "Liam Walker",
-                "remarks": "Cleaned/Uncleaned",
-                "temperature_records": null
-            },
-            {
-                "op_no": 44,
-                "description": "Filter the mass by applying Nitrogen pressure to ANFD until removing the MLR to the collection tank SSST-1005.",
-                "equipment_no": [
-                    "SSANFD-1006",
-                    "SSST-1005"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "06:00",
-                "time_to": "06:30",
-                "duration": "00:30",
-                "performed_by": "Emily White",
-                "checked_by": "Grace Hall",
-                "remarks": "Wash the material with IPA (Lot-II) from the receiver SSRC-1011 to ANFD.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 45,
-                "description": "Stir for 15 to 30 mins.",
-                "equipment_no": [
-                    "SSANFD-1006"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "06:30",
-                "time_to": "07:00",
-                "duration": "00:30",
-                "performed_by": "Chris Green",
-                "checked_by": "Ethan Adams",
-                "remarks": "Apply Nitrogen pressure for 3 to 5 hours. The ML's are collected into a collection tank SSST-1005",
-                "temperature_records": null
-            },
-            {
-                "op_no": 46,
-                "description": "Record Nitrogen pressure for every 60+ 10 min.",
-                "equipment_no": [
-                    "SSANFD-1006"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "07:00",
-                "time_to": "11:00",
-                "duration": "04:00",
-                "performed_by": "Sophia Carter",
-                "checked_by": "Mia Robinson",
+                "duration": "0:30",
+                "performed_by": "U. Sankara Rao",
+                "checked_by": "K. Chinna Rao",
                 "remarks": null,
-                "temperature_records": [
-                    {
-                        "time": "07:00",
-                        "temp_c": 0.0,
-                        "sign": "David Wilson"
-                    },
-                    {
-                        "time": "08:00",
-                        "temp_c": 0.4,
-                        "sign": "Olivia Johnson"
-                    },
-                    {
-                        "time": "09:00",
-                        "temp_c": 0.8,
-                        "sign": "Michael Johnson"
-                    },
-                    {
-                        "time": "10:00",
-                        "temp_c": 1.2,
-                        "sign": "Emily White"
-                    },
-                    {
-                        "time": "11:00",
-                        "temp_c": 1.4,
-                        "sign": "Chris Green"
-                    }
-                ]
-            },
-            {
-                "op_no": 47,
-                "description": "Release Nitrogen pressure and apply Vacuum",
-                "equipment_no": [
-                    "SSANFD-1006"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "11:00",
-                "time_to": "11:10",
-                "duration": "00:10",
-                "performed_by": "David Wilson",
-                "checked_by": "Lucas Allen",
-                "remarks": "Dry the material for 5 to 7 hours under vacuum.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 48,
-                "description": "Note: SSANFD temperature should be below 45 \u2103 and vacuum NLT 600 mmHg. Hot water temperature should be 50 to 60 \u2103. Continue the vacuum drying till distillate is absent in view glass of the collection line.",
-                "equipment_no": [
-                    "SSANFD-1006"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "11:10",
-                "time_to": "18:10",
-                "duration": "07:00",
-                "performed_by": "Olivia Johnson",
-                "checked_by": "Charlotte Young",
-                "remarks": "Record the Vacuum and temperature for every 60+10 minutes in the Temperature record sheet.",
-                "temperature_records": [
-                    {
-                        "time": "11:10",
-                        "temp_c": 20.4,
-                        "sign": "John Doe"
-                    },
-                    {
-                        "time": "12:10",
-                        "temp_c": 22.4,
-                        "sign": "Jane Smith"
-                    },
-                    {
-                        "time": "13:10",
-                        "temp_c": 28.4,
-                        "sign": "Alex Brown"
-                    },
-                    {
-                        "time": "14:10",
-                        "temp_c": 30.1,
-                        "sign": "Emma Davis"
-                    },
-                    {
-                        "time": "15:10",
-                        "temp_c": 31.4,
-                        "sign": "Daniel Garcia"
-                    },
-                    {
-                        "time": "16:10",
-                        "temp_c": 32.9,
-                        "sign": "Sophia Lee"
-                    },
-                    {
-                        "time": "17:10",
-                        "temp_c": 34.8,
-                        "sign": "Michael Clark"
-                    }
-                ]
-            },
-            {
-                "op_no": 49,
-                "description": "Break the vacuum after completion of drying with nitrogen.",
-                "equipment_no": [
-                    "SSANFD-1006"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "18:10",
-                "time_to": "18:20",
-                "duration": "00:10",
-                "performed_by": "John Doe",
-                "checked_by": "Michael Johnson",
-                "remarks": "Cool the material to below 30\u00b0C.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 50,
-                "description": "Unload the material into the single poly bag into cleaned HDPE containers.",
-                "equipment_no": [
-                    "SSANFD-1006"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "18:20",
-                "time_to": "18:50",
-                "duration": "00:30",
-                "performed_by": "Jane Smith",
-                "checked_by": "Emily White",
-                "remarks": "Check the cleanliness of the SSRCVD & hopper.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 51,
-                "description": "Charge material into SSRCVD.",
-                "equipment_no": [
-                    "SSRCVD-1001",
-                    "SSHP-1001"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "18:50",
-                "time_to": "19:20",
-                "duration": "00:30",
-                "performed_by": "Alex Brown",
-                "checked_by": "Chris Green",
-                "remarks": "Cleaned/Uncleaned",
-                "temperature_records": null
-            },
-            {
-                "op_no": 52,
-                "description": "Close the manhole and rotate for 10 to 15 minutes.",
-                "equipment_no": [
-                    "SSRCVD-1001"
-                ],
-                "date": "2024-10-11T00:00:00",
-                "time_from": "19:20",
-                "time_to": "19:35",
-                "duration": "00:15",
-                "performed_by": "Emma Davis",
-                "checked_by": "Sophia Carter",
-                "remarks": "Stop the SSRCVD and unload the material into a single poly bag HDPE containers.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 53,
-                "description": "Check the cleanliness of the Sifter & ensure the integrity of sieve and magnet",
-                "equipment_no": [
-                    "SSSI-1001"
-                ],
-                "date": "2024-10-12T00:00:00",
-                "time_from": "02:50",
-                "time_to": "03:20",
-                "duration": "00:30",
-                "performed_by": "Daniel Garcia",
-                "checked_by": "Jacob Miller",
-                "remarks": "Cleaned / Uncleaned- Integrity of Sieve & Magnet: Satisfactory/ Does not satisfactory",
-                "temperature_records": null
-            },
-            {
-                "op_no": 54,
-                "description": "Record tare weights of containers (HDPE/Fiber containers) including outer Black polythene bag and inner semi transparent LDPE bag).",
-                "equipment_no": [
-                    "SSSI-1001"
-                ],
-                "date": "2024-10-12T00:00:00",
-                "time_from": "03:20",
-                "time_to": "03:50",
-                "duration": "00:30",
-                "performed_by": "Sophia Lee",
-                "checked_by": "Ella Thomas",
-                "remarks": "Mesh No: 40 #",
-                "temperature_records": null
-            },
-            {
-                "op_no": 55,
-                "description": "Sieve the material through designated mesh into HDPE / Fiber containers containing outer Black polythene bag and inner semi transparent LDPE bag and adjust the weights by using calibrated weighing balance.",
-                "equipment_no": [
-                    "SSSI-1001"
-                ],
-                "date": "2024-10-12T00:00:00",
-                "time_from": "03:50",
-                "time_to": "05:30",
-                "duration": "01:40",
-                "performed_by": "Michael Clark",
-                "checked_by": "Liam Walker",
-                "remarks": "Check the integrity of the sieve and magnet of the Sifter after completion of sifting.",
-                "temperature_records": null
-            },
-            {
-                "op_no": 56,
-                "description": "If any damage is found, inform the Officer/HOD.",
-                "equipment_no": [
-                    "SSSI-1001"
-                ],
-                "date": "2024-10-12T00:00:00",
-                "time_from": "05:30",
-                "time_to": "06:00",
-                "duration": "00:30",
-                "performed_by": "Emily White",
-                "checked_by": "Grace Hall",
-                "remarks": "If any foreign particles are found on the magnet, separate them; count its number and write details in the remarks column. Handover the particles in a self sealed cover to the concerned Officer / HOD. Integrity of Sieve & Magnets: Satisfactory/ Does not satisfactory",
-                "temperature_records": null
-            },
-            {
-                "op_no": 57,
-                "description": "Clean the outer surface of the containers with lint free cloth. Paste Internal Product labels on the packing containers.",
-                "equipment_no": [
-                    "SSSI-1001"
-                ],
-                "date": "2024-10-12T00:00:00",
-                "time_from": "06:00",
-                "time_to": "06:30",
-                "duration": "00:30",
-                "performed_by": "Chris Green",
-                "checked_by": "Ethan Adams",
-                "remarks": null,
-                "temperature_records": null
-            },
-            {
-                "op_no": 58,
-                "description": "Inform QC for sampling and complete analysis using the Finished Product Sample advice sheet.",
-                "equipment_no": null,
-                "date": "2024-10-12T00:00:00",
-                "time_from": "06:30",
-                "time_to": "06:50",
-                "duration": "00:20",
-                "performed_by": "Sophia Carter",
-                "checked_by": "Mia Robinson",
-                "remarks": "After QC sampling, Secure the inner and outer polythene bags with a cable tie and seal all the containers with a green seal and transfer them to the FP storage area.",
                 "temperature_records": null
             }
         ]
@@ -1352,243 +245,33 @@
         "measurements": [
             {
                 "drum_no": 1,
-                "tare_wt": 5.21,
+                "tare_wt": 50.0,
                 "gross_wt": 55.2,
-                "net_wt": 50.0
+                "net_wt": 5.2
             },
             {
                 "drum_no": 2,
-                "tare_wt": 5.28,
+                "tare_wt": 50.0,
                 "gross_wt": 55.29,
-                "net_wt": 50.0
+                "net_wt": 5.29
             },
             {
                 "drum_no": 3,
-                "tare_wt": 5.17,
+                "tare_wt": 50.0,
                 "gross_wt": 55.17,
-                "net_wt": 50.0
+                "net_wt": 5.17
             },
             {
                 "drum_no": 4,
-                "tare_wt": 5.15,
+                "tare_wt": 50.0,
                 "gross_wt": 55.15,
-                "net_wt": 50.0
+                "net_wt": 5.15
             },
             {
                 "drum_no": 5,
-                "tare_wt": 5.29,
-                "gross_wt": 55.29,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 6,
-                "tare_wt": 5.18,
+                "tare_wt": 50.0,
                 "gross_wt": 55.18,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 7,
-                "tare_wt": 5.25,
-                "gross_wt": 55.25,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 8,
-                "tare_wt": 5.13,
-                "gross_wt": 55.13,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 9,
-                "tare_wt": 5.25,
-                "gross_wt": 55.25,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 10,
-                "tare_wt": 5.2,
-                "gross_wt": 55.2,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 11,
-                "tare_wt": 5.2,
-                "gross_wt": 55.2,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 12,
-                "tare_wt": 5.3,
-                "gross_wt": 55.3,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 13,
-                "tare_wt": 5.14,
-                "gross_wt": 55.14,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 14,
-                "tare_wt": 5.18,
-                "gross_wt": 55.18,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 15,
-                "tare_wt": 5.14,
-                "gross_wt": 55.14,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 16,
-                "tare_wt": 5.16,
-                "gross_wt": 55.16,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 17,
-                "tare_wt": 5.09,
-                "gross_wt": 55.09,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 18,
-                "tare_wt": 5.17,
-                "gross_wt": 55.17,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 19,
-                "tare_wt": 5.15,
-                "gross_wt": 55.15,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 20,
-                "tare_wt": 5.29,
-                "gross_wt": 55.29,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 21,
-                "tare_wt": 5.18,
-                "gross_wt": 55.18,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 22,
-                "tare_wt": 5.14,
-                "gross_wt": 55.14,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 23,
-                "tare_wt": 5.16,
-                "gross_wt": 55.16,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 24,
-                "tare_wt": 5.09,
-                "gross_wt": 55.09,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 25,
-                "tare_wt": 5.17,
-                "gross_wt": 55.17,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 26,
-                "tare_wt": 5.15,
-                "gross_wt": 55.15,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 27,
-                "tare_wt": 5.29,
-                "gross_wt": 55.29,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 28,
-                "tare_wt": 5.18,
-                "gross_wt": 55.18,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 29,
-                "tare_wt": 5.14,
-                "gross_wt": 55.14,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 30,
-                "tare_wt": 5.16,
-                "gross_wt": 55.16,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 31,
-                "tare_wt": 5.09,
-                "gross_wt": 55.09,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 32,
-                "tare_wt": 5.17,
-                "gross_wt": 55.17,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 33,
-                "tare_wt": 5.15,
-                "gross_wt": 55.15,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 34,
-                "tare_wt": 5.29,
-                "gross_wt": 55.29,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 35,
-                "tare_wt": 5.18,
-                "gross_wt": 55.18,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 36,
-                "tare_wt": 5.14,
-                "gross_wt": 55.14,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 37,
-                "tare_wt": 5.16,
-                "gross_wt": 55.16,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 38,
-                "tare_wt": 5.09,
-                "gross_wt": 55.09,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 39,
-                "tare_wt": 5.17,
-                "gross_wt": 55.17,
-                "net_wt": 50.0
-            },
-            {
-                "drum_no": 40,
-                "tare_wt": 5.15,
-                "gross_wt": 55.15,
-                "net_wt": 50.0
+                "net_wt": 5.18
             }
         ],
         "total_weight": 825.0,
@@ -1596,15 +279,15 @@
     },
     "yield_report": {
         "product_name": "Gabapentin",
-        "expected_yield_min": 750,
-        "expected_yield_max": 850,
+        "expected_yield_min": 750.0,
+        "expected_yield_max": 850.0,
         "actual_yield": 825.0,
-        "sample_quantity": 0,
+        "sample_quantity": 0.0,
         "balance_quantity": 825.0,
         "deviations": null,
         "compiled_by": "PSb",
         "compiled_date": "2024-10-12T00:00:00",
-        "checked_by": "Kno0",
+        "checked_by": "K. Chinna Rao",
         "checked_date": "2024-10-12T00:00:00"
     },
     "bpr_review_checklist": {
@@ -1615,7 +298,7 @@
         "effective_date": "2012-05-12",
         "review_date": "April 2025",
         "product_stage": "Gabapentin\\GP",
-        "batch_no": "09/10 2024 0257.",
+        "batch_no": "09/10 2024 0257",
         "verification_details": [
             {
                 "item_no": "1.0",
@@ -1675,28 +358,28 @@
             },
             {
                 "item_no": "9.0",
-                "description": "Is the yield of the product entered in the yield report?",
-                "yes": true,
-                "no": false,
-                "na": false
-            },
-            {
-                "item_no": "10.0",
                 "description": "Is the batch product passed as per relevant specifications?",
                 "yes": true,
                 "no": false,
                 "na": false
             },
             {
-                "item_no": "11.0",
+                "item_no": "10.0",
                 "description": "Are there any deviations?",
                 "yes": false,
                 "no": true,
                 "na": false
             },
             {
-                "item_no": "12.0",
+                "item_no": "11.0",
                 "description": "If yes, are the deviations closed properly?",
+                "yes": false,
+                "no": true,
+                "na": false
+            },
+            {
+                "item_no": "12.0",
+                "description": "Ref. Deviation No.(s):",
                 "yes": false,
                 "no": false,
                 "na": true
@@ -1705,25 +388,25 @@
                 "item_no": "13.0",
                 "description": "Are all.relevant ATR$ attached to the BPR?",
                 "yes": false,
-                "no": true,
-                "na": false
+                "no": false,
+                "na": true
             }
         ],
-        "reviewed_by": "Officer-Production/ Designee",
+        "reviewed_by": "Officer-Production/Designee",
         "reviewed_date": "2024-10-26",
-        "approved_by": "Head-Production/ Designee",
+        "approved_by": "Head-Production/Designee",
         "approved_date": "2024-10-26",
-        "qa_review": "SARACA /R S LTD. QA 27/10/1"
+        "qa_review": "SARACA/R S LTD. QA 27/10/1"
+    },
+    "approval_details": {
+        "prepared_by": "M",
+        "reviewed_by": "26/08/24",
+        "approved_by": "LU5 28/08/24"
     },
     "document_metadata": {
         "revision_no": "05",
         "effective_date": "2024-09-01T00:00:00",
         "mfr_ref_no": "RD/MF/GP/II(W)/GP-004",
         "format_no": "QSP-021/F-002/01"
-    },
-    "approval_details": {
-        "prepared_by": "M",
-        "reviewed_by": "porno",
-        "approved_by": "LUF"
     }
 }
